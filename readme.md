@@ -1,0 +1,1 @@
+These files are generated programmatically from inline PHPDocs. Pull requests not accepted.
