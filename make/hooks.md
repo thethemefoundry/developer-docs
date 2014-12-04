@@ -1,6 +1,6 @@
-# Actions: 16
+## Actions (16)
 
-## make\_after\_builder\_menu \{.make\}
+### make\_after\_builder\_menu
 
 ```
 do_action( 'make_after_builder_menu' );
@@ -16,7 +16,7 @@ Execute code after the builder menu is displayed.
 
 * [inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L42)
 
-## make\_after\_builder\_stage \{.make\}
+### make\_after\_builder\_stage
 
 ```
 do_action( 'make_after_builder_stage' );
@@ -32,7 +32,7 @@ Execute code after the builder stage is displayed.
 
 * [inc/builder/core/templates/stage-footer.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage-footer.php#L11)
 
-## make\_before\_builder\_menu \{.make\}
+### make\_before\_builder\_menu
 
 ```
 do_action( 'make_before_builder_menu' );
@@ -48,7 +48,7 @@ Execute code before the builder menu is displayed.
 
 * [inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L18)
 
-## make\_before\_builder\_stage \{.make\}
+### make\_before\_builder\_stage
 
 ```
 do_action( 'make_before_builder_stage' );
@@ -64,7 +64,7 @@ Execute code before the builder stage is displayed.
 
 * [inc/builder/core/templates/stage-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage-header.php#L16)
 
-## make\_before\_section\_header \{.make\}
+### make\_before\_section\_header
 
 ```
 do_action( 'make_before_section_header' );
@@ -80,7 +80,7 @@ Execute code before the section header is displayed.
 
 * [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L40)
 
-## make\_builder\_data\_saved \{.make\}
+### make\_builder\_data\_saved
 
 ```
 do_action( 'make_builder_data_saved', $sections, $post_id );
@@ -105,7 +105,7 @@ While it is possible to use a "save\_post" to hook into the save routine, this a
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L196)
 
-## make\_builder\_{$data\['section-type'\]}\_css \{.make\}
+### make\_builder\_{$data\['section-type'\]}\_css
 
 ```
 do_action( 'make_builder_{$data['section-type']}_css', $data, $id );
@@ -126,7 +126,7 @@ Allow section-specific CSS rules to be added to the document head of a Builder p
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L592)
 
-## make\_css \{.make\}
+### make\_css
 
 ```
 do_action( 'make_css' );
@@ -146,7 +146,7 @@ This hook is the correct hook to use for adding CSS styles to the group of selec
 
 * [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L568)
 
-## make\_section\_text\_after\_column \{.make\}
+### make\_section\_text\_after\_column
 
 ```
 do_action( 'make_section_text_after_column', $ttfmake_section_data );
@@ -166,7 +166,7 @@ Execute code after an individual text column is displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L142)
 
-## make\_section\_text\_after\_columns \{.make\}
+### make\_section\_text\_after\_columns
 
 ```
 do_action( 'make_section_text_after_columns', $ttfmake_section_data );
@@ -186,7 +186,7 @@ Execute code after all columns are displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L198)
 
-## make\_section\_text\_after\_columns\_select \{.make\}
+### make\_section\_text\_after\_columns\_select
 
 ```
 do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
@@ -206,7 +206,7 @@ Execute code after the columns select input is displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L54)
 
-## make\_section\_text\_after\_title \{.make\}
+### make\_section\_text\_after\_title
 
 ```
 do_action( 'make_section_text_after_title', $ttfmake_section_data );
@@ -226,7 +226,7 @@ Execute code after the section title is displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L63)
 
-## make\_section\_text\_before\_column \{.make\}
+### make\_section\_text\_before\_column
 
 ```
 do_action( 'make_section_text_before_column', $ttfmake_section_data );
@@ -246,7 +246,7 @@ Execute code before an individual text column is displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L120)
 
-## make\_section\_text\_before\_columns\_select \{.make\}
+### make\_section\_text\_before\_columns\_select
 
 ```
 do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
@@ -266,7 +266,7 @@ Execute code before the columns select input is displayed.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L45)
 
-## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_after \{.make\}
+### make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_after
 
 ```
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_after', $ttfmake_section_data );
@@ -290,7 +290,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L846)
 
-## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before \{.make\}
+### make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before
 
 ```
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_before', $ttfmake_section_data );
@@ -314,9 +314,9 @@ This action is a variable action that allows a developer to hook into specific s
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L817)
 
-# Filters: 109
+## Filters (109)
 
-## make\_add\_section \{.make\}
+### make\_add\_section
 
 ```
 apply_filters( 'make_add_section', $section );
@@ -340,7 +340,7 @@ This filters allows for dynamically altering sections as they get added. This ca
 
 * [inc/builder/core/api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L96)
 
-## make\_all\_font\_choices \{.make\}
+### make\_all\_font\_choices
 
 ```
 apply_filters( 'make_all_font_choices', $choices );
@@ -360,7 +360,7 @@ Allow for developers to modify the full list of fonts.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L638)
 
-## make\_all\_fonts \{.make\}
+### make\_all\_fonts
 
 ```
 apply_filters( 'make_all_fonts', $fonts );
@@ -380,7 +380,7 @@ Allow for developers to modify the full list of fonts.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L684)
 
-## make\_banner\_slide\_configuration \{.make\}
+### make\_banner\_slide\_configuration
 
 ```
 apply_filters( 'make_banner_slide_configuration' );
@@ -390,7 +390,7 @@ apply_filters( 'make_banner_slide_configuration' );
 
 * [inc/builder/sections/builder-templates/banner-slide.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/banner-slide.php#L63)
 
-## make\_builder\_banner\_class \{.make\}
+### make\_builder\_banner\_class
 
 ```
 apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data );
@@ -414,7 +414,7 @@ Filter the class for the banner section.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L410)
 
-## make\_builder\_banner\_slide\_class \{.make\}
+### make\_builder\_banner\_slide\_class
 
 ```
 apply_filters( 'make_builder_banner_slide_class', $slide_class );
@@ -434,7 +434,7 @@ Allow developers to alter the class for the banner slide.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L497)
 
-## make\_builder\_banner\_slide\_style \{.make\}
+### make\_builder\_banner\_slide\_style
 
 ```
 apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake_section_data );
@@ -459,7 +459,7 @@ Allow developers to change the CSS for a Banner section.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L534)
 
-## make\_builder\_get\_banner\_array \{.make\}
+### make\_builder\_get\_banner\_array
 
 ```
 apply_filters( 'make_builder_get_banner_array', $banner_array, $ttfmake_section_data );
@@ -483,7 +483,7 @@ Filter the data array for a banner section.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L383)
 
-## make\_builder\_get\_banner\_slider\_atts \{.make\}
+### make\_builder\_get\_banner\_slider\_atts
 
 ```
 apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake_section_data );
@@ -507,7 +507,7 @@ Allow for altering the banner slider attributes.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L471)
 
-## make\_builder\_get\_gallery\_array \{.make\}
+### make\_builder\_get\_gallery\_array
 
 ```
 apply_filters( 'make_builder_get_gallery_array', $gallery_array, $ttfmake_section_data );
@@ -531,7 +531,7 @@ Filter the gallery item data.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L68)
 
-## make\_builder\_get\_gallery\_item\_class \{.make\}
+### make\_builder\_get\_gallery\_item\_class
 
 ```
 apply_filters( 'make_builder_get_gallery_item_class', $gallery_class, $item, $ttfmake_section_data, $i );
@@ -557,7 +557,7 @@ Filter the class used for a gallery item.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L217)
 
-## make\_builder\_get\_gallery\_item\_image \{.make\}
+### make\_builder\_get\_gallery\_item\_image
 
 ```
 apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
@@ -582,7 +582,7 @@ Alter the generated gallery image.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L260)
 
-## make\_builder\_get\_gallery\_style \{.make\}
+### make\_builder\_get\_gallery\_style
 
 ```
 apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_section_data );
@@ -606,7 +606,7 @@ Filter the style added to a gallery section.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L171)
 
-## make\_builder\_get\_text\_array \{.make\}
+### make\_builder\_get\_text\_array
 
 ```
 apply_filters( 'make_builder_get_text_array', $columns_array, $ttfmake_section_data );
@@ -630,7 +630,7 @@ Filter the array of builder data for the text section.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L308)
 
-## make\_builder\_get\_text\_class \{.make\}
+### make\_builder\_get\_text\_class
 
 ```
 apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data, $sections );
@@ -655,7 +655,7 @@ Filter the text section class.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L343)
 
-## make\_builder\_is\_section\_type \{.make\}
+### make\_builder\_is\_section\_type
 
 ```
 apply_filters( 'make_builder_is_section_type', $is_section_type, $type, $data );
@@ -680,7 +680,7 @@ Allow developers to alter if a set of data is a specified section type.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L27)
 
-## make\_builder\_section\_links \{.make\}
+### make\_builder\_section\_links
 
 ```
 apply_filters( 'make_builder_section_links' );
@@ -690,7 +690,7 @@ apply_filters( 'make_builder_section_links' );
 
 * [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L27)
 
-## make\_column\_buttons \{.make\}
+### make\_column\_buttons
 
 ```
 apply_filters( 'make_column_buttons', $column_buttons, $ttfmake_section_data );
@@ -714,7 +714,7 @@ Filter the buttons added to a text column.
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L104)
 
-## make\_column\_configuration \{.make\}
+### make\_column\_configuration
 
 ```
 apply_filters( 'make_column_configuration' );
@@ -724,7 +724,7 @@ apply_filters( 'make_column_configuration' );
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L153)
 
-## make\_configuration\_overlay\_input \{.make\}
+### make\_configuration\_overlay\_input
 
 ```
 apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section_data );
@@ -749,7 +749,7 @@ Filter the HTML for the input.
 
 * [inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L200)
 
-## make\_configuration\_overlay\_input\_wrap \{.make\}
+### make\_configuration\_overlay\_input\_wrap
 
 ```
 apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $section_data );
@@ -774,7 +774,7 @@ Filter the wrapped used for the inputs.
 
 * [inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L189)
 
-## make\_css\_add \{.make\}
+### make\_css\_add
 
 ```
 apply_filters( 'make_css_add', $data );
@@ -794,7 +794,7 @@ Filter CSS as it is registered.
 
 * [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L122)
 
-## make\_css\_font\_properties \{.make\}
+### make\_css\_font\_properties
 
 ```
 apply_filters( 'make_css_font_properties' );
@@ -806,7 +806,7 @@ Body
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L255)
 
-## make\_css\_parse\_declarations \{.make\}
+### make\_css\_parse\_declarations
 
 ```
 apply_filters( 'make_css_parse_declarations', $output, $declarations, $tab );
@@ -831,7 +831,7 @@ Filter the full list of parsed declarations.
 
 * [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L280)
 
-## make\_customizer\_colorscheme\_sections \{.make\}
+### make\_customizer\_colorscheme\_sections
 
 ```
 apply_filters( 'make_customizer_colorscheme_sections' );
@@ -843,7 +843,7 @@ Footer
 
 * [inc/customizer/sections/color-scheme.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/color-scheme.php#L210)
 
-## make\_customizer\_contentlayout\_sections \{.make\}
+### make\_customizer\_contentlayout\_sections
 
 ```
 apply_filters( 'make_customizer_contentlayout_sections' );
@@ -855,7 +855,7 @@ Pages
 
 * [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L938)
 
-## make\_customizer\_footer\_sections \{.make\}
+### make\_customizer\_footer\_sections
 
 ```
 apply_filters( 'make_customizer_footer_sections' );
@@ -867,7 +867,7 @@ White Label
 
 * [inc/customizer/sections/footer.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/footer.php#L170)
 
-## make\_customizer\_general\_sections \{.make\}
+### make\_customizer\_general\_sections
 
 ```
 apply_filters( 'make_customizer_general_sections' );
@@ -879,7 +879,7 @@ Social Profiles & RSS
 
 * [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L239)
 
-## make\_customizer\_header\_sections \{.make\}
+### make\_customizer\_header\_sections
 
 ```
 apply_filters( 'make_customizer_header_sections' );
@@ -891,7 +891,7 @@ Layout
 
 * [inc/customizer/sections/header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/header.php#L159)
 
-## make\_customizer\_key\_conversions \{.make\}
+### make\_customizer\_key\_conversions
 
 ```
 apply_filters( 'make_customizer_key_conversions' );
@@ -903,7 +903,7 @@ Sets are defined by the theme version they pertain to: $theme\_version => array 
 
 * [inc/compatibility.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility.php#L206)
 
-## make\_customizer\_panels \{.make\}
+### make\_customizer\_panels
 
 ```
 apply_filters( 'make_customizer_panels' );
@@ -913,7 +913,7 @@ apply_filters( 'make_customizer_panels' );
 
 * [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L75)
 
-## make\_customizer\_sections \{.make\}
+### make\_customizer\_sections
 
 ```
 apply_filters( 'make_customizer_sections' );
@@ -923,7 +923,7 @@ apply_filters( 'make_customizer_sections' );
 
 * [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L127)
 
-## make\_customizer\_typography\_sections \{.make\}
+### make\_customizer\_typography\_sections
 
 ```
 apply_filters( 'make_customizer_typography_sections' );
@@ -935,7 +935,7 @@ Headers & Body
 
 * [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L358)
 
-## make\_exif\_aperture \{.make\}
+### make\_exif\_aperture
 
 ```
 apply_filters( 'make_exif_aperture', $f_stop, $raw_aperture );
@@ -959,7 +959,7 @@ Filter the aperture value.
 
 * [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L523)
 
-## make\_exif\_shutter\_speed \{.make\}
+### make\_exif\_shutter\_speed
 
 ```
 apply_filters( 'make_exif_shutter_speed', $converted_as, $raw_shutter_speed );
@@ -983,7 +983,7 @@ Filter the shutter speed value.
 
 * [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L504)
 
-## make\_fitvids\_custom\_selectors \{.make\}
+### make\_fitvids\_custom\_selectors
 
 ```
 apply_filters( 'make_fitvids_custom_selectors', $selector_array );
@@ -1003,7 +1003,7 @@ Allow for changing of the selectors that are used to apply FitVids.
 
 * [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L342)
 
-## make\_font\_relative\_size \{.make\}
+### make\_font\_relative\_size
 
 ```
 apply_filters( 'make_font_relative_size' );
@@ -1013,7 +1013,7 @@ apply_filters( 'make_font_relative_size' );
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L16)
 
-## make\_font\_stack \{.make\}
+### make\_font\_stack
 
 ```
 apply_filters( 'make_font_stack', $stack, $font );
@@ -1037,7 +1037,7 @@ Allow developers to filter the full font stack.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L310)
 
-## make\_font\_variants \{.make\}
+### make\_font\_variants
 
 ```
 apply_filters( 'make_font_variants', $variants, $font );
@@ -1061,7 +1061,7 @@ Allow developers to alter the font variant choice.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L510)
 
-## make\_footer\_1 \{.make\}
+### make\_footer\_1
 
 ```
 apply_filters( 'make_footer_1', $footer_id );
@@ -1081,7 +1081,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-footer-1.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-1.php#L13)
 
-## make\_footer\_2 \{.make\}
+### make\_footer\_2
 
 ```
 apply_filters( 'make_footer_2', $footer_id );
@@ -1101,7 +1101,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-footer-2.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-2.php#L13)
 
-## make\_footer\_3 \{.make\}
+### make\_footer\_3
 
 ```
 apply_filters( 'make_footer_3', $footer_id );
@@ -1121,7 +1121,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-footer-3.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-3.php#L13)
 
-## make\_footer\_4 \{.make\}
+### make\_footer\_4
 
 ```
 apply_filters( 'make_footer_4', $footer_id );
@@ -1141,7 +1141,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-footer-4.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-4.php#L13)
 
-## make\_format\_builder\_format\_models \{.make\}
+### make\_format\_builder\_format\_models
 
 ```
 apply_filters( 'make_format_builder_format_models' );
@@ -1153,7 +1153,7 @@ Format Builder
 
 * [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L294)
 
-## make\_gallery\_class \{.make\}
+### make\_gallery\_class
 
 ```
 apply_filters( 'make_gallery_class', $gallery_class, $ttfmake_section_data, $sections );
@@ -1178,7 +1178,7 @@ Filter the class applied to a gallery.
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L125)
 
-## make\_gallery\_item\_configuration \{.make\}
+### make\_gallery\_item\_configuration
 
 ```
 apply_filters( 'make_gallery_item_configuration' );
@@ -1188,7 +1188,7 @@ apply_filters( 'make_gallery_item_configuration' );
 
 * [inc/builder/sections/builder-templates/gallery-item.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/gallery-item.php#L61)
 
-## make\_generate\_post\_content \{.make\}
+### make\_generate\_post\_content
 
 ```
 apply_filters( 'make_generate_post_content', $post_content, $data );
@@ -1216,7 +1216,7 @@ This content is the full HTML version of the content that will be saved as "post
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L385)
 
-## make\_get\_default \{.make\}
+### make\_get\_default
 
 ```
 apply_filters( 'make_get_default', $default, $option );
@@ -1240,7 +1240,7 @@ Filter the retrieved default value.
 
 * [inc/customizer/helpers-defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-defaults.php#L273)
 
-## make\_get\_exif\_data \{.make\}
+### make\_get\_exif\_data
 
 ```
 apply_filters( 'make_get_exif_data', $output, $attachment_id );
@@ -1264,7 +1264,7 @@ Alter the exif data output.
 
 * [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L576)
 
-## make\_get\_google\_font\_subsets \{.make\}
+### make\_get\_google\_font\_subsets
 
 ```
 apply_filters( 'make_get_google_font_subsets', $subsets );
@@ -1284,7 +1284,7 @@ Filter the list of supported Google Font subsets.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L555)
 
-## make\_get\_google\_font\_uri \{.make\}
+### make\_get\_google\_font\_uri
 
 ```
 apply_filters( 'make_get_google_font_uri', $url );
@@ -1304,7 +1304,7 @@ Filter the Google Fonts URL.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L457)
 
-## make\_get\_google\_fonts \{.make\}
+### make\_get\_google\_fonts
 
 ```
 apply_filters( 'make_get_google_fonts', $fonts );
@@ -1324,7 +1324,7 @@ Allow developers to modify the allowed Google fonts.
 
 * [inc/customizer/google-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/google-fonts.php#L24)
 
-## make\_get\_image \{.make\}
+### make\_get\_image
 
 ```
 apply_filters( 'make_get_image', $return, $image_id, $size );
@@ -1349,7 +1349,7 @@ Filter the image HTML.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L991)
 
-## make\_get\_image\_src \{.make\}
+### make\_get\_image\_src
 
 ```
 apply_filters( 'make_get_image_src', $src, $image_id, $size );
@@ -1374,7 +1374,7 @@ Filter the image source attributes.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1036)
 
-## make\_get\_next\_section\_data \{.make\}
+### make\_get\_next\_section\_data
 
 ```
 apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sections );
@@ -1399,7 +1399,7 @@ Allow developers to alter the "next" section data.
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L518)
 
-## make\_get\_placeholder\_image \{.make\}
+### make\_get\_placeholder\_image
 
 ```
 apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeholder_images );
@@ -1424,7 +1424,7 @@ Filter the image source attributes.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1068)
 
-## make\_get\_section\_data \{.make\}
+### make\_get\_section\_data
 
 ```
 apply_filters( 'make_get_section_data', $ordered_data, $post_id );
@@ -1448,7 +1448,7 @@ Filter the section data for a post.
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L474)
 
-## make\_get\_section\_default \{.make\}
+### make\_get\_section\_default
 
 ```
 apply_filters( 'make_get_section_default', $value, $key, $section_type );
@@ -1473,7 +1473,7 @@ Filter the default section data that is received.
 
 * [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L734)
 
-## make\_get\_section\_name \{.make\}
+### make\_get\_section\_name
 
 ```
 apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
@@ -1498,7 +1498,7 @@ Alter section name.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L952)
 
-## make\_get\_standard\_fonts \{.make\}
+### make\_get\_standard\_fonts
 
 ```
 apply_filters( 'make_get_standard_fonts', $fonts );
@@ -1518,7 +1518,7 @@ Allow for developers to modify the standard fonts.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L704)
 
-## make\_get\_view \{.make\}
+### make\_get\_view
 
 ```
 apply_filters( 'make_get_view', $view, $parent_post_type );
@@ -1542,7 +1542,7 @@ Allow developers to dynamically change the view.
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L296)
 
-## make\_get\_wp\_editor\_id \{.make\}
+### make\_get\_wp\_editor\_id
 
 ```
 apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
@@ -1567,7 +1567,7 @@ Alter the wp\_editor ID.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L920)
 
-## make\_has\_sidebar \{.make\}
+### make\_has\_sidebar
 
 ```
 apply_filters( 'make_has_sidebar', $show_sidebar, $location, $view );
@@ -1592,7 +1592,7 @@ Allow developers to dynamically changed the result of the "has sidebar" check.
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L338)
 
-## make\_insert\_post\_data\_sections \{.make\}
+### make\_insert\_post\_data\_sections
 
 ```
 apply_filters( 'make_insert_post_data_sections', $data );
@@ -1612,7 +1612,7 @@ Filter the section data.
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L308)
 
-## make\_is\_builder\_page \{.make\}
+### make\_is\_builder\_page
 
 ```
 apply_filters( 'make_is_builder_page', $is_builder_page, $post_id );
@@ -1636,7 +1636,7 @@ Allow a developer to dynamically change whether the post uses the builder or not
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L564)
 
-## make\_load\_section\_template \{.make\}
+### make\_load\_section\_template
 
 ```
 apply_filters( 'make_load_section_template', $templates, $slug, $path );
@@ -1661,7 +1661,7 @@ Filter the templates to try and load.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L879)
 
-## make\_parse\_declaration \{.make\}
+### make\_parse\_declaration
 
 ```
 apply_filters( 'make_parse_declaration', $parsed_value, $property, $value, $t, $n );
@@ -1688,7 +1688,7 @@ Filter the final CSS declaration after being parsed.
 
 * [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L268)
 
-## make\_prepare\_data \{.make\}
+### make\_prepare\_data
 
 ```
 apply_filters( 'make_prepare_data', $clean_sections, $sections, $order );
@@ -1713,7 +1713,7 @@ Filter the full set of data for a post.
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L157)
 
-## make\_prepare\_data\_section \{.make\}
+### make\_prepare\_data\_section
 
 ```
 apply_filters( 'make_prepare_data_section', $data, $section_type );
@@ -1741,7 +1741,7 @@ The result of the call\_user\_func\_array() call is an array of data representin
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L141)
 
-## make\_read\_more\_text \{.make\}
+### make\_read\_more\_text
 
 ```
 apply_filters( 'make_read_more_text', $read_more_text );
@@ -1761,7 +1761,7 @@ Filter the value of the read more text.
 
 * [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L164)
 
-## make\_sanitize\_choice \{.make\}
+### make\_sanitize\_choice
 
 ```
 apply_filters( 'make_sanitize_choice', $value, $setting );
@@ -1785,7 +1785,7 @@ Filter the sanitized value.
 
 * [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L36)
 
-## make\_sanitize\_font\_choice \{.make\}
+### make\_sanitize\_font\_choice
 
 ```
 apply_filters( 'make_sanitize_font_choice', $value );
@@ -1805,7 +1805,7 @@ Filter the sanitized font choice.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L596)
 
-## make\_sanitize\_font\_subset \{.make\}
+### make\_sanitize\_font\_subset
 
 ```
 apply_filters( 'make_sanitize_font_subset', $value );
@@ -1825,7 +1825,7 @@ Filter the sanitized subset choice.
 
 * [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L535)
 
-## make\_sanitize\_section\_choice \{.make\}
+### make\_sanitize\_section\_choice
 
 ```
 apply_filters( 'make_sanitize_section_choice', $value, $key, $section_type );
@@ -1850,7 +1850,7 @@ Allow developers to alter a section choice during the sanitization process.
 
 * [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L781)
 
-## make\_sanitize\_text\_allowed\_tags \{.make\}
+### make\_sanitize\_text\_allowed\_tags
 
 ```
 apply_filters( 'make_sanitize_text_allowed_tags', $expandedtags, $string );
@@ -1874,7 +1874,7 @@ Customize the tags and attributes that are allows during text sanitization.
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L148)
 
-## make\_section\_choices \{.make\}
+### make\_section\_choices
 
 ```
 apply_filters( 'make_section_choices', $choices, $key, $section_type );
@@ -1899,7 +1899,7 @@ Filter the section choices.
 
 * [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L705)
 
-## make\_section\_classes \{.make\}
+### make\_section\_classes
 
 ```
 apply_filters( 'make_section_classes', $classes, $current_section );
@@ -1923,7 +1923,7 @@ Filter the section classes.
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L587)
 
-## make\_section\_defaults \{.make\}
+### make\_section\_defaults
 
 ```
 apply_filters( 'make_section_defaults', $defaults );
@@ -1943,7 +1943,7 @@ Filter the section defaults.
 
 * [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L676)
 
-## make\_setting\_choices \{.make\}
+### make\_setting\_choices
 
 ```
 apply_filters( 'make_setting_choices', $choices, $setting );
@@ -1967,7 +1967,7 @@ Filter the setting choices.
 
 * [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L207)
 
-## make\_setting\_defaults \{.make\}
+### make\_setting\_defaults
 
 ```
 apply_filters( 'make_setting_defaults', $defaults );
@@ -1987,7 +1987,7 @@ Filter the default values for the settings.
 
 * [inc/customizer/helpers-defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-defaults.php#L248)
 
-## make\_show\_footer\_credit \{.make\}
+### make\_show\_footer\_credit
 
 ```
 apply_filters( 'make_show_footer_credit', $show );
@@ -2007,7 +2007,7 @@ Allow toggling of the footer credit.
 
 * [partials/footer-credit.php](https://github.com/thethemefoundry/make/blob/master/src/partials/footer-credit.php#L15)
 
-## make\_sidebar\_left \{.make\}
+### make\_sidebar\_left
 
 ```
 apply_filters( 'make_sidebar_left', $footer_id );
@@ -2027,7 +2027,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-left.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-left.php#L13)
 
-## make\_sidebar\_list\_enabled \{.make\}
+### make\_sidebar\_list\_enabled
 
 ```
 apply_filters( 'make_sidebar_list_enabled', $enabled_views, $location );
@@ -2051,7 +2051,7 @@ Filter the list of sidebars that are available for a specific location.
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L421)
 
-## make\_sidebar\_right \{.make\}
+### make\_sidebar\_right
 
 ```
 apply_filters( 'make_sidebar_right', $footer_id );
@@ -2071,7 +2071,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 * [sidebar-right.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-right.php#L13)
 
-## make\_social\_links \{.make\}
+### make\_social\_links
 
 ```
 apply_filters( 'make_social_links', $services_with_links );
@@ -2091,7 +2091,7 @@ Filter the social links added to the site.
 
 * [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L360)
 
-## make\_style\_formats \{.make\}
+### make\_style\_formats
 
 ```
 apply_filters( 'make_style_formats', $style_formats );
@@ -2111,7 +2111,7 @@ Filter the styles that are added to the TinyMCE Formats dropdown.
 
 * [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L417)
 
-## make\_supported\_social\_icons \{.make\}
+### make\_supported\_social\_icons
 
 ```
 apply_filters( 'make_supported_social_icons', $icons );
@@ -2135,7 +2135,7 @@ This array uses the url pattern for the key and the CSS class (as dictated by Fo
 
 * [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L354)
 
-## make\_template\_content\_archive \{.make\}
+### make\_template\_content\_archive
 
 ```
 apply_filters( 'make_template_content_archive', $type, $post );
@@ -2159,7 +2159,7 @@ Allow for changing the template partial.
 
 * [index.php](https://github.com/thethemefoundry/make/blob/master/src/index.php#L25)
 
-## make\_template\_content\_page \{.make\}
+### make\_template\_content\_page
 
 ```
 apply_filters( 'make_template_content_page', $type, $post );
@@ -2183,7 +2183,7 @@ Allow for changing the template partial.
 
 * [page.php](https://github.com/thethemefoundry/make/blob/master/src/page.php#L25)
 
-## make\_template\_content\_search \{.make\}
+### make\_template\_content\_search
 
 ```
 apply_filters( 'make_template_content_search', $type, $post );
@@ -2207,7 +2207,7 @@ Allow for changing the template partial.
 
 * [search.php](https://github.com/thethemefoundry/make/blob/master/src/search.php#L29)
 
-## make\_template\_content\_single \{.make\}
+### make\_template\_content\_single
 
 ```
 apply_filters( 'make_template_content_single', $type, $post );
@@ -2231,7 +2231,7 @@ Allow for changing the template partial.
 
 * [single.php](https://github.com/thethemefoundry/make/blob/master/src/single.php#L25)
 
-## make\_the\_builder\_content \{.make\}
+### make\_the\_builder\_content
 
 ```
 apply_filters( 'make_the_builder_content', $content );
@@ -2251,7 +2251,7 @@ Filter the content used for "post\_content" when the builder is used to generate
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L606)
 
-## make\_will\_be\_builder\_page \{.make\}
+### make\_will\_be\_builder\_page
 
 ```
 apply_filters( 'make_will_be_builder_page', $will_be_builder_page, $template, $use_builder );
@@ -2276,7 +2276,7 @@ Allow developers to dynamically change the builder page status.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L791)
 
-## ttfmake-text-column-classes \{.make\}
+### ttfmake-text-column-classes
 
 ```
 apply_filters( 'ttfmake-text-column-classes' );
@@ -2286,7 +2286,7 @@ apply_filters( 'ttfmake-text-column-classes' );
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L107)
 
-## ttfmake\_builder\_js\_dependencies \{.make\}
+### ttfmake\_builder\_js\_dependencies
 
 ```
 apply_filters( 'ttfmake_builder_js_dependencies', $dependencies );
@@ -2306,7 +2306,7 @@ Filter the dependencies for the Make builder JS.
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L309)
 
-## ttfmake\_builder\_section\_footer\_links \{.make\}
+### ttfmake\_builder\_section\_footer\_links
 
 ```
 apply_filters( 'ttfmake_builder_section_footer_links' );
@@ -2316,7 +2316,7 @@ apply_filters( 'ttfmake_builder_section_footer_links' );
 
 * [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L27)
 
-## ttfmake\_custom\_logo\_information \{.make\}
+### ttfmake\_custom\_logo\_information
 
 ```
 apply_filters( 'ttfmake_custom_logo_information' );
@@ -2326,7 +2326,7 @@ apply_filters( 'ttfmake_custom_logo_information' );
 
 * [inc/customizer/helpers-logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-logo.php#L301)
 
-## ttfmake\_custom\_logo\_max\_width \{.make\}
+### ttfmake\_custom\_logo\_max\_width
 
 ```
 apply_filters( 'ttfmake_custom_logo_max_width' );
@@ -2336,7 +2336,7 @@ apply_filters( 'ttfmake_custom_logo_max_width' );
 
 * [inc/customizer/helpers-logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-logo.php#L314)
 
-## ttfmp\_perpage\_keys \{.make\}
+### ttfmp\_perpage\_keys
 
 ```
 apply_filters( 'ttfmp_perpage_keys' );
@@ -2346,7 +2346,7 @@ apply_filters( 'ttfmp_perpage_keys' );
 
 * [components/per-page/class-options.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/class-options.php#L97)
 
-## ttfmp\_perpage\_post\_types \{.make\}
+### ttfmp\_perpage\_post\_types
 
 ```
 apply_filters( 'ttfmp_perpage_post_types' );
@@ -2356,7 +2356,7 @@ apply_filters( 'ttfmp_perpage_post_types' );
 
 * [components/per-page/class-metabox.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/class-metabox.php#L97)
 
-## ttfmp\_perpage\_view \{.make\}
+### ttfmp\_perpage\_view
 
 ```
 apply_filters( 'ttfmp_perpage_view' );
@@ -2366,7 +2366,7 @@ apply_filters( 'ttfmp_perpage_view' );
 
 * [components/per-page/per-page.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/per-page.php#L132)
 
-## ttfmp\_post\_list\_output \{.make\}
+### ttfmp\_post\_list\_output
 
 ```
 apply_filters( 'ttfmp_post_list_output' );
@@ -2376,7 +2376,7 @@ apply_filters( 'ttfmp_post_list_output' );
 
 * [components/post-list/post-list.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/post-list.php#L298)
 
-## ttfmp\_post\_list\_template\_paths \{.make\}
+### ttfmp\_post\_list\_template\_paths
 
 ```
 apply_filters( 'ttfmp_post_list_template_paths' );
@@ -2386,7 +2386,7 @@ apply_filters( 'ttfmp_post_list_template_paths' );
 
 * [components/post-list/post-list.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/post-list.php#L237)
 
-## ttfmp\_posts\_list\_thumbnail\_size \{.make\}
+### ttfmp\_posts\_list\_thumbnail\_size
 
 ```
 apply_filters( 'ttfmp_posts_list_thumbnail_size' );
@@ -2396,7 +2396,7 @@ apply_filters( 'ttfmp_posts_list_thumbnail_size' );
 
 * [components/post-list/templates/post-list-item.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/templates/post-list-item.php#L9)
 
-## ttfmp\_shop\_layout\_product\_description \{.make\}
+### ttfmp\_shop\_layout\_product\_description
 
 ```
 apply_filters( 'ttfmp_shop_layout_product_description' );
@@ -2406,7 +2406,7 @@ apply_filters( 'ttfmp_shop_layout_product_description' );
 
 * [shared/shop-settings/layout-product.php](https://github.com/thethemefoundry/make/blob/master/src/shared/shop-settings/layout-product.php#L20)
 
-## ttfmp\_shop\_layout\_shop\_description \{.make\}
+### ttfmp\_shop\_layout\_shop\_description
 
 ```
 apply_filters( 'ttfmp_shop_layout_shop_description' );
@@ -2416,7 +2416,7 @@ apply_filters( 'ttfmp_shop_layout_shop_description' );
 
 * [shared/shop-settings/layout-shop.php](https://github.com/thethemefoundry/make/blob/master/src/shared/shop-settings/layout-shop.php#L20)
 
-## ttfmp\_style\_kit\_definitions \{.make\}
+### ttfmp\_style\_kit\_definitions
 
 ```
 apply_filters( 'ttfmp_style_kit_definitions' );
@@ -2426,7 +2426,7 @@ apply_filters( 'ttfmp_style_kit_definitions' );
 
 * [components/style-kits/definitions.php](https://github.com/thethemefoundry/make/blob/master/src/components/style-kits/definitions.php#L420)
 
-## ttfmp\_woocommerce\_product\_grid\_output \{.make\}
+### ttfmp\_woocommerce\_product\_grid\_output
 
 ```
 apply_filters( 'ttfmp_woocommerce_product_grid_output' );
@@ -2436,7 +2436,7 @@ apply_filters( 'ttfmp_woocommerce_product_grid_output' );
 
 * [components/woocommerce/class-shortcode.php](https://github.com/thethemefoundry/make/blob/master/src/components/woocommerce/class-shortcode.php#L305)
 
-## ttfmp\_woocommerce\_product\_grid\_query\_args \{.make\}
+### ttfmp\_woocommerce\_product\_grid\_query\_args
 
 ```
 apply_filters( 'ttfmp_woocommerce_product_grid_query_args' );
