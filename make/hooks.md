@@ -2344,7 +2344,7 @@ apply_filters( 'ttfmp_perpage_keys' );
 
 ### Source
 
-* [components/per-page/class-options.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/class-options.php#L97)
+* components/per-page/class-options.php, line 100
 
 ## ttfmp\_perpage\_post\_types
 
@@ -2354,7 +2354,7 @@ apply_filters( 'ttfmp_perpage_post_types' );
 
 ### Source
 
-* [components/per-page/class-metabox.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/class-metabox.php#L97)
+* components/per-page/class-metabox.php, line 100
 
 ## ttfmp\_perpage\_view
 
@@ -2364,7 +2364,7 @@ apply_filters( 'ttfmp_perpage_view' );
 
 ### Source
 
-* [components/per-page/per-page.php](https://github.com/thethemefoundry/make/blob/master/src/components/per-page/per-page.php#L132)
+* components/per-page/per-page.php, line 135
 
 ## ttfmp\_post\_list\_output
 
@@ -2374,7 +2374,7 @@ apply_filters( 'ttfmp_post_list_output' );
 
 ### Source
 
-* [components/post-list/post-list.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/post-list.php#L298)
+* components/post-list/post-list.php, line 301
 
 ## ttfmp\_post\_list\_template\_paths
 
@@ -2384,7 +2384,7 @@ apply_filters( 'ttfmp_post_list_template_paths' );
 
 ### Source
 
-* [components/post-list/post-list.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/post-list.php#L237)
+* components/post-list/post-list.php, line 240
 
 ## ttfmp\_posts\_list\_thumbnail\_size
 
@@ -2394,7 +2394,7 @@ apply_filters( 'ttfmp_posts_list_thumbnail_size' );
 
 ### Source
 
-* [components/post-list/templates/post-list-item.php](https://github.com/thethemefoundry/make/blob/master/src/components/post-list/templates/post-list-item.php#L9)
+* components/post-list/templates/post-list-item.php, line 13
 
 ## ttfmp\_shop\_layout\_product\_description
 
@@ -2404,7 +2404,7 @@ apply_filters( 'ttfmp_shop_layout_product_description' );
 
 ### Source
 
-* [shared/shop-settings/layout-product.php](https://github.com/thethemefoundry/make/blob/master/src/shared/shop-settings/layout-product.php#L20)
+* shared/shop-settings/layout-product.php, line 23
 
 ## ttfmp\_shop\_layout\_shop\_description
 
@@ -2414,7 +2414,7 @@ apply_filters( 'ttfmp_shop_layout_shop_description' );
 
 ### Source
 
-* [shared/shop-settings/layout-shop.php](https://github.com/thethemefoundry/make/blob/master/src/shared/shop-settings/layout-shop.php#L20)
+* shared/shop-settings/layout-shop.php, line 23
 
 ## ttfmp\_style\_kit\_definitions
 
@@ -2424,7 +2424,7 @@ apply_filters( 'ttfmp_style_kit_definitions' );
 
 ### Source
 
-* [components/style-kits/definitions.php](https://github.com/thethemefoundry/make/blob/master/src/components/style-kits/definitions.php#L420)
+* components/style-kits/definitions.php, line 423
 
 ## ttfmp\_woocommerce\_product\_grid\_output
 
@@ -2434,7 +2434,7 @@ apply_filters( 'ttfmp_woocommerce_product_grid_output' );
 
 ### Source
 
-* [components/woocommerce/class-shortcode.php](https://github.com/thethemefoundry/make/blob/master/src/components/woocommerce/class-shortcode.php#L305)
+* components/woocommerce/class-shortcode.php, line 308
 
 ## ttfmp\_woocommerce\_product\_grid\_query\_args
 
@@ -2444,5 +2444,5 @@ apply_filters( 'ttfmp_woocommerce_product_grid_query_args' );
 
 ### Source
 
-* [components/woocommerce/class-shortcode.php](https://github.com/thethemefoundry/make/blob/master/src/components/woocommerce/class-shortcode.php#L192)
+* components/woocommerce/class-shortcode.php, line 195
 
