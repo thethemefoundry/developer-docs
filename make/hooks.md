@@ -2,7 +2,7 @@
 
 ## make\_after\_builder\_menu
 
-```
+```php
 do_action( 'make_after_builder_menu' );
 ```
 
@@ -18,7 +18,7 @@ Execute code after the builder menu is displayed.
 
 ## make\_after\_builder\_stage
 
-```
+```php
 do_action( 'make_after_builder_stage' );
 ```
 
@@ -34,7 +34,7 @@ Execute code after the builder stage is displayed.
 
 ## make\_before\_builder\_menu
 
-```
+```php
 do_action( 'make_before_builder_menu' );
 ```
 
@@ -50,7 +50,7 @@ Execute code before the builder menu is displayed.
 
 ## make\_before\_builder\_stage
 
-```
+```php
 do_action( 'make_before_builder_stage' );
 ```
 
@@ -66,7 +66,7 @@ Execute code before the builder stage is displayed.
 
 ## make\_before\_section\_header
 
-```
+```php
 do_action( 'make_before_section_header' );
 ```
 
@@ -82,7 +82,7 @@ Execute code before the section header is displayed.
 
 ## make\_builder\_data\_saved
 
-```
+```php
 do_action( 'make_builder_data_saved', $sections, $post_id );
 ```
 
@@ -107,7 +107,7 @@ While it is possible to use a "save\_post" to hook into the save routine, this a
 
 ## make\_builder\_{$data\['section-type'\]}\_css
 
-```
+```php
 do_action( 'make_builder_{$data['section-type']}_css', $data, $id );
 ```
 
@@ -128,7 +128,7 @@ Allow section-specific CSS rules to be added to the document head of a Builder p
 
 ## make\_css
 
-```
+```php
 do_action( 'make_css' );
 ```
 
@@ -148,7 +148,7 @@ This hook is the correct hook to use for adding CSS styles to the group of selec
 
 ## make\_section\_text\_after\_column
 
-```
+```php
 do_action( 'make_section_text_after_column', $ttfmake_section_data );
 ```
 
@@ -168,7 +168,7 @@ Execute code after an individual text column is displayed.
 
 ## make\_section\_text\_after\_columns
 
-```
+```php
 do_action( 'make_section_text_after_columns', $ttfmake_section_data );
 ```
 
@@ -188,7 +188,7 @@ Execute code after all columns are displayed.
 
 ## make\_section\_text\_after\_columns\_select
 
-```
+```php
 do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
 ```
 
@@ -208,7 +208,7 @@ Execute code after the columns select input is displayed.
 
 ## make\_section\_text\_after\_title
 
-```
+```php
 do_action( 'make_section_text_after_title', $ttfmake_section_data );
 ```
 
@@ -228,7 +228,7 @@ Execute code after the section title is displayed.
 
 ## make\_section\_text\_before\_column
 
-```
+```php
 do_action( 'make_section_text_before_column', $ttfmake_section_data );
 ```
 
@@ -248,7 +248,7 @@ Execute code before an individual text column is displayed.
 
 ## make\_section\_text\_before\_columns\_select
 
-```
+```php
 do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
 ```
 
@@ -268,7 +268,7 @@ Execute code before the columns select input is displayed.
 
 ## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_after
 
-```
+```php
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_after', $ttfmake_section_data );
 ```
 
@@ -292,7 +292,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 ## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before
 
-```
+```php
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_before', $ttfmake_section_data );
 ```
 
@@ -318,7 +318,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 ## make\_add\_section
 
-```
+```php
 apply_filters( 'make_add_section', $section );
 ```
 
@@ -342,7 +342,7 @@ This filters allows for dynamically altering sections as they get added. This ca
 
 ## make\_all\_font\_choices
 
-```
+```php
 apply_filters( 'make_all_font_choices', $choices );
 ```
 
@@ -362,7 +362,7 @@ Allow for developers to modify the full list of fonts.
 
 ## make\_all\_fonts
 
-```
+```php
 apply_filters( 'make_all_fonts', $fonts );
 ```
 
@@ -382,7 +382,7 @@ Allow for developers to modify the full list of fonts.
 
 ## make\_banner\_slide\_configuration
 
-```
+```php
 apply_filters( 'make_banner_slide_configuration' );
 ```
 
@@ -392,7 +392,7 @@ apply_filters( 'make_banner_slide_configuration' );
 
 ## make\_builder\_banner\_class
 
-```
+```php
 apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data );
 ```
 
@@ -416,7 +416,7 @@ Filter the class for the banner section.
 
 ## make\_builder\_banner\_slide\_class
 
-```
+```php
 apply_filters( 'make_builder_banner_slide_class', $slide_class );
 ```
 
@@ -436,7 +436,7 @@ Allow developers to alter the class for the banner slide.
 
 ## make\_builder\_banner\_slide\_style
 
-```
+```php
 apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake_section_data );
 ```
 
@@ -461,7 +461,7 @@ Allow developers to change the CSS for a Banner section.
 
 ## make\_builder\_get\_banner\_array
 
-```
+```php
 apply_filters( 'make_builder_get_banner_array', $banner_array, $ttfmake_section_data );
 ```
 
@@ -485,7 +485,7 @@ Filter the data array for a banner section.
 
 ## make\_builder\_get\_banner\_slider\_atts
 
-```
+```php
 apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake_section_data );
 ```
 
@@ -509,7 +509,7 @@ Allow for altering the banner slider attributes.
 
 ## make\_builder\_get\_gallery\_array
 
-```
+```php
 apply_filters( 'make_builder_get_gallery_array', $gallery_array, $ttfmake_section_data );
 ```
 
@@ -533,7 +533,7 @@ Filter the gallery item data.
 
 ## make\_builder\_get\_gallery\_item\_class
 
-```
+```php
 apply_filters( 'make_builder_get_gallery_item_class', $gallery_class, $item, $ttfmake_section_data, $i );
 ```
 
@@ -559,7 +559,7 @@ Filter the class used for a gallery item.
 
 ## make\_builder\_get\_gallery\_item\_image
 
-```
+```php
 apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
 ```
 
@@ -584,7 +584,7 @@ Alter the generated gallery image.
 
 ## make\_builder\_get\_gallery\_style
 
-```
+```php
 apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_section_data );
 ```
 
@@ -608,7 +608,7 @@ Filter the style added to a gallery section.
 
 ## make\_builder\_get\_text\_array
 
-```
+```php
 apply_filters( 'make_builder_get_text_array', $columns_array, $ttfmake_section_data );
 ```
 
@@ -632,7 +632,7 @@ Filter the array of builder data for the text section.
 
 ## make\_builder\_get\_text\_class
 
-```
+```php
 apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data, $sections );
 ```
 
@@ -657,7 +657,7 @@ Filter the text section class.
 
 ## make\_builder\_is\_section\_type
 
-```
+```php
 apply_filters( 'make_builder_is_section_type', $is_section_type, $type, $data );
 ```
 
@@ -682,7 +682,7 @@ Allow developers to alter if a set of data is a specified section type.
 
 ## make\_builder\_section\_links
 
-```
+```php
 apply_filters( 'make_builder_section_links' );
 ```
 
@@ -692,7 +692,7 @@ apply_filters( 'make_builder_section_links' );
 
 ## make\_column\_buttons
 
-```
+```php
 apply_filters( 'make_column_buttons', $column_buttons, $ttfmake_section_data );
 ```
 
@@ -716,7 +716,7 @@ Filter the buttons added to a text column.
 
 ## make\_column\_configuration
 
-```
+```php
 apply_filters( 'make_column_configuration' );
 ```
 
@@ -726,7 +726,7 @@ apply_filters( 'make_column_configuration' );
 
 ## make\_configuration\_overlay\_input
 
-```
+```php
 apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section_data );
 ```
 
@@ -751,7 +751,7 @@ Filter the HTML for the input.
 
 ## make\_configuration\_overlay\_input\_wrap
 
-```
+```php
 apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $section_data );
 ```
 
@@ -776,7 +776,7 @@ Filter the wrapped used for the inputs.
 
 ## make\_css\_add
 
-```
+```php
 apply_filters( 'make_css_add', $data );
 ```
 
@@ -796,7 +796,7 @@ Filter CSS as it is registered.
 
 ## make\_css\_font\_properties
 
-```
+```php
 apply_filters( 'make_css_font_properties' );
 ```
 
@@ -808,7 +808,7 @@ Body
 
 ## make\_css\_parse\_declarations
 
-```
+```php
 apply_filters( 'make_css_parse_declarations', $output, $declarations, $tab );
 ```
 
@@ -833,7 +833,7 @@ Filter the full list of parsed declarations.
 
 ## make\_customizer\_colorscheme\_sections
 
-```
+```php
 apply_filters( 'make_customizer_colorscheme_sections' );
 ```
 
@@ -845,7 +845,7 @@ Footer
 
 ## make\_customizer\_contentlayout\_sections
 
-```
+```php
 apply_filters( 'make_customizer_contentlayout_sections' );
 ```
 
@@ -857,7 +857,7 @@ Pages
 
 ## make\_customizer\_footer\_sections
 
-```
+```php
 apply_filters( 'make_customizer_footer_sections' );
 ```
 
@@ -869,7 +869,7 @@ White Label
 
 ## make\_customizer\_general\_sections
 
-```
+```php
 apply_filters( 'make_customizer_general_sections' );
 ```
 
@@ -881,7 +881,7 @@ Social Profiles & RSS
 
 ## make\_customizer\_header\_sections
 
-```
+```php
 apply_filters( 'make_customizer_header_sections' );
 ```
 
@@ -893,7 +893,7 @@ Layout
 
 ## make\_customizer\_key\_conversions
 
-```
+```php
 apply_filters( 'make_customizer_key_conversions' );
 ```
 
@@ -905,7 +905,7 @@ Sets are defined by the theme version they pertain to: $theme\_version => array 
 
 ## make\_customizer\_panels
 
-```
+```php
 apply_filters( 'make_customizer_panels' );
 ```
 
@@ -915,7 +915,7 @@ apply_filters( 'make_customizer_panels' );
 
 ## make\_customizer\_sections
 
-```
+```php
 apply_filters( 'make_customizer_sections' );
 ```
 
@@ -925,7 +925,7 @@ apply_filters( 'make_customizer_sections' );
 
 ## make\_customizer\_typography\_sections
 
-```
+```php
 apply_filters( 'make_customizer_typography_sections' );
 ```
 
@@ -937,7 +937,7 @@ Headers & Body
 
 ## make\_exif\_aperture
 
-```
+```php
 apply_filters( 'make_exif_aperture', $f_stop, $raw_aperture );
 ```
 
@@ -961,7 +961,7 @@ Filter the aperture value.
 
 ## make\_exif\_shutter\_speed
 
-```
+```php
 apply_filters( 'make_exif_shutter_speed', $converted_as, $raw_shutter_speed );
 ```
 
@@ -985,7 +985,7 @@ Filter the shutter speed value.
 
 ## make\_fitvids\_custom\_selectors
 
-```
+```php
 apply_filters( 'make_fitvids_custom_selectors', $selector_array );
 ```
 
@@ -1005,7 +1005,7 @@ Allow for changing of the selectors that are used to apply FitVids.
 
 ## make\_font\_relative\_size
 
-```
+```php
 apply_filters( 'make_font_relative_size' );
 ```
 
@@ -1015,7 +1015,7 @@ apply_filters( 'make_font_relative_size' );
 
 ## make\_font\_stack
 
-```
+```php
 apply_filters( 'make_font_stack', $stack, $font );
 ```
 
@@ -1039,7 +1039,7 @@ Allow developers to filter the full font stack.
 
 ## make\_font\_variants
 
-```
+```php
 apply_filters( 'make_font_variants', $variants, $font );
 ```
 
@@ -1063,7 +1063,7 @@ Allow developers to alter the font variant choice.
 
 ## make\_footer\_1
 
-```
+```php
 apply_filters( 'make_footer_1', $footer_id );
 ```
 
@@ -1083,7 +1083,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_footer\_2
 
-```
+```php
 apply_filters( 'make_footer_2', $footer_id );
 ```
 
@@ -1103,7 +1103,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_footer\_3
 
-```
+```php
 apply_filters( 'make_footer_3', $footer_id );
 ```
 
@@ -1123,7 +1123,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_footer\_4
 
-```
+```php
 apply_filters( 'make_footer_4', $footer_id );
 ```
 
@@ -1143,7 +1143,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_format\_builder\_format\_models
 
-```
+```php
 apply_filters( 'make_format_builder_format_models' );
 ```
 
@@ -1155,7 +1155,7 @@ Format Builder
 
 ## make\_gallery\_class
 
-```
+```php
 apply_filters( 'make_gallery_class', $gallery_class, $ttfmake_section_data, $sections );
 ```
 
@@ -1180,7 +1180,7 @@ Filter the class applied to a gallery.
 
 ## make\_gallery\_item\_configuration
 
-```
+```php
 apply_filters( 'make_gallery_item_configuration' );
 ```
 
@@ -1190,7 +1190,7 @@ apply_filters( 'make_gallery_item_configuration' );
 
 ## make\_generate\_post\_content
 
-```
+```php
 apply_filters( 'make_generate_post_content', $post_content, $data );
 ```
 
@@ -1218,7 +1218,7 @@ This content is the full HTML version of the content that will be saved as "post
 
 ## make\_get\_default
 
-```
+```php
 apply_filters( 'make_get_default', $default, $option );
 ```
 
@@ -1242,7 +1242,7 @@ Filter the retrieved default value.
 
 ## make\_get\_exif\_data
 
-```
+```php
 apply_filters( 'make_get_exif_data', $output, $attachment_id );
 ```
 
@@ -1266,7 +1266,7 @@ Alter the exif data output.
 
 ## make\_get\_google\_font\_subsets
 
-```
+```php
 apply_filters( 'make_get_google_font_subsets', $subsets );
 ```
 
@@ -1286,7 +1286,7 @@ Filter the list of supported Google Font subsets.
 
 ## make\_get\_google\_font\_uri
 
-```
+```php
 apply_filters( 'make_get_google_font_uri', $url );
 ```
 
@@ -1306,7 +1306,7 @@ Filter the Google Fonts URL.
 
 ## make\_get\_google\_fonts
 
-```
+```php
 apply_filters( 'make_get_google_fonts', $fonts );
 ```
 
@@ -1326,7 +1326,7 @@ Allow developers to modify the allowed Google fonts.
 
 ## make\_get\_image
 
-```
+```php
 apply_filters( 'make_get_image', $return, $image_id, $size );
 ```
 
@@ -1351,7 +1351,7 @@ Filter the image HTML.
 
 ## make\_get\_image\_src
 
-```
+```php
 apply_filters( 'make_get_image_src', $src, $image_id, $size );
 ```
 
@@ -1376,7 +1376,7 @@ Filter the image source attributes.
 
 ## make\_get\_next\_section\_data
 
-```
+```php
 apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sections );
 ```
 
@@ -1401,7 +1401,7 @@ Allow developers to alter the "next" section data.
 
 ## make\_get\_placeholder\_image
 
-```
+```php
 apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeholder_images );
 ```
 
@@ -1426,7 +1426,7 @@ Filter the image source attributes.
 
 ## make\_get\_section\_data
 
-```
+```php
 apply_filters( 'make_get_section_data', $ordered_data, $post_id );
 ```
 
@@ -1450,7 +1450,7 @@ Filter the section data for a post.
 
 ## make\_get\_section\_default
 
-```
+```php
 apply_filters( 'make_get_section_default', $value, $key, $section_type );
 ```
 
@@ -1475,7 +1475,7 @@ Filter the default section data that is received.
 
 ## make\_get\_section\_name
 
-```
+```php
 apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
 ```
 
@@ -1500,7 +1500,7 @@ Alter section name.
 
 ## make\_get\_standard\_fonts
 
-```
+```php
 apply_filters( 'make_get_standard_fonts', $fonts );
 ```
 
@@ -1520,7 +1520,7 @@ Allow for developers to modify the standard fonts.
 
 ## make\_get\_view
 
-```
+```php
 apply_filters( 'make_get_view', $view, $parent_post_type );
 ```
 
@@ -1544,7 +1544,7 @@ Allow developers to dynamically change the view.
 
 ## make\_get\_wp\_editor\_id
 
-```
+```php
 apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
 ```
 
@@ -1569,7 +1569,7 @@ Alter the wp\_editor ID.
 
 ## make\_has\_sidebar
 
-```
+```php
 apply_filters( 'make_has_sidebar', $show_sidebar, $location, $view );
 ```
 
@@ -1594,7 +1594,7 @@ Allow developers to dynamically changed the result of the "has sidebar" check.
 
 ## make\_insert\_post\_data\_sections
 
-```
+```php
 apply_filters( 'make_insert_post_data_sections', $data );
 ```
 
@@ -1614,7 +1614,7 @@ Filter the section data.
 
 ## make\_is\_builder\_page
 
-```
+```php
 apply_filters( 'make_is_builder_page', $is_builder_page, $post_id );
 ```
 
@@ -1638,7 +1638,7 @@ Allow a developer to dynamically change whether the post uses the builder or not
 
 ## make\_load\_section\_template
 
-```
+```php
 apply_filters( 'make_load_section_template', $templates, $slug, $path );
 ```
 
@@ -1663,7 +1663,7 @@ Filter the templates to try and load.
 
 ## make\_parse\_declaration
 
-```
+```php
 apply_filters( 'make_parse_declaration', $parsed_value, $property, $value, $t, $n );
 ```
 
@@ -1690,7 +1690,7 @@ Filter the final CSS declaration after being parsed.
 
 ## make\_prepare\_data
 
-```
+```php
 apply_filters( 'make_prepare_data', $clean_sections, $sections, $order );
 ```
 
@@ -1715,7 +1715,7 @@ Filter the full set of data for a post.
 
 ## make\_prepare\_data\_section
 
-```
+```php
 apply_filters( 'make_prepare_data_section', $data, $section_type );
 ```
 
@@ -1743,7 +1743,7 @@ The result of the call\_user\_func\_array() call is an array of data representin
 
 ## make\_read\_more\_text
 
-```
+```php
 apply_filters( 'make_read_more_text', $read_more_text );
 ```
 
@@ -1763,7 +1763,7 @@ Filter the value of the read more text.
 
 ## make\_sanitize\_choice
 
-```
+```php
 apply_filters( 'make_sanitize_choice', $value, $setting );
 ```
 
@@ -1787,7 +1787,7 @@ Filter the sanitized value.
 
 ## make\_sanitize\_font\_choice
 
-```
+```php
 apply_filters( 'make_sanitize_font_choice', $value );
 ```
 
@@ -1807,7 +1807,7 @@ Filter the sanitized font choice.
 
 ## make\_sanitize\_font\_subset
 
-```
+```php
 apply_filters( 'make_sanitize_font_subset', $value );
 ```
 
@@ -1827,7 +1827,7 @@ Filter the sanitized subset choice.
 
 ## make\_sanitize\_section\_choice
 
-```
+```php
 apply_filters( 'make_sanitize_section_choice', $value, $key, $section_type );
 ```
 
@@ -1852,7 +1852,7 @@ Allow developers to alter a section choice during the sanitization process.
 
 ## make\_sanitize\_text\_allowed\_tags
 
-```
+```php
 apply_filters( 'make_sanitize_text_allowed_tags', $expandedtags, $string );
 ```
 
@@ -1876,7 +1876,7 @@ Customize the tags and attributes that are allows during text sanitization.
 
 ## make\_section\_choices
 
-```
+```php
 apply_filters( 'make_section_choices', $choices, $key, $section_type );
 ```
 
@@ -1901,7 +1901,7 @@ Filter the section choices.
 
 ## make\_section\_classes
 
-```
+```php
 apply_filters( 'make_section_classes', $classes, $current_section );
 ```
 
@@ -1925,7 +1925,7 @@ Filter the section classes.
 
 ## make\_section\_defaults
 
-```
+```php
 apply_filters( 'make_section_defaults', $defaults );
 ```
 
@@ -1945,7 +1945,7 @@ Filter the section defaults.
 
 ## make\_setting\_choices
 
-```
+```php
 apply_filters( 'make_setting_choices', $choices, $setting );
 ```
 
@@ -1969,7 +1969,7 @@ Filter the setting choices.
 
 ## make\_setting\_defaults
 
-```
+```php
 apply_filters( 'make_setting_defaults', $defaults );
 ```
 
@@ -1989,7 +1989,7 @@ Filter the default values for the settings.
 
 ## make\_show\_footer\_credit
 
-```
+```php
 apply_filters( 'make_show_footer_credit', $show );
 ```
 
@@ -2009,7 +2009,7 @@ Allow toggling of the footer credit.
 
 ## make\_sidebar\_left
 
-```
+```php
 apply_filters( 'make_sidebar_left', $footer_id );
 ```
 
@@ -2029,7 +2029,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_sidebar\_list\_enabled
 
-```
+```php
 apply_filters( 'make_sidebar_list_enabled', $enabled_views, $location );
 ```
 
@@ -2053,7 +2053,7 @@ Filter the list of sidebars that are available for a specific location.
 
 ## make\_sidebar\_right
 
-```
+```php
 apply_filters( 'make_sidebar_right', $footer_id );
 ```
 
@@ -2073,7 +2073,7 @@ Filter the sidebar ID to allow developers to programmatically change the sidebar
 
 ## make\_social\_links
 
-```
+```php
 apply_filters( 'make_social_links', $services_with_links );
 ```
 
@@ -2093,7 +2093,7 @@ Filter the social links added to the site.
 
 ## make\_style\_formats
 
-```
+```php
 apply_filters( 'make_style_formats', $style_formats );
 ```
 
@@ -2113,7 +2113,7 @@ Filter the styles that are added to the TinyMCE Formats dropdown.
 
 ## make\_supported\_social\_icons
 
-```
+```php
 apply_filters( 'make_supported_social_icons', $icons );
 ```
 
@@ -2137,7 +2137,7 @@ This array uses the url pattern for the key and the CSS class (as dictated by Fo
 
 ## make\_template\_content\_archive
 
-```
+```php
 apply_filters( 'make_template_content_archive', $type, $post );
 ```
 
@@ -2161,7 +2161,7 @@ Allow for changing the template partial.
 
 ## make\_template\_content\_page
 
-```
+```php
 apply_filters( 'make_template_content_page', $type, $post );
 ```
 
@@ -2185,7 +2185,7 @@ Allow for changing the template partial.
 
 ## make\_template\_content\_search
 
-```
+```php
 apply_filters( 'make_template_content_search', $type, $post );
 ```
 
@@ -2209,7 +2209,7 @@ Allow for changing the template partial.
 
 ## make\_template\_content\_single
 
-```
+```php
 apply_filters( 'make_template_content_single', $type, $post );
 ```
 
@@ -2233,7 +2233,7 @@ Allow for changing the template partial.
 
 ## make\_the\_builder\_content
 
-```
+```php
 apply_filters( 'make_the_builder_content', $content );
 ```
 
@@ -2253,7 +2253,7 @@ Filter the content used for "post\_content" when the builder is used to generate
 
 ## make\_will\_be\_builder\_page
 
-```
+```php
 apply_filters( 'make_will_be_builder_page', $will_be_builder_page, $template, $use_builder );
 ```
 
@@ -2278,7 +2278,7 @@ Allow developers to dynamically change the builder page status.
 
 ## ttfmake-text-column-classes
 
-```
+```php
 apply_filters( 'ttfmake-text-column-classes' );
 ```
 
@@ -2288,7 +2288,7 @@ apply_filters( 'ttfmake-text-column-classes' );
 
 ## ttfmake\_builder\_js\_dependencies
 
-```
+```php
 apply_filters( 'ttfmake_builder_js_dependencies', $dependencies );
 ```
 
@@ -2308,7 +2308,7 @@ Filter the dependencies for the Make builder JS.
 
 ## ttfmake\_builder\_section\_footer\_links
 
-```
+```php
 apply_filters( 'ttfmake_builder_section_footer_links' );
 ```
 
@@ -2318,7 +2318,7 @@ apply_filters( 'ttfmake_builder_section_footer_links' );
 
 ## ttfmake\_custom\_logo\_information
 
-```
+```php
 apply_filters( 'ttfmake_custom_logo_information' );
 ```
 
@@ -2328,7 +2328,7 @@ apply_filters( 'ttfmake_custom_logo_information' );
 
 ## ttfmake\_custom\_logo\_max\_width
 
-```
+```php
 apply_filters( 'ttfmake_custom_logo_max_width' );
 ```
 
@@ -2338,7 +2338,7 @@ apply_filters( 'ttfmake_custom_logo_max_width' );
 
 ## ttfmp\_perpage\_keys
 
-```
+```php
 apply_filters( 'ttfmp_perpage_keys' );
 ```
 
@@ -2348,7 +2348,7 @@ apply_filters( 'ttfmp_perpage_keys' );
 
 ## ttfmp\_perpage\_post\_types
 
-```
+```php
 apply_filters( 'ttfmp_perpage_post_types' );
 ```
 
@@ -2358,7 +2358,7 @@ apply_filters( 'ttfmp_perpage_post_types' );
 
 ## ttfmp\_perpage\_view
 
-```
+```php
 apply_filters( 'ttfmp_perpage_view' );
 ```
 
@@ -2368,7 +2368,7 @@ apply_filters( 'ttfmp_perpage_view' );
 
 ## ttfmp\_post\_list\_output
 
-```
+```php
 apply_filters( 'ttfmp_post_list_output' );
 ```
 
@@ -2378,7 +2378,7 @@ apply_filters( 'ttfmp_post_list_output' );
 
 ## ttfmp\_post\_list\_template\_paths
 
-```
+```php
 apply_filters( 'ttfmp_post_list_template_paths' );
 ```
 
@@ -2388,7 +2388,7 @@ apply_filters( 'ttfmp_post_list_template_paths' );
 
 ## ttfmp\_posts\_list\_thumbnail\_size
 
-```
+```php
 apply_filters( 'ttfmp_posts_list_thumbnail_size' );
 ```
 
@@ -2398,7 +2398,7 @@ apply_filters( 'ttfmp_posts_list_thumbnail_size' );
 
 ## ttfmp\_shop\_layout\_product\_description
 
-```
+```php
 apply_filters( 'ttfmp_shop_layout_product_description' );
 ```
 
@@ -2408,7 +2408,7 @@ apply_filters( 'ttfmp_shop_layout_product_description' );
 
 ## ttfmp\_shop\_layout\_shop\_description
 
-```
+```php
 apply_filters( 'ttfmp_shop_layout_shop_description' );
 ```
 
@@ -2418,7 +2418,7 @@ apply_filters( 'ttfmp_shop_layout_shop_description' );
 
 ## ttfmp\_style\_kit\_definitions
 
-```
+```php
 apply_filters( 'ttfmp_style_kit_definitions' );
 ```
 
@@ -2428,7 +2428,7 @@ apply_filters( 'ttfmp_style_kit_definitions' );
 
 ## ttfmp\_woocommerce\_product\_grid\_output
 
-```
+```php
 apply_filters( 'ttfmp_woocommerce_product_grid_output' );
 ```
 
@@ -2438,7 +2438,7 @@ apply_filters( 'ttfmp_woocommerce_product_grid_output' );
 
 ## ttfmp\_woocommerce\_product\_grid\_query\_args
 
-```
+```php
 apply_filters( 'ttfmp_woocommerce_product_grid_query_args' );
 ```
 
