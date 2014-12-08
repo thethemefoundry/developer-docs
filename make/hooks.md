@@ -1,4 +1,4 @@
-# Actions (16)
+# Actions
 
 ## make\_after\_builder\_menu
 
@@ -314,7 +314,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 * [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L817)
 
-# Filters (109)
+# Filters
 
 ## make\_add\_section
 
