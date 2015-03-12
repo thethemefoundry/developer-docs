@@ -124,7 +124,7 @@ Allow section-specific CSS rules to be added to the document head of a Builder p
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L592)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L854)
 
 ## make\_css
 
@@ -144,7 +144,7 @@ This hook is the correct hook to use for adding CSS styles to the group of selec
 
 ### Source
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L585)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L603)
 
 ## make\_section\_text\_after\_column
 
@@ -288,7 +288,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L846)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L788)
 
 ## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before
 
@@ -312,7 +312,7 @@ This action is a variable action that allows a developer to hook into specific s
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L817)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L759)
 
 # Filters
 
@@ -358,7 +358,7 @@ Allow for developers to modify the full list of fonts.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L656)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L283)
 
 ## make\_all\_fonts
 
@@ -378,7 +378,7 @@ Allow for developers to modify the full list of fonts.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L702)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L359)
 
 ## make\_banner\_slide\_configuration
 
@@ -847,7 +847,7 @@ Filter CSS as it is registered.
 
 ### Source
 
-* [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L122)
+* [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L121)
 
 ## make\_css\_font\_properties
 
@@ -871,7 +871,7 @@ css\_property => sanitize\_callback
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L272)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L514)
 
 ## make\_css\_parse\_declarations
 
@@ -896,7 +896,51 @@ Filter the full list of parsed declarations.
 
 ### Source
 
-* [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L280)
+* [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L279)
+
+## make\_customizer\_background\_image\_group\_definitions
+
+```php
+apply_filters( 'make_customizer_background_image_group_definitions', $definitions, $region );
+```
+
+Filter the Customizer's background image control definitions.
+
+### Returns
+
+* **$definitions**: _(array)_ Array of Customizer options and their setting and control definitions.
+
+### Other parameters
+
+* **$region**: _(string)_ The site region that the background image properties will apply to.
+
+### Changelog
+
+* **Since**: 1.5.0.
+
+### Source
+
+* [inc/customizer/sections/background-images.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/background-images.php#L136)
+
+## make\_customizer\_background\_sections
+
+```php
+apply_filters( 'make_customizer_background_sections', $header_sections );
+```
+
+Filter the definitions for the controls in the Background Images panel of the Customizer.
+
+### Returns
+
+* **$header\_sections**: _(array)_ The array of definitions.
+
+### Changelog
+
+* **Since**: 1.3.0.
+
+### Source
+
+* [inc/customizer/sections/background-images.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/background-images.php#L53)
 
 ## make\_customizer\_colorscheme\_sections
 
@@ -916,7 +960,7 @@ Filter the definitions for the controls in the Color Scheme panel of the Customi
 
 ### Source
 
-* [inc/customizer/sections/color-scheme.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/color-scheme.php#L216)
+* [inc/customizer/sections/color-scheme.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/color-scheme.php#L672)
 
 ## make\_customizer\_contentlayout\_sections
 
@@ -924,7 +968,11 @@ Filter the definitions for the controls in the Color Scheme panel of the Customi
 apply_filters( 'make_customizer_contentlayout_sections', $contentlayout_sections );
 ```
 
-Filter the definitions for the controls in the Content & Layout panel of the Customizer.
+Filter the definitions for the controls in the Layout panel of the Customizer.
+
+### Description
+
+The panel was previously labeled "Content &amp; Layout".
 
 ### Returns
 
@@ -936,7 +984,17 @@ Filter the definitions for the controls in the Content & Layout panel of the Cus
 
 ### Source
 
-* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L944)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L405)
+
+## make\_customizer\_control\_path
+
+```php
+apply_filters( 'make_customizer_control_path' );
+```
+
+### Source
+
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L338)
 
 ## make\_customizer\_footer\_sections
 
@@ -944,7 +1002,11 @@ Filter the definitions for the controls in the Content & Layout panel of the Cus
 apply_filters( 'make_customizer_footer_sections', $footer_sections );
 ```
 
-Filter the definitions for the controls in the Footer panel of the Customizer.
+Deprecated: Filter the definitions for the controls in the Footer panel of the Customizer.
+
+### Description
+
+This filter was introduced when the Footer options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
 ### Returns
 
@@ -956,7 +1018,7 @@ Filter the definitions for the controls in the Footer panel of the Customizer.
 
 ### Source
 
-* [inc/customizer/sections/footer.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/footer.php#L176)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L431)
 
 ## make\_customizer\_general\_sections
 
@@ -976,7 +1038,7 @@ Filter the definitions for the controls in the General panel of the Customizer.
 
 ### Source
 
-* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L245)
+* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L337)
 
 ## make\_customizer\_header\_sections
 
@@ -984,7 +1046,11 @@ Filter the definitions for the controls in the General panel of the Customizer.
 apply_filters( 'make_customizer_header_sections', $header_sections );
 ```
 
-Filter the definitions for the controls in the Header panel of the Customizer.
+Deprecated: Filter the definitions for the controls in the Header panel of the Customizer.
+
+### Description
+
+This filter was introduced when the Header options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
 ### Returns
 
@@ -996,7 +1062,7 @@ Filter the definitions for the controls in the Header panel of the Customizer.
 
 ### Source
 
-* [inc/customizer/sections/header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/header.php#L165)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L418)
 
 ## make\_customizer\_key\_conversions
 
@@ -1020,7 +1086,7 @@ The keys for some Customizer options have changed between versions. This array d
 
 ### Source
 
-* [inc/compatibility.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility.php#L212)
+* [inc/compatibility.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility.php#L214)
 
 ## make\_customizer\_panels
 
@@ -1040,7 +1106,7 @@ Filter the array of panel definitions for the Customizer.
 
 ### Source
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L82)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L87)
 
 ## make\_customizer\_sections
 
@@ -1064,7 +1130,31 @@ This filter is used to compile a master array of section definitions for each pa
 
 ### Source
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L144)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L149)
+
+## make\_customizer\_typography\_group\_definitions
+
+```php
+apply_filters( 'make_customizer_typography_group_definitions', $definitions, $element );
+```
+
+Filter the Customizer's font control definitions.
+
+### Returns
+
+* **$definitions**: _(array)_ Array of Customizer options and their setting and control definitions.
+
+### Other parameters
+
+* **$element**: _(string)_ The HTML element that the font properties will apply to.
+
+### Changelog
+
+* **Since**: 1.5.0.
+
+### Source
+
+* [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L384)
 
 ## make\_customizer\_typography\_sections
 
@@ -1084,7 +1174,7 @@ Filter the definitions for the controls in the Typography panel of the Customize
 
 ### Source
 
-* [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L364)
+* [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L227)
 
 ## make\_exif\_aperture
 
@@ -1108,7 +1198,7 @@ Filter the aperture value.
 
 ### Source
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L523)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L395)
 
 ## make\_exif\_shutter\_speed
 
@@ -1132,7 +1222,7 @@ Filter the shutter speed value.
 
 ### Source
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L504)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L376)
 
 ## make\_fitvids\_custom\_selectors
 
@@ -1152,7 +1242,7 @@ Allow for changing of the selectors that are used to apply FitVids.
 
 ### Source
 
-* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L371)
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L374)
 
 ## make\_font\_relative\_size
 
@@ -1176,7 +1266,7 @@ Each array item defines a percentage by which to scale a font size compared to s
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L25)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L470)
 
 ## make\_font\_stack
 
@@ -1200,7 +1290,7 @@ Allow developers to filter the full font stack.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L327)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L447)
 
 ## make\_font\_variants
 
@@ -1224,7 +1314,7 @@ Allow developers to alter the font variant choice.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L527)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L198)
 
 ## make\_footer\_1
 
@@ -1425,7 +1515,7 @@ Filter the retrieved default value.
 
 ### Source
 
-* [inc/customizer/helpers-defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-defaults.php#L273)
+* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L462)
 
 ## make\_get\_exif\_data
 
@@ -1449,7 +1539,7 @@ Alter the exif data output.
 
 ### Source
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L576)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L448)
 
 ## make\_get\_google\_font\_subsets
 
@@ -1469,7 +1559,7 @@ Filter the list of supported Google Font subsets.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L572)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L218)
 
 ## make\_get\_google\_font\_uri
 
@@ -1489,7 +1579,7 @@ Filter the Google Fonts URL.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L474)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L145)
 
 ## make\_get\_google\_fonts
 
@@ -1534,7 +1624,7 @@ Filter the image HTML.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L991)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L933)
 
 ## make\_get\_image\_src
 
@@ -1559,7 +1649,7 @@ Filter the image source attributes.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1036)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L978)
 
 ## make\_get\_next\_section\_data
 
@@ -1609,7 +1699,7 @@ Filter the image source attributes.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1068)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1010)
 
 ## make\_get\_section\_data
 
@@ -1633,7 +1723,7 @@ Filter the section data for a post.
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L474)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L736)
 
 ## make\_get\_section\_default
 
@@ -1683,7 +1773,7 @@ Alter section name.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L952)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L894)
 
 ## make\_get\_standard\_fonts
 
@@ -1703,7 +1793,7 @@ Allow for developers to modify the standard fonts.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L722)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L45)
 
 ## make\_get\_view
 
@@ -1727,7 +1817,7 @@ Allow developers to dynamically change the view.
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L296)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L294)
 
 ## make\_get\_wp\_editor\_id
 
@@ -1752,7 +1842,7 @@ Alter the wp\_editor ID.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L920)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L862)
 
 ## make\_has\_sidebar
 
@@ -1777,7 +1867,7 @@ Allow developers to dynamically changed the result of the "has sidebar" check.
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L338)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L336)
 
 ## make\_insert\_post\_data\_sections
 
@@ -1821,7 +1911,7 @@ Allow a developer to dynamically change whether the post uses the builder or not
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L564)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L826)
 
 ## make\_load\_section\_template
 
@@ -1846,7 +1936,7 @@ Filter the templates to try and load.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L879)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L821)
 
 ## make\_parse\_declaration
 
@@ -1873,7 +1963,7 @@ Filter the final CSS declaration after being parsed.
 
 ### Source
 
-* [inc/customizer/helpers-css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-css.php#L268)
+* [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L267)
 
 ## make\_prepare\_data
 
@@ -1931,22 +2021,14 @@ The result of the call\_user\_func\_array() call is an array of data representin
 ## make\_read\_more\_text
 
 ```php
-apply_filters( 'make_read_more_text', $read_more_text );
+apply_filters( 'make_read_more_text' );
 ```
 
-Filter the value of the read more text.
-
-### Returns
-
-* **$read\_more\_text**: _(string)_ The read more text value.
-
-### Changelog
-
-* **Since**: 1.2.3.
+This filter is documented in inc/template-tags.php
 
 ### Source
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L164)
+* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L122)
 
 ## make\_sanitize\_choice
 
@@ -1970,7 +2052,7 @@ Filter the sanitized value.
 
 ### Source
 
-* [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L36)
+* [inc/customizer/choices.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/choices.php#L322)
 
 ## make\_sanitize\_font\_choice
 
@@ -1990,7 +2072,7 @@ Filter the sanitized font choice.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L614)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L334)
 
 ## make\_sanitize\_font\_subset
 
@@ -2010,7 +2092,7 @@ Filter the sanitized subset choice.
 
 ### Source
 
-* [inc/customizer/helpers-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-fonts.php#L552)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L255)
 
 ## make\_sanitize\_section\_choice
 
@@ -2059,7 +2141,7 @@ Customize the tags and attributes that are allows during text sanitization.
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L148)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L146)
 
 ## make\_section\_choices
 
@@ -2152,7 +2234,7 @@ Filter the setting choices.
 
 ### Source
 
-* [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L207)
+* [inc/customizer/choices.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/choices.php#L288)
 
 ## make\_setting\_defaults
 
@@ -2172,7 +2254,7 @@ Filter the default values for the settings.
 
 ### Source
 
-* [inc/customizer/helpers-defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-defaults.php#L248)
+* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L437)
 
 ## make\_show\_footer\_credit
 
@@ -2236,7 +2318,7 @@ Filter the list of sidebars that are available for a specific location.
 
 ### Source
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L421)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L419)
 
 ## make\_sidebar\_right
 
@@ -2276,7 +2358,7 @@ Filter the social links added to the site.
 
 ### Source
 
-* [inc/customizer/helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers.php#L360)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L520)
 
 ## make\_style\_formats
 
@@ -2320,7 +2402,7 @@ This array uses the url pattern for the key and the CSS class (as dictated by Fo
 
 ### Source
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L354)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L573)
 
 ## make\_template\_content\_archive
 
@@ -2461,7 +2543,7 @@ Allow developers to dynamically change the builder page status.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L791)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L733)
 
 ## ttfmake-text-column-classes
 
@@ -2506,7 +2588,7 @@ Filter the dependencies for the Make builder JS.
 
 ### Source
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L309)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L308)
 
 ## ttfmake\_builder\_section\_footer\_links
 
@@ -2554,7 +2636,7 @@ This filter may be useful if you encounter problems getting your custom logo to 
 
 ### Source
 
-* [inc/customizer/helpers-logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-logo.php#L327)
+* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L327)
 
 ## ttfmake\_custom\_logo\_max\_width
 
@@ -2574,17 +2656,75 @@ Filter the maximum allowable width for a custom logo.
 
 ### Source
 
-* [inc/customizer/helpers-logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/helpers-logo.php#L347)
+* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L347)
+
+## ttfmp\_color\_highlight\_description
+
+```php
+apply_filters( 'ttfmp_color_highlight_description', $description );
+```
+
+Filter the description of the Highlight Color control.
+
+### Returns
+
+* **$description**: _(string)_ The control description.
+
+### Changelog
+
+* **Since**: 1.5.0.
+
+### Source
+
+* shared/shop-settings/shop-settings.php, line 409
+
+## ttfmp\_perpage\_allowed\_keys
+
+```php
+apply_filters( 'ttfmp_perpage_allowed_keys', $allowed_keys, $view );
+```
+
+Filter to change the theme option keys that are allowed to be modified by the Per Page component.
+
+### Returns
+
+* **$allowed\_keys**: _(array)_ The array of option keys that are allowed to be modified by the Per Page component.
+
+### Other parameters
+
+* **$view**: _(string)_ The type of view being modified.
+
+### Changelog
+
+* **Since**: 1.5.1
+
+### Source
+
+* components/per-page/class-options.php, line 102
 
 ## ttfmp\_perpage\_keys
 
 ```php
-apply_filters( 'ttfmp_perpage_keys' );
+apply_filters( 'ttfmp_perpage_keys', $keys, $view );
 ```
+
+Filter to change the theme option keys that are allowed to be modified for the specified view.
+
+### Returns
+
+* **$keys**: _(array)_ The allowed keys for the specified view.
+
+### Other parameters
+
+* **$view**: _(string)_ The specified view. Added in 1.5.1.
+
+### Changelog
+
+* **Since**: 1.0.0.
 
 ### Source
 
-* components/per-page/class-options.php, line 100
+* components/per-page/class-options.php, line 120
 
 ## ttfmp\_perpage\_post\_types
 
@@ -2594,7 +2734,7 @@ apply_filters( 'ttfmp_perpage_post_types' );
 
 ### Source
 
-* components/per-page/class-metabox.php, line 100
+* components/per-page/class-metabox.php, line 105
 
 ## ttfmp\_perpage\_view
 
@@ -2604,7 +2744,7 @@ apply_filters( 'ttfmp_perpage_view' );
 
 ### Source
 
-* components/per-page/per-page.php, line 135
+* components/per-page/per-page.php, line 131
 
 ## ttfmp\_post\_list\_output
 
@@ -2656,15 +2796,37 @@ apply_filters( 'ttfmp_shop_layout_shop_description' );
 
 * shared/shop-settings/layout-shop.php, line 23
 
+## ttfmp\_style\_kit\_allowed\_option\_keys
+
+```php
+apply_filters( 'ttfmp_style_kit_allowed_option_keys', $keys );
+```
+
+Filter to modify the array of option keys that Style Kits is allowed to modify.
+
+### Returns
+
+* **$keys**: _(array)_ Array of option keys that Style Kits is allowed to modify.
+
+### Changelog
+
+* **Since**: 1.5.0.
+
+### Source
+
+* components/style-kits/style-kits.php, line 400
+
 ## ttfmp\_style\_kit\_definitions
 
 ```php
 apply_filters( 'ttfmp_style_kit_definitions' );
 ```
 
+Layout
+
 ### Source
 
-* components/style-kits/definitions.php, line 423
+* components/style-kits/definitions.php, line 462
 
 ## ttfmp\_woocommerce\_product\_grid\_output
 
