@@ -1,6 +1,6 @@
-# Actions
+## Actions
 
-## make\_after\_builder\_menu
+### make\_after\_builder\_menu
 
 ```php
 do_action( 'make_after_builder_menu' );
@@ -8,15 +8,15 @@ do_action( 'make_after_builder_menu' );
 
 Execute code after the builder menu items are displayed.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L61)
 
-## make\_after\_builder\_stage
+### make\_after\_builder\_stage
 
 ```php
 do_action( 'make_after_builder_stage' );
@@ -24,15 +24,15 @@ do_action( 'make_after_builder_stage' );
 
 Execute code after the builder stage is displayed.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/templates/stage-footer.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage-footer.php#L11)
 
-## make\_before\_builder\_menu
+### make\_before\_builder\_menu
 
 ```php
 do_action( 'make_before_builder_menu' );
@@ -40,15 +40,15 @@ do_action( 'make_before_builder_menu' );
 
 Execute code before the builder menu items are displayed.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L18)
 
-## make\_before\_builder\_stage
+### make\_before\_builder\_stage
 
 ```php
 do_action( 'make_before_builder_stage' );
@@ -56,15 +56,15 @@ do_action( 'make_before_builder_stage' );
 
 Execute code before the builder stage is displayed.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/templates/stage-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage-header.php#L16)
 
-## make\_before\_section\_header
+### make\_before\_section\_header
 
 ```php
 do_action( 'make_before_section_header' );
@@ -72,15 +72,15 @@ do_action( 'make_before_section_header' );
 
 Execute code before the section header is displayed.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L57)
+* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L58)
 
-## make\_builder\_data\_saved
+### make\_builder\_data\_saved
 
 ```php
 do_action( 'make_builder_data_saved', $sections, $post_id );
@@ -92,20 +92,20 @@ Execute code after the section data is saved.
 
 While it is possible to use a "save\_post" to hook into the save routine, this action is preferred as it is only called after all validation and sanitization is completed.
 
-### Parameters
+##### Parameters:
 
 * **$sections**: _(array)_ The clean section data.
 * **$post\_id**: _(int)_ The post ID for the saved data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L196)
 
-## make\_builder\_{$data\['section-type'\]}\_css
+### make\_builder\_{$data\['section-type'\]}\_css
 
 ```php
 do_action( 'make_builder_{$data['section-type']}_css', $data, $id );
@@ -113,20 +113,20 @@ do_action( 'make_builder_{$data['section-type']}_css', $data, $id );
 
 Allow section-specific CSS rules to be added to the document head of a Builder page.
 
-### Parameters
+##### Parameters:
 
 * **$data**: _(array)_ The Builder section's data.
 * **$id**: _(int)_ The ID of the Builder section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.5
 
-### Source
+##### Source:
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L854)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L899)
 
-## make\_css
+### make\_css
 
 ```php
 do_action( 'make_css' );
@@ -138,15 +138,15 @@ The hook used to add CSS rules for the generated inline CSS.
 
 This hook is the correct hook to use for adding CSS styles to the group of selectors and properties that will be added to inline CSS that is printed in the head. Hooking elsewhere may lead to rules not being registered correctly for the CSS generation. Most Customizer options will use this hook to register additional CSS rules.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L460)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L505)
 
-## make\_section\_text\_after\_column
+### make\_section\_text\_after\_column
 
 ```php
 do_action( 'make_section_text_after_column', $ttfmake_section_data );
@@ -154,19 +154,19 @@ do_action( 'make_section_text_after_column', $ttfmake_section_data );
 
 Execute code after an individual text column is displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L153)
 
-## make\_section\_text\_after\_columns
+### make\_section\_text\_after\_columns
 
 ```php
 do_action( 'make_section_text_after_columns', $ttfmake_section_data );
@@ -174,19 +174,19 @@ do_action( 'make_section_text_after_columns', $ttfmake_section_data );
 
 Execute code after all columns are displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L216)
 
-## make\_section\_text\_after\_columns\_select
+### make\_section\_text\_after\_columns\_select
 
 ```php
 do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
@@ -194,19 +194,19 @@ do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
 
 Execute code after the columns select input is displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L54)
 
-## make\_section\_text\_after\_title
+### make\_section\_text\_after\_title
 
 ```php
 do_action( 'make_section_text_after_title', $ttfmake_section_data );
@@ -214,19 +214,19 @@ do_action( 'make_section_text_after_title', $ttfmake_section_data );
 
 Execute code after the section title is displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L63)
 
-## make\_section\_text\_before\_column
+### make\_section\_text\_before\_column
 
 ```php
 do_action( 'make_section_text_before_column', $ttfmake_section_data );
@@ -234,19 +234,19 @@ do_action( 'make_section_text_before_column', $ttfmake_section_data );
 
 Execute code before an individual text column is displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L131)
 
-## make\_section\_text\_before\_columns\_select
+### make\_section\_text\_before\_columns\_select
 
 ```php
 do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
@@ -254,19 +254,19 @@ do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
 
 Execute code before the columns select input is displayed.
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L45)
 
-## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_after
+### make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_after
 
 ```php
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_after', $ttfmake_section_data );
@@ -278,19 +278,19 @@ Allow for script execution in the footer of a builder section.
 
 This action is a variable action that allows a developer to hook into specific section types (e.g., 'text'). Do not confuse "id" in this context as the individual section id (e.g., 14092814910).
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The array of data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L788)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L789)
 
-## make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before
+### make\_section\_{$ttfmake\_section\_data\['section'\]\['id'\]}\_before
 
 ```php
 do_action( 'make_section_{$ttfmake_section_data['section']['id']}_before', $ttfmake_section_data );
@@ -302,21 +302,21 @@ Allow for script execution in the header of a builder section.
 
 This action is a variable action that allows a developer to hook into specific section types (e.g., 'text'). Do not confuse "id" in this context as the individual section id (e.g., 14092814910).
 
-### Parameters
+##### Parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The array of data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L759)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L760)
 
-# Filters
+## Filters
 
-## make\_add\_section
+### make\_add\_section
 
 ```php
 apply_filters( 'make_add_section', $section );
@@ -328,19 +328,19 @@ Allow the added sections to be filtered.
 
 This filters allows for dynamically altering sections as they get added. This can help enforce policies for sections by sanitizing the registered values.
 
-### Returns
+##### Returns:
 
 * **$section**: _(array)_ The section being added.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L96)
 
-## make\_all\_font\_choices
+### make\_all\_font\_choices
 
 ```php
 apply_filters( 'make_all_font_choices', $choices );
@@ -348,19 +348,19 @@ apply_filters( 'make_all_font_choices', $choices );
 
 Allow for developers to modify the full list of fonts.
 
-### Returns
+##### Returns:
 
 * **$choices**: _(array)_ The list of all fonts.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L285)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L289)
 
-## make\_all\_fonts
+### make\_all\_fonts
 
 ```php
 apply_filters( 'make_all_fonts', $fonts );
@@ -368,19 +368,19 @@ apply_filters( 'make_all_fonts', $fonts );
 
 Allow for developers to modify the full list of fonts.
 
-### Returns
+##### Returns:
 
 * **$fonts**: _(array)_ The list of all fonts.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L361)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L365)
 
-## make\_banner\_slide\_configuration
+### make\_banner\_slide\_configuration
 
 ```php
 apply_filters( 'make_banner_slide_configuration', $inputs );
@@ -388,19 +388,19 @@ apply_filters( 'make_banner_slide_configuration', $inputs );
 
 Filter the definitions of the Banner slide configuration inputs.
 
-### Returns
+##### Returns:
 
 * **$inputs**: _(array)_ The input definition array.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/banner-slide.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/banner-slide.php#L70)
 
-## make\_builder\_banner\_class
+### make\_builder\_banner\_class
 
 ```php
 apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data );
@@ -408,23 +408,23 @@ apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data
 
 Filter the class for the banner section.
 
-### Returns
+##### Returns:
 
 * **$banner\_class**: _(string)_ The banner class.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L410)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L462)
 
-## make\_builder\_banner\_slide\_class
+### make\_builder\_banner\_slide\_class
 
 ```php
 apply_filters( 'make_builder_banner_slide_class', $slide_class );
@@ -432,19 +432,19 @@ apply_filters( 'make_builder_banner_slide_class', $slide_class );
 
 Allow developers to alter the class for the banner slide.
 
-### Returns
+##### Returns:
 
 * **$slide\_class**: _(string)_ The banner classes.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L497)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L587)
 
-## make\_builder\_banner\_slide\_style
+### make\_builder\_banner\_slide\_style
 
 ```php
 apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake_section_data );
@@ -452,24 +452,24 @@ apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake
 
 Allow developers to change the CSS for a Banner section.
 
-### Returns
+##### Returns:
 
 * **$slide\_style**: _(string)_ The CSS for the banner.
 
-### Other parameters
+##### Other parameters:
 
 * **$slide**: _(array)_ The slide data.
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L534)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L624)
 
-## make\_builder\_get\_banner\_array
+### make\_builder\_get\_banner\_array
 
 ```php
 apply_filters( 'make_builder_get_banner_array', $banner_array, $ttfmake_section_data );
@@ -477,23 +477,23 @@ apply_filters( 'make_builder_get_banner_array', $banner_array, $ttfmake_section_
 
 Filter the data array for a banner section.
 
-### Returns
+##### Returns:
 
 * **$banner\_array**: _(array)_ The ordered banner data.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ All of the data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L383)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L428)
 
-## make\_builder\_get\_banner\_slider\_atts
+### make\_builder\_get\_banner\_slider\_atts
 
 ```php
 apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake_section_data );
@@ -501,23 +501,23 @@ apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake
 
 Allow for altering the banner slider attributes.
 
-### Returns
+##### Returns:
 
 * **$data\_attributes**: _(string)_ The data attributes in string form.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L471)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L561)
 
-## make\_builder\_get\_gallery\_array
+### make\_builder\_get\_gallery\_array
 
 ```php
 apply_filters( 'make_builder_get_gallery_array', $gallery_array, $ttfmake_section_data );
@@ -525,23 +525,23 @@ apply_filters( 'make_builder_get_gallery_array', $gallery_array, $ttfmake_sectio
 
 Filter the gallery item data.
 
-### Returns
+##### Returns:
 
 * **$gallery\_array**: _(array)_ The array of gallery item data.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L68)
 
-## make\_builder\_get\_gallery\_item\_class
+### make\_builder\_get\_gallery\_item\_class
 
 ```php
 apply_filters( 'make_builder_get_gallery_item_class', $gallery_class, $item, $ttfmake_section_data, $i );
@@ -549,25 +549,25 @@ apply_filters( 'make_builder_get_gallery_item_class', $gallery_class, $item, $tt
 
 Filter the class used for a gallery item.
 
-### Returns
+##### Returns:
 
 * **$gallery\_class**: _(string)_ The computed gallery class.
 
-### Other parameters
+##### Other parameters:
 
 * **$item**: _(array)_ The item's data.
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 * **$i**: _(int)_ The current gallery item number.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L217)
 
-## make\_builder\_get\_gallery\_item\_image
+### make\_builder\_get\_gallery\_item\_image
 
 ```php
 apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
@@ -575,24 +575,24 @@ apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
 
 Alter the generated gallery image.
 
-### Returns
+##### Returns:
 
 * **$image**: _(string)_ The image HTML.
 
-### Other parameters
+##### Other parameters:
 
 * **$item**: _(array)_ The item's data.
 * **$aspect**: _(string)_ The aspect ratio for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L260)
 
-## make\_builder\_get\_gallery\_style
+### make\_builder\_get\_gallery\_style
 
 ```php
 apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_section_data );
@@ -600,23 +600,23 @@ apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_sectio
 
 Filter the style added to a gallery section.
 
-### Returns
+##### Returns:
 
 * **$gallery\_style**: _(string)_ The style applied to the gallery.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L171)
 
-## make\_builder\_get\_text\_array
+### make\_builder\_get\_text\_array
 
 ```php
 apply_filters( 'make_builder_get_text_array', $columns_array, $ttfmake_section_data );
@@ -624,23 +624,23 @@ apply_filters( 'make_builder_get_text_array', $columns_array, $ttfmake_section_d
 
 Filter the array of builder data for the text section.
 
-### Returns
+##### Returns:
 
 * **$columns\_array**: _(array)_ The ordered data for the text section.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The raw section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L308)
 
-## make\_builder\_get\_text\_class
+### make\_builder\_get\_text\_class
 
 ```php
 apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data, $sections );
@@ -648,24 +648,24 @@ apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data
 
 Filter the text section class.
 
-### Returns
+##### Returns:
 
 * **$text\_class**: _(string)_ The computed class string.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 * **$sections**: _(array)_ The list of sections.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L343)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L350)
 
-## make\_builder\_is\_section\_type
+### make\_builder\_is\_section\_type
 
 ```php
 apply_filters( 'make_builder_is_section_type', $is_section_type, $type, $data );
@@ -673,24 +673,24 @@ apply_filters( 'make_builder_is_section_type', $is_section_type, $type, $data );
 
 Allow developers to alter if a set of data is a specified section type.
 
-### Returns
+##### Returns:
 
 * **$is\_section\_type**: _(bool)_ Whether or not the data represents a specific section.
 
-### Other parameters
+##### Other parameters:
 
 * **$type**: _(string)_ The section type to check.
 * **$data**: _(array)_ The section data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L27)
 
-## make\_builder\_js\_templates
+### make\_builder\_js\_templates
 
 ```php
 apply_filters( 'make_builder_js_templates', $templates );
@@ -702,19 +702,19 @@ Array of items to print as JS templates in the footer of the Builder screen.
 
 Each item is represented as an associative array and includes the following items:  id                  The ID of the template builder\_template    The relative path to the PHP template path                The path to the base directory 
 
-### Returns
+##### Returns:
 
 * **$templates**: _(array)_ The
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.6.0.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L633)
+* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L731)
 
-## make\_builder\_section\_links
+### make\_builder\_section\_links
 
 ```php
 apply_filters( 'make_builder_section_links', $links );
@@ -722,19 +722,19 @@ apply_filters( 'make_builder_section_links', $links );
 
 Filter the definitions for the buttons that appear in each Builder section's header.
 
-### Returns
+##### Returns:
 
 * **$links**: _(array)_ The button definition array.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
-* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L44)
+* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L45)
 
-## make\_column\_buttons
+### make\_column\_buttons
 
 ```php
 apply_filters( 'make_column_buttons', $column_buttons, $ttfmake_section_data );
@@ -742,23 +742,23 @@ apply_filters( 'make_column_buttons', $column_buttons, $ttfmake_section_data );
 
 Filter the buttons added to a text column.
 
-### Returns
+##### Returns:
 
 * **$column\_buttons**: _(array)_ The current list of buttons.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ All data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L104)
 
-## make\_column\_configuration
+### make\_column\_configuration
 
 ```php
 apply_filters( 'make_column_configuration', $inputs );
@@ -766,19 +766,19 @@ apply_filters( 'make_column_configuration', $inputs );
 
 Filter the definitions of the Columns section's column configuration inputs.
 
-### Returns
+##### Returns:
 
 * **$inputs**: _(array)_ The input definition array.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L171)
 
-## make\_configuration\_overlay\_input
+### make\_configuration\_overlay\_input
 
 ```php
 apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section_data );
@@ -786,24 +786,24 @@ apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section
 
 Filter the HTML for the input.
 
-### Returns
+##### Returns:
 
 * **$this\_output**: _(string)_ The HTML for the input.
 
-### Other parameters
+##### Other parameters:
 
 * **$args**: _(string)_ The input data.
 * **$section\_data**: _(string)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L200)
 
-## make\_configuration\_overlay\_input\_wrap
+### make\_configuration\_overlay\_input\_wrap
 
 ```php
 apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $section_data );
@@ -811,24 +811,24 @@ apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $sectio
 
 Filter the wrapped used for the inputs.
 
-### Returns
+##### Returns:
 
 * **$wrapper**: _(string)_ The HTML to wrap around the input.
 
-### Other parameters
+##### Other parameters:
 
 * **$args**: _(string)_ The input data that is wrapped.
 * **$section\_data**: _(string)_ The data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L189)
 
-## make\_content\_width
+### make\_content\_width
 
 ```php
 apply_filters( 'make_content_width', $new_width, $left, $right );
@@ -836,24 +836,24 @@ apply_filters( 'make_content_width', $new_width, $left, $right );
 
 Filter to modify the $content\_width variable.
 
-### Returns
+##### Returns:
 
 * **$new\_width**: _(int)_ The new content width.
 
-### Other parameters
+##### Other parameters:
 
 * **$left**: _(bool)_ True if the current view has a left sidebar.
 * **$right**: _(bool)_ True if the current view has a right sidebar.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.8
 
-### Source
+##### Source:
 
-* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L69)
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L132)
 
-## make\_css\_add
+### make\_css\_add
 
 ```php
 apply_filters( 'make_css_add', $data );
@@ -861,19 +861,19 @@ apply_filters( 'make_css_add', $data );
 
 Filter CSS as it is registered.
 
-### Returns
+##### Returns:
 
 * **$data**: _(array)_ The selectors and properties to add to the CSS.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3
 
-### Source
+##### Source:
 
 * [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L121)
 
-## make\_css\_font\_properties
+### make\_css\_font\_properties
 
 ```php
 apply_filters( 'make_css_font_properties', $properties );
@@ -885,19 +885,19 @@ Filter the array of customizable font properties and their sanitization callback
 
 css\_property => sanitize\_callback
 
-### Returns
+##### Returns:
 
 * **$properties**: _(array)_ The array of font properties and callbacks.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L508)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L511)
 
-## make\_css\_parse\_declarations
+### make\_css\_parse\_declarations
 
 ```php
 apply_filters( 'make_css_parse_declarations', $output, $declarations, $tab );
@@ -905,24 +905,24 @@ apply_filters( 'make_css_parse_declarations', $output, $declarations, $tab );
 
 Filter the full list of parsed declarations.
 
-### Returns
+##### Returns:
 
 * **$output**: _(string)_ The full CSS output.
 
-### Other parameters
+##### Other parameters:
 
 * **$declarations**: _(array)_ The list of CSS declarations.
 * **$tab**: _(string)_ The tab character.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L279)
 
-## make\_customizer\_background\_image\_group\_definitions
+### make\_customizer\_background\_image\_group\_definitions
 
 ```php
 apply_filters( 'make_customizer_background_image_group_definitions', $definitions, $region );
@@ -930,23 +930,23 @@ apply_filters( 'make_customizer_background_image_group_definitions', $definition
 
 Filter the Customizer's background image control definitions.
 
-### Returns
+##### Returns:
 
 * **$definitions**: _(array)_ Array of Customizer options and their setting and control definitions.
 
-### Other parameters
+##### Other parameters:
 
 * **$region**: _(string)_ The site region that the background image properties will apply to.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.5.0.
 
-### Source
+##### Source:
 
 * [inc/customizer/sections/background-images.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/background-images.php#L136)
 
-## make\_customizer\_background\_sections
+### make\_customizer\_background\_sections
 
 ```php
 apply_filters( 'make_customizer_background_sections', $header_sections );
@@ -954,19 +954,19 @@ apply_filters( 'make_customizer_background_sections', $header_sections );
 
 Filter the definitions for the controls in the Background Images panel of the Customizer.
 
-### Returns
+##### Returns:
 
 * **$header\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
 * [inc/customizer/sections/background-images.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/background-images.php#L53)
 
-## make\_customizer\_colorscheme\_sections
+### make\_customizer\_colorscheme\_sections
 
 ```php
 apply_filters( 'make_customizer_colorscheme_sections', $colorscheme_sections );
@@ -974,19 +974,19 @@ apply_filters( 'make_customizer_colorscheme_sections', $colorscheme_sections );
 
 Filter the definitions for the controls in the Color Scheme panel of the Customizer.
 
-### Returns
+##### Returns:
 
 * **$colorscheme\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
 * [inc/customizer/sections/color-scheme.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/color-scheme.php#L672)
 
-## make\_customizer\_contentlayout\_sections
+### make\_customizer\_contentlayout\_sections
 
 ```php
 apply_filters( 'make_customizer_contentlayout_sections', $contentlayout_sections );
@@ -998,29 +998,43 @@ Filter the definitions for the controls in the Layout panel of the Customizer.
 
 The panel was previously labeled "Content &amp; Layout".
 
-### Returns
+##### Returns:
 
 * **$contentlayout\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L405)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L409)
 
-## make\_customizer\_control\_path
+### make\_customizer\_control\_path
 
 ```php
-apply_filters( 'make_customizer_control_path' );
+apply_filters( 'make_customizer_control_path', $control_path, $class );
 ```
 
-### Source
+Filter for the path to the directory containing control classes.
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L305)
+##### Returns:
 
-## make\_customizer\_footer\_sections
+* **$control\_path**: _(string)_ The directory path.
+
+##### Other parameters:
+
+* **$class**: _(string)_ The name of the class.
+
+##### Changelog:
+
+* **Since**: 
+
+##### Source:
+
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L77)
+
+### make\_customizer\_footer\_sections (Deprecated)
 
 ```php
 apply_filters( 'make_customizer_footer_sections', $footer_sections );
@@ -1032,19 +1046,19 @@ Deprecated: Filter the definitions for the controls in the Footer panel of the C
 
 This filter was introduced when the Footer options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
-### Returns
+##### Returns:
 
 * **$footer\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L431)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L435)
 
-## make\_customizer\_general\_sections
+### make\_customizer\_general\_sections
 
 ```php
 apply_filters( 'make_customizer_general_sections', $general_sections );
@@ -1052,19 +1066,19 @@ apply_filters( 'make_customizer_general_sections', $general_sections );
 
 Filter the definitions for the controls in the General panel of the Customizer.
 
-### Returns
+##### Returns:
 
 * **$general\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L337)
+* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L359)
 
-## make\_customizer\_header\_sections
+### make\_customizer\_header\_sections (Deprecated)
 
 ```php
 apply_filters( 'make_customizer_header_sections', $header_sections );
@@ -1076,19 +1090,19 @@ Deprecated: Filter the definitions for the controls in the Header panel of the C
 
 This filter was introduced when the Header options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
-### Returns
+##### Returns:
 
 * **$header\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L418)
+* [inc/customizer/sections/content-layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/content-layout.php#L422)
 
-## make\_customizer\_key\_conversions
+### make\_customizer\_key\_conversions
 
 ```php
 apply_filters( 'make_customizer_key_conversions', $conversions );
@@ -1100,19 +1114,19 @@ Filter the array of Customizer option key conversions.
 
 The keys for some Customizer options have changed between versions. This array defines each change as $new\_key => $old key.
 
-### Returns
+##### Returns:
 
 * **$conversions**: _(array)_ The array of key conversions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
 * [inc/compatibility.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility.php#L214)
 
-## make\_customizer\_panels
+### make\_customizer\_panels
 
 ```php
 apply_filters( 'make_customizer_panels', $panels );
@@ -1120,19 +1134,19 @@ apply_filters( 'make_customizer_panels', $panels );
 
 Filter the array of panel definitions for the Customizer.
 
-### Returns
+##### Returns:
 
 * **$panels**: _(array)_ The array of panel definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L70)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L112)
 
-## make\_customizer\_sections
+### make\_customizer\_sections
 
 ```php
 apply_filters( 'make_customizer_sections', $sections );
@@ -1144,19 +1158,19 @@ Filter the array of section definitions for the Customizer.
 
 This filter is used to compile a master array of section definitions for each panel in the Customizer.
 
-### Returns
+##### Returns:
 
 * **$sections**: _(array)_ The array of section definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L129)
+* [inc/customizer/bootstrap.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/bootstrap.php#L171)
 
-## make\_customizer\_typography\_group\_definitions
+### make\_customizer\_typography\_group\_definitions
 
 ```php
 apply_filters( 'make_customizer_typography_group_definitions', $definitions, $element );
@@ -1164,23 +1178,23 @@ apply_filters( 'make_customizer_typography_group_definitions', $definitions, $el
 
 Filter the Customizer's font control definitions.
 
-### Returns
+##### Returns:
 
 * **$definitions**: _(array)_ Array of Customizer options and their setting and control definitions.
 
-### Other parameters
+##### Other parameters:
 
 * **$element**: _(string)_ The HTML element that the font properties will apply to.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.5.0.
 
-### Source
+##### Source:
 
 * [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L391)
 
-## make\_customizer\_typography\_sections
+### make\_customizer\_typography\_sections
 
 ```php
 apply_filters( 'make_customizer_typography_sections', $typography_sections );
@@ -1188,19 +1202,19 @@ apply_filters( 'make_customizer_typography_sections', $typography_sections );
 
 Filter the definitions for the controls in the Typography panel of the Customizer.
 
-### Returns
+##### Returns:
 
 * **$typography\_sections**: _(array)_ The array of definitions.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.3.0.
 
-### Source
+##### Source:
 
 * [inc/customizer/sections/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/typography.php#L234)
 
-## make\_enqueue\_parent\_stylesheet
+### make\_enqueue\_parent\_stylesheet
 
 ```php
 apply_filters( 'make_enqueue_parent_stylesheet', $enqueue );
@@ -1208,19 +1222,19 @@ apply_filters( 'make_enqueue_parent_stylesheet', $enqueue );
 
 Toggle for loading the parent stylesheet along with the child one.
 
-### Returns
+##### Returns:
 
 * **$enqueue**: _(bool)_ True enqueues the parent stylesheet.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.6.0.
 
-### Source
+##### Source:
 
-* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L335)
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L349)
 
-## make\_exif\_aperture
+### make\_exif\_aperture
 
 ```php
 apply_filters( 'make_exif_aperture', $f_stop, $raw_aperture );
@@ -1228,23 +1242,23 @@ apply_filters( 'make_exif_aperture', $f_stop, $raw_aperture );
 
 Filter the aperture value.
 
-### Returns
+##### Returns:
 
 * **$f\_stop**: _(string)_ The aperture value.
 
-### Other parameters
+##### Other parameters:
 
 * **$raw\_aperture**: _(int)_ The raw aperture value.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L395)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L396)
 
-## make\_exif\_shutter\_speed
+### make\_exif\_shutter\_speed
 
 ```php
 apply_filters( 'make_exif_shutter_speed', $converted_as, $raw_shutter_speed );
@@ -1252,23 +1266,23 @@ apply_filters( 'make_exif_shutter_speed', $converted_as, $raw_shutter_speed );
 
 Filter the shutter speed value.
 
-### Returns
+##### Returns:
 
 * **$converted\_as**: _(string)_ The shutter speed value.
 
-### Other parameters
+##### Other parameters:
 
 * **$raw\_shutter\_speed**: _(float)_ The raw shutter speed value.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L376)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L377)
 
-## make\_fitvids\_custom\_selectors
+### make\_fitvids\_custom\_selectors
 
 ```php
 apply_filters( 'make_fitvids_custom_selectors', $selector_array );
@@ -1276,19 +1290,19 @@ apply_filters( 'make_fitvids_custom_selectors', $selector_array );
 
 Allow for changing of the selectors that are used to apply FitVids.
 
-### Returns
+##### Returns:
 
 * **$selector\_array**: _(array)_ The selectors used by FitVids.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L410)
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L424)
 
-## make\_font\_relative\_size
+### make\_font\_relative\_size
 
 ```php
 apply_filters( 'make_font_relative_size', $sizes );
@@ -1300,19 +1314,19 @@ Filter the array of relative font sizes.
 
 Each array item defines a percentage by which to scale a font size compared to some other font size. Most of these were deprecated in version 1.3.0.
 
-### Returns
+##### Returns:
 
 * **$sizes**: _(array)_ The array of relative sizes.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.0.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L464)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L467)
 
-## make\_font\_stack
+### make\_font\_stack
 
 ```php
 apply_filters( 'make_font_stack', $stack, $font );
@@ -1320,23 +1334,23 @@ apply_filters( 'make_font_stack', $stack, $font );
 
 Allow developers to filter the full font stack.
 
-### Returns
+##### Returns:
 
 * **$stack**: _(string)_ The font stack.
 
-### Other parameters
+##### Other parameters:
 
 * **$font**: _(string)_ The font.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L441)
+* [inc/customizer/style/typography.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/style/typography.php#L444)
 
-## make\_font\_variants
+### make\_font\_variants
 
 ```php
 apply_filters( 'make_font_variants', $variants, $font );
@@ -1344,23 +1358,23 @@ apply_filters( 'make_font_variants', $variants, $font );
 
 Allow developers to alter the font variant choice.
 
-### Returns
+##### Returns:
 
 * **$variants**: _(array)_ The variants for the font.
 
-### Other parameters
+##### Other parameters:
 
 * **$font**: _(string)_ The font to load variants for.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L198)
 
-## make\_footer\_1
+### make\_footer\_1
 
 ```php
 apply_filters( 'make_footer_1', $footer_id );
@@ -1368,19 +1382,19 @@ apply_filters( 'make_footer_1', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-footer-1.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-1.php#L13)
 
-## make\_footer\_2
+### make\_footer\_2
 
 ```php
 apply_filters( 'make_footer_2', $footer_id );
@@ -1388,19 +1402,19 @@ apply_filters( 'make_footer_2', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-footer-2.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-2.php#L13)
 
-## make\_footer\_3
+### make\_footer\_3
 
 ```php
 apply_filters( 'make_footer_3', $footer_id );
@@ -1408,19 +1422,19 @@ apply_filters( 'make_footer_3', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-footer-3.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-3.php#L13)
 
-## make\_footer\_4
+### make\_footer\_4
 
 ```php
 apply_filters( 'make_footer_4', $footer_id );
@@ -1428,19 +1442,19 @@ apply_filters( 'make_footer_4', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-footer-4.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-4.php#L13)
 
-## make\_format\_builder\_format\_models
+### make\_format\_builder\_format\_models
 
 ```php
 apply_filters( 'make_format_builder_format_models', $models );
@@ -1452,19 +1466,19 @@ Filter the format model definitions and their script locations.
 
 model => URI of the model's script file
 
-### Returns
+##### Returns:
 
 * **$models**: _(array)_ The array of format models.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.1
 
-### Source
+##### Source:
 
-* [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L304)
+* [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L306)
 
-## make\_gallery\_class
+### make\_gallery\_class
 
 ```php
 apply_filters( 'make_gallery_class', $gallery_class, $ttfmake_section_data, $sections );
@@ -1472,24 +1486,24 @@ apply_filters( 'make_gallery_class', $gallery_class, $ttfmake_section_data, $sec
 
 Filter the class applied to a gallery.
 
-### Returns
+##### Returns:
 
 * **$gallery\_class**: _(string)_ The class applied to the gallery.
 
-### Other parameters
+##### Other parameters:
 
 * **$ttfmake\_section\_data**: _(array)_ The section data.
 * **$sections**: _(array)_ The list of sections.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L125)
 
-## make\_gallery\_item\_configuration
+### make\_gallery\_item\_configuration
 
 ```php
 apply_filters( 'make_gallery_item_configuration', $inputs );
@@ -1497,19 +1511,19 @@ apply_filters( 'make_gallery_item_configuration', $inputs );
 
 Filter the definitions of the Gallery item configuration inputs.
 
-### Returns
+##### Returns:
 
 * **$inputs**: _(array)_ The input definition array.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.0.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/gallery-item.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/gallery-item.php#L68)
 
-## make\_generate\_post\_content
+### make\_generate\_post\_content
 
 ```php
 apply_filters( 'make_generate_post_content', $post_content, $data );
@@ -1521,23 +1535,23 @@ Filter the generated post content.
 
 This content is the full HTML version of the content that will be saved as "post\_content".
 
-### Returns
+##### Returns:
 
 * **$post\_content**: _(string)_ The fully generated post content.
 
-### Other parameters
+##### Other parameters:
 
 * **$data**: _(array)_ The data used to generate the content.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L385)
 
-## make\_get\_default
+### make\_get\_default
 
 ```php
 apply_filters( 'make_get_default', $default, $option );
@@ -1545,23 +1559,23 @@ apply_filters( 'make_get_default', $default, $option );
 
 Filter the retrieved default value.
 
-### Returns
+##### Returns:
 
 * **$default**: _(mixed)_ The default value.
 
-### Other parameters
+##### Other parameters:
 
 * **$option**: _(string)_ The name of the default value.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L462)
+* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L466)
 
-## make\_get\_exif\_data
+### make\_get\_exif\_data
 
 ```php
 apply_filters( 'make_get_exif_data', $output, $attachment_id );
@@ -1569,23 +1583,23 @@ apply_filters( 'make_get_exif_data', $output, $attachment_id );
 
 Alter the exif data output.
 
-### Returns
+##### Returns:
 
 * **$output**: _(string)_ The EXIF data prepared as HTML.
 
-### Other parameters
+##### Other parameters:
 
 * **$attachment\_id**: _(int)_ The image being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L448)
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L467)
 
-## make\_get\_google\_font\_subsets
+### make\_get\_google\_font\_subsets
 
 ```php
 apply_filters( 'make_get_google_font_subsets', $subsets );
@@ -1593,19 +1607,19 @@ apply_filters( 'make_get_google_font_subsets', $subsets );
 
 Filter the list of supported Google Font subsets.
 
-### Returns
+##### Returns:
 
 * **$subsets**: _(array)_ The list of subsets.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L218)
 
-## make\_get\_google\_font\_uri
+### make\_get\_google\_font\_uri
 
 ```php
 apply_filters( 'make_get_google_font_uri', $url );
@@ -1613,19 +1627,19 @@ apply_filters( 'make_get_google_font_uri', $url );
 
 Filter the Google Fonts URL.
 
-### Returns
+##### Returns:
 
 * **$url**: _(string)_ The URL to retrieve the Google Fonts.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L145)
 
-## make\_get\_google\_fonts
+### make\_get\_google\_fonts
 
 ```php
 apply_filters( 'make_get_google_fonts', $fonts );
@@ -1633,19 +1647,19 @@ apply_filters( 'make_get_google_fonts', $fonts );
 
 Allow developers to modify the allowed Google fonts.
 
-### Returns
+##### Returns:
 
 * **$fonts**: _(array)_ The list of Google fonts with variants and subsets.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/google-fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/google-fonts.php#L24)
 
-## make\_get\_image
+### make\_get\_image
 
 ```php
 apply_filters( 'make_get_image', $return, $image_id, $size );
@@ -1653,24 +1667,24 @@ apply_filters( 'make_get_image', $return, $image_id, $size );
 
 Filter the image HTML.
 
-### Returns
+##### Returns:
 
 * **$return**: _(string)_ The image HTML.
 
-### Other parameters
+##### Other parameters:
 
 * **$image\_id**: _(int)_ The ID for the image.
 * **$size**: _(bool)_ The requested image size.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L933)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L934)
 
-## make\_get\_image\_src
+### make\_get\_image\_src
 
 ```php
 apply_filters( 'make_get_image_src', $src, $image_id, $size );
@@ -1678,24 +1692,24 @@ apply_filters( 'make_get_image_src', $src, $image_id, $size );
 
 Filter the image source attributes.
 
-### Returns
+##### Returns:
 
 * **$src**: _(string)_ The image source attributes.
 
-### Other parameters
+##### Other parameters:
 
 * **$image\_id**: _(int)_ The ID for the image.
 * **$size**: _(bool)_ The requested image size.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L978)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L979)
 
-## make\_get\_next\_section\_data
+### make\_get\_next\_section\_data
 
 ```php
 apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sections );
@@ -1703,24 +1717,24 @@ apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sect
 
 Allow developers to alter the "next" section data.
 
-### Returns
+##### Returns:
 
 * **$next\_data**: _(array)_ The data for the next section.
 
-### Other parameters
+##### Other parameters:
 
 * **$current\_section**: _(array)_ The data for the current section.
 * **$sections**: _(array)_ The list of all sections.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L518)
 
-## make\_get\_placeholder\_image
+### make\_get\_placeholder\_image
 
 ```php
 apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeholder_images );
@@ -1728,24 +1742,24 @@ apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeh
 
 Filter the image source attributes.
 
-### Returns
+##### Returns:
 
 * **$return**: _(string)_ The image source attributes.
 
-### Other parameters
+##### Other parameters:
 
 * **$image\_id**: _(int)_ The ID for the image.
 * **$ttfmake\_placeholder\_images**: _(bool)_ The list of placeholder images.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1010)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1011)
 
-## make\_get\_section\_data
+### make\_get\_section\_data
 
 ```php
 apply_filters( 'make_get_section_data', $ordered_data, $post_id );
@@ -1753,23 +1767,23 @@ apply_filters( 'make_get_section_data', $ordered_data, $post_id );
 
 Filter the section data for a post.
 
-### Returns
+##### Returns:
 
 * **$ordered\_data**: _(array)_ The array of section data.
 
-### Other parameters
+##### Other parameters:
 
 * **$post\_id**: _(int)_ The post ID for the retrieved data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L736)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L740)
 
-## make\_get\_section\_default
+### make\_get\_section\_default
 
 ```php
 apply_filters( 'make_get_section_default', $value, $key, $section_type );
@@ -1777,24 +1791,24 @@ apply_filters( 'make_get_section_default', $value, $key, $section_type );
 
 Filter the default section data that is received.
 
-### Returns
+##### Returns:
 
 * **$value**: _(mixed)_ The section value.
 
-### Other parameters
+##### Other parameters:
 
 * **$key**: _(string)_ The key to get data for.
 * **$section\_type**: _(string)_ The type of section the data is for.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L745)
+* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L843)
 
-## make\_get\_section\_name
+### make\_get\_section\_name
 
 ```php
 apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
@@ -1802,24 +1816,24 @@ apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
 
 Alter section name.
 
-### Returns
+##### Returns:
 
 * **$name**: _(string)_ The name of the section.
 
-### Other parameters
+##### Other parameters:
 
 * **$data**: _(array)_ The section data.
 * **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L894)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L895)
 
-## make\_get\_standard\_fonts
+### make\_get\_standard\_fonts
 
 ```php
 apply_filters( 'make_get_standard_fonts', $fonts );
@@ -1827,19 +1841,19 @@ apply_filters( 'make_get_standard_fonts', $fonts );
 
 Allow for developers to modify the standard fonts.
 
-### Returns
+##### Returns:
 
 * **$fonts**: _(array)_ The list of standard fonts.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L45)
 
-## make\_get\_view
+### make\_get\_view
 
 ```php
 apply_filters( 'make_get_view', $view, $parent_post_type );
@@ -1847,23 +1861,23 @@ apply_filters( 'make_get_view', $view, $parent_post_type );
 
 Allow developers to dynamically change the view.
 
-### Returns
+##### Returns:
 
 * **$view**: _(string)_ The view name.
 
-### Other parameters
+##### Other parameters:
 
 * **$parent\_post\_type**: _(string)_ The post type for the parent post of the current post.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L294)
 
-## make\_get\_wp\_editor\_id
+### make\_get\_wp\_editor\_id
 
 ```php
 apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
@@ -1871,24 +1885,24 @@ apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
 
 Alter the wp\_editor ID.
 
-### Returns
+##### Returns:
 
 * **$id**: _(string)_ The ID for the editor.
 
-### Other parameters
+##### Other parameters:
 
 * **$data**: _(array)_ The section data.
 * **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L862)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L863)
 
-## make\_has\_sidebar
+### make\_has\_sidebar
 
 ```php
 apply_filters( 'make_has_sidebar', $show_sidebar, $location, $view );
@@ -1896,24 +1910,24 @@ apply_filters( 'make_has_sidebar', $show_sidebar, $location, $view );
 
 Allow developers to dynamically changed the result of the "has sidebar" check.
 
-### Returns
+##### Returns:
 
 * **$show\_sidebar**: _(bool)_ Whether or not to show the sidebar.
 
-### Other parameters
+##### Other parameters:
 
 * **$location**: _(string)_ The location of the sidebar being evaluated.
 * **$view**: _(string)_ The view name.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L336)
 
-## make\_insert\_post\_data\_sections
+### make\_insert\_post\_data\_sections
 
 ```php
 apply_filters( 'make_insert_post_data_sections', $data );
@@ -1921,19 +1935,19 @@ apply_filters( 'make_insert_post_data_sections', $data );
 
 Filter the section data.
 
-### Returns
+##### Returns:
 
 * **$data**: _(array)_ The sanitized data.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L308)
 
-## make\_is\_builder\_page
+### make\_is\_builder\_page
 
 ```php
 apply_filters( 'make_is_builder_page', $is_builder_page, $post_id );
@@ -1941,23 +1955,23 @@ apply_filters( 'make_is_builder_page', $is_builder_page, $post_id );
 
 Allow a developer to dynamically change whether the post uses the builder or not.
 
-### Returns
+##### Returns:
 
 * **$is\_builder\_page**: _(bool)_ Whether or not the post uses the builder.
 
-### Other parameters
+##### Other parameters:
 
 * **$post\_id**: _(int)_ The ID of post being evaluated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3
 
-### Source
+##### Source:
 
-* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L826)
+* [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L830)
 
-## make\_load\_section\_template
+### make\_load\_section\_template
 
 ```php
 apply_filters( 'make_load_section_template', $templates, $slug, $path );
@@ -1965,24 +1979,24 @@ apply_filters( 'make_load_section_template', $templates, $slug, $path );
 
 Filter the templates to try and load.
 
-### Returns
+##### Returns:
 
 * **$templates**: _(array)_ The list of template to try and load.
 
-### Other parameters
+##### Other parameters:
 
 * **$slug**: _(string)_ The template slug.
 * **$path**: _(string)_ The path to the template.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L821)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L822)
 
-## make\_parse\_declaration
+### make\_parse\_declaration
 
 ```php
 apply_filters( 'make_parse_declaration', $parsed_value, $property, $value, $t, $n );
@@ -1990,26 +2004,26 @@ apply_filters( 'make_parse_declaration', $parsed_value, $property, $value, $t, $
 
 Filter the final CSS declaration after being parsed.
 
-### Returns
+##### Returns:
 
 * **$parsed\_value**: _(string)_ The full CSS declaration.
 
-### Other parameters
+##### Other parameters:
 
 * **$property**: _(string)_ The property being parsed.
 * **$value**: _(string)_ The value for the property.
 * **$t**: _(string)_ The tab character.
 * **$n**: _(string)_ The newline character.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/css.php#L267)
 
-## make\_prepare\_data
+### make\_prepare\_data
 
 ```php
 apply_filters( 'make_prepare_data', $clean_sections, $sections, $order );
@@ -2017,24 +2031,24 @@ apply_filters( 'make_prepare_data', $clean_sections, $sections, $order );
 
 Filter the full set of data for a post.
 
-### Returns
+##### Returns:
 
 * **$clean\_sections**: _(array)_ The clean sections.
 
-### Other parameters
+##### Other parameters:
 
 * **$sections**: _(array)_ The raw sections.
 * **$order**: _(array)_ The order for the sections.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L157)
 
-## make\_prepare\_data\_section
+### make\_prepare\_data\_section
 
 ```php
 apply_filters( 'make_prepare_data_section', $data, $section_type );
@@ -2046,23 +2060,23 @@ Filter the prepared data for an individual section.
 
 The result of the call\_user\_func\_array() call is an array of data representing the data for the section. This filter allows a developer to alter that data after it is handled.
 
-### Returns
+##### Returns:
 
 * **$data**: _(array)_ The raw section data.
 
-### Other parameters
+##### Other parameters:
 
 * **$section\_type**: _(string)_ The type of section being handled.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L141)
 
-## make\_read\_more\_text
+### make\_read\_more\_text
 
 ```php
 apply_filters( 'make_read_more_text' );
@@ -2070,11 +2084,35 @@ apply_filters( 'make_read_more_text' );
 
 This filter is documented in inc/template-tags.php
 
-### Source
+##### Source:
 
-* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L122)
+* [inc/customizer/sections/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/sections/general.php#L144)
 
-## make\_sanitize\_choice
+### make\_required\_files
+
+```php
+apply_filters( 'make_required_files', $files );
+```
+
+Filter the list of theme files to load.
+
+### Description
+
+Note that in some cases, the order that the files are listed in matters.
+
+##### Returns:
+
+* **$files**: _(array)_ The array of absolute file paths.
+
+##### Changelog:
+
+* **Since**: 1.6.1.
+
+##### Source:
+
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L83)
+
+### make\_sanitize\_choice
 
 ```php
 apply_filters( 'make_sanitize_choice', $value, $setting );
@@ -2082,23 +2120,23 @@ apply_filters( 'make_sanitize_choice', $value, $setting );
 
 Filter the sanitized value.
 
-### Returns
+##### Returns:
 
 * **$value**: _(mixed)_ The sanitized value.
 
-### Other parameters
+##### Other parameters:
 
 * **$setting**: _(string)_ The key for the setting.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/choices.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/choices.php#L322)
 
-## make\_sanitize\_font\_choice
+### make\_sanitize\_font\_choice
 
 ```php
 apply_filters( 'make_sanitize_font_choice', $value );
@@ -2106,19 +2144,19 @@ apply_filters( 'make_sanitize_font_choice', $value );
 
 Filter the sanitized font choice.
 
-### Returns
+##### Returns:
 
 * **$value**: _(string)_ The chosen font value.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L336)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L340)
 
-## make\_sanitize\_font\_subset
+### make\_sanitize\_font\_subset
 
 ```php
 apply_filters( 'make_sanitize_font_subset', $value );
@@ -2126,19 +2164,19 @@ apply_filters( 'make_sanitize_font_subset', $value );
 
 Filter the sanitized subset choice.
 
-### Returns
+##### Returns:
 
 * **$value**: _(string)_ The chosen subset value.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L257)
+* [inc/customizer/fonts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/fonts.php#L261)
 
-## make\_sanitize\_section\_choice
+### make\_sanitize\_section\_choice
 
 ```php
 apply_filters( 'make_sanitize_section_choice', $value, $key, $section_type );
@@ -2146,24 +2184,24 @@ apply_filters( 'make_sanitize_section_choice', $value, $key, $section_type );
 
 Allow developers to alter a section choice during the sanitization process.
 
-### Returns
+##### Returns:
 
 * **$value**: _(mixed)_ The value for the section choice.
 
-### Other parameters
+##### Other parameters:
 
 * **$key**: _(string)_ The key for the section choice.
 * **$section\_type**: _(string)_ The section type.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L792)
+* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L890)
 
-## make\_sanitize\_text\_allowed\_tags
+### make\_sanitize\_text\_allowed\_tags
 
 ```php
 apply_filters( 'make_sanitize_text_allowed_tags', $expandedtags, $string );
@@ -2171,23 +2209,23 @@ apply_filters( 'make_sanitize_text_allowed_tags', $expandedtags, $string );
 
 Customize the tags and attributes that are allows during text sanitization.
 
-### Returns
+##### Returns:
 
 * **$expandedtags**: _(array)_ The list of allowed tags and attributes.
 
-### Other parameters
+##### Other parameters:
 
 * **$string**: _(string)_ The text string being sanitized.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.4.3
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L146)
 
-## make\_section\_choices
+### make\_section\_choices
 
 ```php
 apply_filters( 'make_section_choices', $choices, $key, $section_type );
@@ -2195,24 +2233,24 @@ apply_filters( 'make_section_choices', $choices, $key, $section_type );
 
 Filter the section choices.
 
-### Returns
+##### Returns:
 
 * **$choices**: _(array)_ The default section choices.
 
-### Other parameters
+##### Other parameters:
 
 * **$key**: _(string)_ The key for the data.
 * **$section\_type**: _(string)_ The type of section this relates to.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L716)
+* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L814)
 
-## make\_section\_classes
+### make\_section\_classes
 
 ```php
 apply_filters( 'make_section_classes', $classes, $current_section );
@@ -2220,23 +2258,23 @@ apply_filters( 'make_section_classes', $classes, $current_section );
 
 Filter the section classes.
 
-### Returns
+##### Returns:
 
 * **$classes**: _(string)_ The sting of classes.
 
-### Other parameters
+##### Other parameters:
 
 * **$current\_section**: _(array)_ The array of data for the current section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L611)
 
-## make\_section\_defaults
+### make\_section\_defaults
 
 ```php
 apply_filters( 'make_section_defaults', $defaults );
@@ -2244,19 +2282,19 @@ apply_filters( 'make_section_defaults', $defaults );
 
 Filter the section defaults.
 
-### Returns
+##### Returns:
 
 * **$defaults**: _(array)_ The default section data
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L687)
+* [inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L785)
 
-## make\_section\_html\_id
+### make\_section\_html\_id
 
 ```php
 apply_filters( 'make_section_html_id' );
@@ -2264,11 +2302,11 @@ apply_filters( 'make_section_html_id' );
 
 This filter is documented in Make, inc/builder/core/save.php
 
-### Source
+##### Source:
 
 * components/text-column-layout/text-column-layout.php, line 316
 
-## make\_setting\_choices
+### make\_setting\_choices
 
 ```php
 apply_filters( 'make_setting_choices', $choices, $setting );
@@ -2276,23 +2314,23 @@ apply_filters( 'make_setting_choices', $choices, $setting );
 
 Filter the setting choices.
 
-### Returns
+##### Returns:
 
 * **$choices**: _(array)_ The choices for the setting.
 
-### Other parameters
+##### Other parameters:
 
 * **$setting**: _(string)_ The setting name.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/customizer/choices.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/choices.php#L288)
 
-## make\_setting\_defaults
+### make\_setting\_defaults
 
 ```php
 apply_filters( 'make_setting_defaults', $defaults );
@@ -2300,19 +2338,19 @@ apply_filters( 'make_setting_defaults', $defaults );
 
 Filter the default values for the settings.
 
-### Returns
+##### Returns:
 
 * **$defaults**: _(array)_ The list of default settings.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L437)
+* [inc/customizer/defaults.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/defaults.php#L441)
 
-## make\_show\_footer\_credit
+### make\_show\_footer\_credit
 
 ```php
 apply_filters( 'make_show_footer_credit', $show );
@@ -2320,19 +2358,19 @@ apply_filters( 'make_show_footer_credit', $show );
 
 Allow toggling of the footer credit.
 
-### Returns
+##### Returns:
 
 * **$show**: _(bool)_ Whether or not to show the footer credit.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [partials/footer-credit.php](https://github.com/thethemefoundry/make/blob/master/src/partials/footer-credit.php#L15)
 
-## make\_sidebar\_left
+### make\_sidebar\_left
 
 ```php
 apply_filters( 'make_sidebar_left', $footer_id );
@@ -2340,19 +2378,19 @@ apply_filters( 'make_sidebar_left', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-left.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-left.php#L13)
 
-## make\_sidebar\_list\_enabled
+### make\_sidebar\_list\_enabled
 
 ```php
 apply_filters( 'make_sidebar_list_enabled', $enabled_views, $location );
@@ -2360,23 +2398,23 @@ apply_filters( 'make_sidebar_list_enabled', $enabled_views, $location );
 
 Filter the list of sidebars that are available for a specific location.
 
-### Returns
+##### Returns:
 
 * **$enabled\_views**: _(array)_ The list of views enabled for the sidebar.
 
-### Other parameters
+##### Other parameters:
 
 * **$location**: _(string)_ The location of the sidebar being evaulated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L419)
 
-## make\_sidebar\_right
+### make\_sidebar\_right
 
 ```php
 apply_filters( 'make_sidebar_right', $footer_id );
@@ -2384,19 +2422,19 @@ apply_filters( 'make_sidebar_right', $footer_id );
 
 Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
 
-### Returns
+##### Returns:
 
 * **$footer\_id**: _(string)_ The ID of the current footer being generated.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [sidebar-right.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-right.php#L13)
 
-## make\_social\_links
+### make\_social\_links
 
 ```php
 apply_filters( 'make_social_links', $services_with_links );
@@ -2404,19 +2442,19 @@ apply_filters( 'make_social_links', $services_with_links );
 
 Filter the social links added to the site.
 
-### Returns
+##### Returns:
 
 * **$services\_with\_links**: _(array)_ The social services and links.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L520)
 
-## make\_style\_formats
+### make\_style\_formats
 
 ```php
 apply_filters( 'make_style_formats', $style_formats );
@@ -2424,19 +2462,19 @@ apply_filters( 'make_style_formats', $style_formats );
 
 Filter the styles that are added to the TinyMCE Formats dropdown.
 
-### Returns
+##### Returns:
 
 * **$style\_formats**: _(array)_ The format items being added to TinyMCE.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L428)
+* [inc/formatting/formatting.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/formatting.php#L430)
 
-## make\_supported\_social\_icons
+### make\_supported\_social\_icons
 
 ```php
 apply_filters( 'make_supported_social_icons', $icons );
@@ -2448,19 +2486,19 @@ Filter the supported social icons.
 
 This array uses the url pattern for the key and the CSS class (as dictated by Font Awesome) as the array value. The URL pattern is used to match the URL used by a menu item.
 
-### Returns
+##### Returns:
 
 * **$icons**: _(array)_ The array of supported social icons.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/extras.php](https://github.com/thethemefoundry/make/blob/master/src/inc/extras.php#L573)
 
-## make\_template\_content\_archive
+### make\_template\_content\_archive
 
 ```php
 apply_filters( 'make_template_content_archive', $type, $post );
@@ -2468,23 +2506,23 @@ apply_filters( 'make_template_content_archive', $type, $post );
 
 Allow for changing the template partial.
 
-### Returns
+##### Returns:
 
 * **$type**: _(string)_ The default template type to use.
 
-### Other parameters
+##### Other parameters:
 
 * **$post**: _(WP\_Post)_ The post object for the current post.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [index.php](https://github.com/thethemefoundry/make/blob/master/src/index.php#L25)
 
-## make\_template\_content\_page
+### make\_template\_content\_page
 
 ```php
 apply_filters( 'make_template_content_page', $type, $post );
@@ -2492,23 +2530,23 @@ apply_filters( 'make_template_content_page', $type, $post );
 
 Allow for changing the template partial.
 
-### Returns
+##### Returns:
 
 * **$type**: _(string)_ The default template type to use.
 
-### Other parameters
+##### Other parameters:
 
 * **$post**: _(WP\_Post)_ The post object for the current post.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [page.php](https://github.com/thethemefoundry/make/blob/master/src/page.php#L25)
 
-## make\_template\_content\_search
+### make\_template\_content\_search
 
 ```php
 apply_filters( 'make_template_content_search', $type, $post );
@@ -2516,23 +2554,23 @@ apply_filters( 'make_template_content_search', $type, $post );
 
 Allow for changing the template partial.
 
-### Returns
+##### Returns:
 
 * **$type**: _(string)_ The default template type to use.
 
-### Other parameters
+##### Other parameters:
 
 * **$post**: _(WP\_Post)_ The post object for the current post.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [search.php](https://github.com/thethemefoundry/make/blob/master/src/search.php#L29)
+* [search.php](https://github.com/thethemefoundry/make/blob/master/src/search.php#L30)
 
-## make\_template\_content\_single
+### make\_template\_content\_single
 
 ```php
 apply_filters( 'make_template_content_single', $type, $post );
@@ -2540,23 +2578,23 @@ apply_filters( 'make_template_content_single', $type, $post );
 
 Allow for changing the template partial.
 
-### Returns
+##### Returns:
 
 * **$type**: _(string)_ The default template type to use.
 
-### Other parameters
+##### Other parameters:
 
 * **$post**: _(WP\_Post)_ The post object for the current post.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [single.php](https://github.com/thethemefoundry/make/blob/master/src/single.php#L25)
 
-## make\_the\_builder\_content
+### make\_the\_builder\_content
 
 ```php
 apply_filters( 'make_the_builder_content', $content );
@@ -2564,19 +2602,19 @@ apply_filters( 'make_the_builder_content', $content );
 
 Filter the content used for "post\_content" when the builder is used to generate content.
 
-### Returns
+##### Returns:
 
 * **$content**: _(string)_ The post content.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
 * [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L630)
 
-## make\_will\_be\_builder\_page
+### make\_will\_be\_builder\_page
 
 ```php
 apply_filters( 'make_will_be_builder_page', $will_be_builder_page, $template, $use_builder );
@@ -2584,24 +2622,24 @@ apply_filters( 'make_will_be_builder_page', $will_be_builder_page, $template, $u
 
 Allow developers to dynamically change the builder page status.
 
-### Returns
+##### Returns:
 
 * **$will\_be\_builder\_page**: _(bool)_ Whether or not this page will be a builder page.
 
-### Other parameters
+##### Other parameters:
 
 * **$template**: _(string)_ The template name.
 * **$use\_builder**: _(int)_ Value of the "use-builder" input. 1 === use builder. 0 === do not use builder.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L733)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L734)
 
-## ttfmake-text-column-classes
+### ttfmake-text-column-classes
 
 ```php
 apply_filters( 'ttfmake-text-column-classes', $column_classes, $i, $ttfmake_section_data );
@@ -2609,24 +2647,24 @@ apply_filters( 'ttfmake-text-column-classes', $column_classes, $i, $ttfmake_sect
 
 Filter the classes applied to each column in a Columns section.
 
-### Returns
+##### Returns:
 
 * **$column\_classes**: _(string)_ The classes for the column.
 
-### Other parameters
+##### Other parameters:
 
 * **$i**: _(int)_ The column number.
 * **$ttfmake\_section\_data**: _(array)_ The array of data for the section.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.0.
 
-### Source
+##### Source:
 
 * [inc/builder/sections/builder-templates/text.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/builder-templates/text.php#L116)
 
-## ttfmake\_builder\_js\_dependencies
+### ttfmake\_builder\_js\_dependencies
 
 ```php
 apply_filters( 'ttfmake_builder_js_dependencies', $dependencies );
@@ -2634,19 +2672,19 @@ apply_filters( 'ttfmake_builder_js_dependencies', $dependencies );
 
 Filter the dependencies for the Make builder JS.
 
-### Returns
+##### Returns:
 
 * **$dependencies**: _(array)_ The list of dependencies.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.2.3.
 
-### Source
+##### Source:
 
-* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L308)
+* [inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L309)
 
-## ttfmake\_builder\_section\_footer\_links
+### ttfmake\_builder\_section\_footer\_links
 
 ```php
 apply_filters( 'ttfmake_builder_section_footer_links', $links );
@@ -2658,19 +2696,19 @@ Deprecated: Filter the definitions for the links that appear in each Builder sec
 
 This filter is deprecated. Use make\_builder\_section\_links instead.
 
-### Returns
+##### Returns:
 
 * **$links**: _(array)_ The link definition array.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.0.7.
 
-### Source
+##### Source:
 
-* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L36)
+* [inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L37)
 
-## ttfmake\_custom\_logo\_information
+### ttfmake\_custom\_logo\_information
 
 ```php
 apply_filters( 'ttfmake_custom_logo_information', $logo_information );
@@ -2682,19 +2720,19 @@ Filter the URL and dimensions of the custom logo.
 
 This filter may be useful if you encounter problems getting your custom logo to appear. Note, however, that using this filter will hard-code the logo information and settings in the Logo interface in the Customizer won't be reflected.
 
-### Returns
+##### Returns:
 
 * **$logo\_information**: _(array)_ The array of information.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.0.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L327)
+* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L334)
 
-## ttfmake\_custom\_logo\_max\_width
+### ttfmake\_custom\_logo\_max\_width
 
 ```php
 apply_filters( 'ttfmake_custom_logo_max_width', $width );
@@ -2702,19 +2740,19 @@ apply_filters( 'ttfmake_custom_logo_max_width', $width );
 
 Filter the maximum allowable width for a custom logo.
 
-### Returns
+##### Returns:
 
 * **$width**: _(string|int)_ The maximum width, in pixels.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.0.0.
 
-### Source
+##### Source:
 
-* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L347)
+* [inc/customizer/logo.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/logo.php#L354)
 
-## ttfmp\_color\_highlight\_description
+### ttfmp\_color\_highlight\_description
 
 ```php
 apply_filters( 'ttfmp_color_highlight_description', $description );
@@ -2722,19 +2760,19 @@ apply_filters( 'ttfmp_color_highlight_description', $description );
 
 Filter the description of the Highlight Color control.
 
-### Returns
+##### Returns:
 
 * **$description**: _(string)_ The control description.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.5.0.
 
-### Source
+##### Source:
 
-* shared/shop-settings/shop-settings.php, line 371
+* shared/shop-settings/shop-settings.php, line 380
 
-## ttfmp\_perpage\_allowed\_keys
+### ttfmp\_perpage\_allowed\_keys
 
 ```php
 apply_filters( 'ttfmp_perpage_allowed_keys', $allowed_keys, $view );
@@ -2742,23 +2780,23 @@ apply_filters( 'ttfmp_perpage_allowed_keys', $allowed_keys, $view );
 
 Filter to change the theme option keys that are allowed to be modified by the Per Page component.
 
-### Returns
+##### Returns:
 
 * **$allowed\_keys**: _(array)_ The array of option keys that are allowed to be modified by the Per Page component.
 
-### Other parameters
+##### Other parameters:
 
 * **$view**: _(string)_ The type of view being modified.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.5.1
 
-### Source
+##### Source:
 
-* components/per-page/class-options.php, line 102
+* components/per-page/class-options.php, line 104
 
-## ttfmp\_perpage\_keys
+### ttfmp\_perpage\_keys
 
 ```php
 apply_filters( 'ttfmp_perpage_keys', $keys, $view );
@@ -2766,53 +2804,53 @@ apply_filters( 'ttfmp_perpage_keys', $keys, $view );
 
 Filter to change the theme option keys that are allowed to be modified for the specified view.
 
-### Returns
+##### Returns:
 
 * **$keys**: _(array)_ The allowed keys for the specified view.
 
-### Other parameters
+##### Other parameters:
 
 * **$view**: _(string)_ The specified view. Added in 1.5.1.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.0.0.
 
-### Source
+##### Source:
 
-* components/per-page/class-options.php, line 120
+* components/per-page/class-options.php, line 122
 
-## ttfmp\_perpage\_post\_types
+### ttfmp\_perpage\_post\_types
 
 ```php
 apply_filters( 'ttfmp_perpage_post_types' );
 ```
 
-### Source
+##### Source:
 
 * components/per-page/class-metabox.php, line 105
 
-## ttfmp\_perpage\_view
+### ttfmp\_perpage\_view
 
 ```php
 apply_filters( 'ttfmp_perpage_view' );
 ```
 
-### Source
+##### Source:
 
 * components/per-page/per-page.php, line 131
 
-## ttfmp\_post\_list\_output
+### ttfmp\_post\_list\_output
 
 ```php
 apply_filters( 'ttfmp_post_list_output' );
 ```
 
-### Source
+##### Source:
 
-* components/post-list/post-list.php, line 311
+* components/post-list/post-list.php, line 405
 
-## ttfmp\_post\_list\_query\_args
+### ttfmp\_post\_list\_query\_args
 
 ```php
 apply_filters( 'ttfmp_post_list_query_args', $args, $options );
@@ -2820,43 +2858,43 @@ apply_filters( 'ttfmp_post_list_query_args', $args, $options );
 
 Filter the arguments that are used to create the Posts List query object.
 
-### Returns
+##### Returns:
 
 * **$args**: _(array)_ The query arguments.
 
-### Other parameters
+##### Other parameters:
 
 * **$options**: _(array)_ The section/widget options used to determine the arguments.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.6.0.
 
-### Source
+##### Source:
 
-* components/post-list/post-list.php, line 201
+* components/post-list/post-list.php, line 293
 
-## ttfmp\_post\_list\_template\_paths
+### ttfmp\_post\_list\_template\_paths
 
 ```php
 apply_filters( 'ttfmp_post_list_template_paths' );
 ```
 
-### Source
+##### Source:
 
-* components/post-list/post-list.php, line 250
+* components/post-list/post-list.php, line 344
 
-## ttfmp\_posts\_list\_thumbnail\_size
+### ttfmp\_posts\_list\_thumbnail\_size
 
 ```php
 apply_filters( 'ttfmp_posts_list_thumbnail_size' );
 ```
 
-### Source
+##### Source:
 
 * components/post-list/templates/post-list-item.php, line 13
 
-## ttfmp\_shop\_layout\_product\_description
+### ttfmp\_shop\_layout\_product\_description
 
 ```php
 apply_filters( 'ttfmp_shop_layout_product_description' );
@@ -2864,11 +2902,11 @@ apply_filters( 'ttfmp_shop_layout_product_description' );
 
 Product
 
-### Source
+##### Source:
 
 * shared/shop-settings/shop-settings.php, line 214
 
-## ttfmp\_shop\_layout\_shop\_description
+### ttfmp\_shop\_layout\_shop\_description
 
 ```php
 apply_filters( 'ttfmp_shop_layout_shop_description' );
@@ -2876,11 +2914,11 @@ apply_filters( 'ttfmp_shop_layout_shop_description' );
 
 Shop
 
-### Source
+##### Source:
 
 * shared/shop-settings/shop-settings.php, line 157
 
-## ttfmp\_style\_kit\_allowed\_option\_keys
+### ttfmp\_style\_kit\_allowed\_option\_keys
 
 ```php
 apply_filters( 'ttfmp_style_kit_allowed_option_keys', $keys );
@@ -2888,19 +2926,19 @@ apply_filters( 'ttfmp_style_kit_allowed_option_keys', $keys );
 
 Filter to modify the array of option keys that Style Kits is allowed to modify.
 
-### Returns
+##### Returns:
 
 * **$keys**: _(array)_ Array of option keys that Style Kits is allowed to modify.
 
-### Changelog
+##### Changelog:
 
 * **Since**: 1.5.0.
 
-### Source
+##### Source:
 
-* components/style-kits/style-kits.php, line 396
+* components/style-kits/style-kits.php, line 400
 
-## ttfmp\_style\_kit\_definitions
+### ttfmp\_style\_kit\_definitions
 
 ```php
 apply_filters( 'ttfmp_style_kit_definitions' );
@@ -2908,27 +2946,27 @@ apply_filters( 'ttfmp_style_kit_definitions' );
 
 Layout
 
-### Source
+##### Source:
 
 * components/style-kits/definitions.php, line 462
 
-## ttfmp\_woocommerce\_product\_grid\_output
+### ttfmp\_woocommerce\_product\_grid\_output
 
 ```php
 apply_filters( 'ttfmp_woocommerce_product_grid_output' );
 ```
 
-### Source
+##### Source:
 
 * components/woocommerce/class-shortcode.php, line 308
 
-## ttfmp\_woocommerce\_product\_grid\_query\_args
+### ttfmp\_woocommerce\_product\_grid\_query\_args
 
 ```php
 apply_filters( 'ttfmp_woocommerce_product_grid_query_args' );
 ```
 
-### Source
+##### Source:
 
 * components/woocommerce/class-shortcode.php, line 195
 
