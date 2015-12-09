@@ -88,7 +88,7 @@ do_action( 'make_builder_data_saved', $sections, $post_id );
 
 Execute code after the section data is saved.
 
-### Description
+##### Description
 
 While it is possible to use a "save\_post" to hook into the save routine, this action is preferred as it is only called after all validation and sanitization is completed.
 
@@ -134,7 +134,7 @@ do_action( 'make_css' );
 
 The hook used to add CSS rules for the generated inline CSS.
 
-### Description
+##### Description
 
 This hook is the correct hook to use for adding CSS styles to the group of selectors and properties that will be added to inline CSS that is printed in the head. Hooking elsewhere may lead to rules not being registered correctly for the CSS generation. Most Customizer options will use this hook to register additional CSS rules.
 
@@ -274,7 +274,7 @@ do_action( 'make_section_{$ttfmake_section_data['section']['id']}_after', $ttfma
 
 Allow for script execution in the footer of a builder section.
 
-### Description
+##### Description
 
 This action is a variable action that allows a developer to hook into specific section types (e.g., 'text'). Do not confuse "id" in this context as the individual section id (e.g., 14092814910).
 
@@ -298,7 +298,7 @@ do_action( 'make_section_{$ttfmake_section_data['section']['id']}_before', $ttfm
 
 Allow for script execution in the header of a builder section.
 
-### Description
+##### Description
 
 This action is a variable action that allows a developer to hook into specific section types (e.g., 'text'). Do not confuse "id" in this context as the individual section id (e.g., 14092814910).
 
@@ -324,7 +324,7 @@ apply_filters( 'make_add_section', $section );
 
 Allow the added sections to be filtered.
 
-### Description
+##### Description
 
 This filters allows for dynamically altering sections as they get added. This can help enforce policies for sections by sanitizing the registered values.
 
@@ -698,7 +698,7 @@ apply_filters( 'make_builder_js_templates', $templates );
 
 Array of items to print as JS templates in the footer of the Builder screen.
 
-### Description
+##### Description
 
 Each item is represented as an associative array and includes the following items:  id                  The ID of the template builder\_template    The relative path to the PHP template path                The path to the base directory 
 
@@ -881,7 +881,7 @@ apply_filters( 'make_css_font_properties', $properties );
 
 Filter the array of customizable font properties and their sanitization callbacks.
 
-### Description
+##### Description
 
 css\_property => sanitize\_callback
 
@@ -994,7 +994,7 @@ apply_filters( 'make_customizer_contentlayout_sections', $contentlayout_sections
 
 Filter the definitions for the controls in the Layout panel of the Customizer.
 
-### Description
+##### Description
 
 The panel was previously labeled "Content &amp; Layout".
 
@@ -1042,7 +1042,7 @@ apply_filters( 'make_customizer_footer_sections', $footer_sections );
 
 Deprecated: Filter the definitions for the controls in the Footer panel of the Customizer.
 
-### Description
+##### Description
 
 This filter was introduced when the Footer options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
@@ -1086,7 +1086,7 @@ apply_filters( 'make_customizer_header_sections', $header_sections );
 
 Deprecated: Filter the definitions for the controls in the Header panel of the Customizer.
 
-### Description
+##### Description
 
 This filter was introduced when the Header options were all in one panel instead of divided among Typography, Color, Layout, etc.
 
@@ -1110,7 +1110,7 @@ apply_filters( 'make_customizer_key_conversions', $conversions );
 
 Filter the array of Customizer option key conversions.
 
-### Description
+##### Description
 
 The keys for some Customizer options have changed between versions. This array defines each change as $new\_key => $old key.
 
@@ -1154,7 +1154,7 @@ apply_filters( 'make_customizer_sections', $sections );
 
 Filter the array of section definitions for the Customizer.
 
-### Description
+##### Description
 
 This filter is used to compile a master array of section definitions for each panel in the Customizer.
 
@@ -1310,7 +1310,7 @@ apply_filters( 'make_font_relative_size', $sizes );
 
 Filter the array of relative font sizes.
 
-### Description
+##### Description
 
 Each array item defines a percentage by which to scale a font size compared to some other font size. Most of these were deprecated in version 1.3.0.
 
@@ -1462,7 +1462,7 @@ apply_filters( 'make_format_builder_format_models', $models );
 
 Filter the format model definitions and their script locations.
 
-### Description
+##### Description
 
 model => URI of the model's script file
 
@@ -1531,7 +1531,7 @@ apply_filters( 'make_generate_post_content', $post_content, $data );
 
 Filter the generated post content.
 
-### Description
+##### Description
 
 This content is the full HTML version of the content that will be saved as "post\_content".
 
@@ -2056,7 +2056,7 @@ apply_filters( 'make_prepare_data_section', $data, $section_type );
 
 Filter the prepared data for an individual section.
 
-### Description
+##### Description
 
 The result of the call\_user\_func\_array() call is an array of data representing the data for the section. This filter allows a developer to alter that data after it is handled.
 
@@ -2096,7 +2096,7 @@ apply_filters( 'make_required_files', $files );
 
 Filter the list of theme files to load.
 
-### Description
+##### Description
 
 Note that in some cases, the order that the files are listed in matters.
 
@@ -2482,7 +2482,7 @@ apply_filters( 'make_supported_social_icons', $icons );
 
 Filter the supported social icons.
 
-### Description
+##### Description
 
 This array uses the url pattern for the key and the CSS class (as dictated by Font Awesome) as the array value. The URL pattern is used to match the URL used by a menu item.
 
@@ -2692,7 +2692,7 @@ apply_filters( 'ttfmake_builder_section_footer_links', $links );
 
 Deprecated: Filter the definitions for the links that appear in each Builder section's footer.
 
-### Description
+##### Description
 
 This filter is deprecated. Use make\_builder\_section\_links instead.
 
@@ -2716,7 +2716,7 @@ apply_filters( 'ttfmake_custom_logo_information', $logo_information );
 
 Filter the URL and dimensions of the custom logo.
 
-### Description
+##### Description
 
 This filter may be useful if you encounter problems getting your custom logo to appear. Note, however, that using this filter will hard-code the logo information and settings in the Logo interface in the Customizer won't be reflected.
 
