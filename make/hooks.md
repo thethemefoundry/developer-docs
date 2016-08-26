@@ -792,7 +792,7 @@ This allows for a custom metabox callback to be used in place of the default one
 
 ##### Source:
 
-* inc/component/perpage/metabox.php, line 167
+* inc/component/perpage/metabox.php, line 176
 
 ## Filters
 
@@ -834,7 +834,7 @@ Filter: Prevent an integration from being added.
 
 ##### Source:
 
-* [inc/integration/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/integration/manager.php#L59)
+* [inc/integration/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/integration/manager.php#L64)
 
 ### make\_add\_section
 
@@ -902,7 +902,7 @@ Filter the class for the banner section.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L462)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L496)
 
 ### make\_builder\_banner\_slide\_class
 
@@ -922,7 +922,7 @@ Allow developers to alter the class for the banner slide.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L587)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L621)
 
 ### make\_builder\_banner\_slide\_style
 
@@ -947,7 +947,7 @@ Allow developers to change the CSS for a Banner section.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L624)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L658)
 
 ### make\_builder\_get\_banner\_array
 
@@ -971,7 +971,7 @@ Filter the data array for a banner section.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L428)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L462)
 
 ### make\_builder\_get\_banner\_slider\_atts
 
@@ -995,7 +995,7 @@ Allow for altering the banner slider attributes.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L561)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L595)
 
 ### make\_builder\_get\_gallery\_array
 
@@ -1070,7 +1070,33 @@ Alter the generated gallery image.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L260)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L294)
+
+### make\_builder\_get\_gallery\_item\_onclick
+
+```php
+apply_filters( 'make_builder_get_gallery_item_onclick', $onclick, $link, $ttfmake_section_data, $i );
+```
+
+Filter the class used for a gallery item.
+
+##### Returns:
+
+* **$onclick**: _(string)_ The computed gallery onclick attribute.
+
+##### Other parameters:
+
+* **$link**: _(string)_ The item's link.
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+* **$i**: _(int)_ The current gallery item number.
+
+##### Changelog:
+
+* **Since**: 1.7.6.
+
+##### Source:
+
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L251)
 
 ### make\_builder\_get\_gallery\_style
 
@@ -1118,7 +1144,7 @@ Filter the array of builder data for the text section.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L308)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L342)
 
 ### make\_builder\_get\_text\_class
 
@@ -1143,7 +1169,7 @@ Filter the text section class.
 
 ##### Source:
 
-* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L350)
+* [inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L384)
 
 ### make\_builder\_is\_default
 
@@ -1484,7 +1510,7 @@ Filter: Modify the array of panel definitions for the Customizer.
 
 ##### Source:
 
-* [inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L280)
+* [inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L279)
 
 ### make\_customizer\_sections
 
@@ -1504,7 +1530,7 @@ Filter: Modify the array of section/control definitions for the Customizer.
 
 ##### Source:
 
-* [inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L355)
+* [inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L354)
 
 ### make\_enqueue\_parent\_stylesheet
 
@@ -1525,6 +1551,30 @@ Filter: Toggle whether the parent stylesheet loads along with the child one.
 ##### Source:
 
 * [inc/setup/scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L283)
+
+### make\_entry\_thumbnail\_size
+
+```php
+apply_filters( 'make_entry_thumbnail_size', $size, $layout_setting );
+```
+
+Filter: Modify the image size used to display a post's featured image (post thumbnail)
+
+##### Returns:
+
+* **$size**: _(string)_ The ID of the image size to use.
+
+##### Other parameters:
+
+* **$layout\_setting**: _(string)_ The value of the featured image layout setting for the current view.
+
+##### Changelog:
+
+* **Since**: 1.7.4.
+
+##### Source:
+
+* [inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L603)
 
 ### make\_error\_backtrace\_limit
 
@@ -1708,7 +1758,7 @@ Each array item defines a percentage by which to scale a font size compared to s
 
 ##### Source:
 
-* [inc/style/datahelper.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/datahelper.php#L211)
+* [inc/style/datahelper.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/datahelper.php#L212)
 
 ### make\_font\_stack
 
@@ -3048,7 +3098,7 @@ Filter the content used for "post\_content" when the builder is used to generate
 
 ##### Source:
 
-* [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L630)
+* [inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L640)
 
 ### make\_widget\_display\_args
 
@@ -3306,7 +3356,7 @@ Filter: Modify the HTML output for a Posts List.
 
 ##### Source:
 
-* inc/component/postslist/setup.php, line 848
+* inc/component/postslist/setup.php, line 854
 
 ### makeplus\_postslist\_query\_args
 
@@ -3330,7 +3380,7 @@ Filter the arguments that are used to create the Posts List query object.
 
 ##### Source:
 
-* inc/component/postslist/setup.php, line 692
+* inc/component/postslist/setup.php, line 693
 
 ### makeplus\_postslist\_template\_paths
 
@@ -3350,7 +3400,7 @@ Filter: Modify the array of paths used when locating the post-list-item.php temp
 
 ##### Source:
 
-* inc/component/postslist/setup.php, line 766
+* inc/component/postslist/setup.php, line 772
 
 ### makeplus\_typekit\_async
 
@@ -3412,6 +3462,26 @@ Filter: Modify the result of the check to see if the current view is "shop".
 
 * inc/component/ecommerce/enhancement/layoutshop.php, line 109
 
+### makeplus\_woocommerce\_product\_grid\_image\_size
+
+```php
+apply_filters( 'makeplus_woocommerce_product_grid_image_size', $image_size );
+```
+
+Filter: Modify the image size used for product images in the Products section.
+
+##### Returns:
+
+* **$image\_size**: _(string)_ The name of the image size to use.
+
+##### Changelog:
+
+* **Since**: 1.7.1.
+
+##### Source:
+
+* inc/component/woocommerce/shortcode.php, line 390
+
 ### makeplus\_woocommerce\_product\_grid\_output
 
 ```php
@@ -3430,7 +3500,7 @@ Filter: Modify the output for the Product Grid.
 
 ##### Source:
 
-* inc/component/woocommerce/shortcode.php, line 439
+* inc/component/woocommerce/shortcode.php, line 452
 
 ### makeplus\_woocommerce\_product\_grid\_query\_args
 
@@ -3454,7 +3524,7 @@ Filter: Modify the query arguments for the Product Grid.
 
 ##### Source:
 
-* inc/component/woocommerce/shortcode.php, line 262
+* inc/component/woocommerce/shortcode.php, line 263
 
 ### ttfmake-text-column-classes
 
