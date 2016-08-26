@@ -1078,7 +1078,7 @@ Alter the generated gallery image.
 apply_filters( 'make_builder_get_gallery_item_onclick', $onclick, $link, $ttfmake_section_data, $i );
 ```
 
-Filter the class used for a gallery item.
+Filter the the onclick attribute for a gallery item.
 
 ##### Returns:
 
