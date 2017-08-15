@@ -1,4 +1,3 @@
-
 ## Actions
 
 ### make\_api\_loaded
@@ -23,7 +22,7 @@ Action: Fire when the Make API has finished loading.
 
 ##### Source:
 
-* [src/functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L40)
+* [functions.php](https://github.com/thethemefoundry/make/blob/master/src/functions.php#L40)
 
 ### make\_notice\_loaded
 
@@ -49,12 +48,12 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/admin/notice.php](https://github.com/thethemefoundry/make/blob/master/src/inc/admin/notice.php#L108)
+* [notice.php](https://github.com/thethemefoundry/make/blob/master/src/inc/admin/notice.php#L108)
 
-### make\_section\_'.$ttfmake\_section\_data['section']['id'].'\_before
+### make\_section\_'  .  $ttfmake\_section\_data['section']['id']  .  '\_before
 
 ```php
-do_action( 'make_section_' . $ttfmake_section_data['section']['id'] . '_before', $ttfmake_section_data );
+do_action( 'make_section_'  .  $ttfmake_section_data['section']['id']  .  '_before', $ttfmake_section_data );
 ```
 
 ##### Description
@@ -75,12 +74,12 @@ not confuse "id" in this context as the individual section id (e.g., 14092814910
 
 ##### Source:
 
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L792)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L690)
 
-### make\_section\_'.$ttfmake\_section\_data['section']['id'].'\_after
+### make\_section\_'  .  $ttfmake\_section\_data['section']['id']  .  '\_after
 
 ```php
-do_action( 'make_section_' . $ttfmake_section_data['section']['id'] . '_after', $ttfmake_section_data );
+do_action( 'make_section_'  .  $ttfmake_section_data['section']['id']  .  '_after', $ttfmake_section_data );
 ```
 
 ##### Description
@@ -101,7 +100,7 @@ not confuse "id" in this context as the individual section id (e.g., 14092814910
 
 ##### Source:
 
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L821)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L719)
 
 ### make\_builder\_data\_saved
 
@@ -129,7 +128,7 @@ only called after all validation and sanitization is completed.
 
 ##### Source:
 
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L184)
+* [save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L187)
 
 ### make\_before\_builder\_menu
 
@@ -151,7 +150,7 @@ Execute code before the builder menu items are displayed.
 
 ##### Source:
 
-* [src/inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L18)
+* [menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L18)
 
 ### make\_after\_builder\_menu
 
@@ -173,7 +172,7 @@ Execute code after the builder menu items are displayed.
 
 ##### Source:
 
-* [src/inc/builder/core/templates/menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L42)
+* [menu.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/menu.php#L42)
 
 ### make\_before\_section\_header
 
@@ -195,7 +194,51 @@ Execute code before the section header is displayed.
 
 ##### Source:
 
-* [src/inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L56)
+* [section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L70)
+
+### make\_section\_header\_badges
+
+```php
+do_action( 'make_section_header_badges' );
+```
+
+##### Description
+
+Display custom badges.
+
+##### Parameters:
+
+
+##### Changelog:
+
+
+* **Since**: 1.8.11.
+
+##### Source:
+
+* [section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L81)
+
+### make\_before\_builder\_stage
+
+```php
+do_action( 'make_before_builder_stage' );
+```
+
+##### Description
+
+Execute code before the builder stage is displayed.
+
+##### Parameters:
+
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [stage.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage.php#L13)
 
 ### make\_after\_builder\_stage
 
@@ -217,156 +260,12 @@ Execute code after the builder stage is displayed.
 
 ##### Source:
 
-* [src/inc/builder/core/templates/stage-footer.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage-footer.php#L11)
+* [stage.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/stage.php#L26)
 
-### make\_section\_text\_before\_column
-
-```php
-do_action( 'make_section_text_before_column', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code before an individual text column is displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template-column.php#L72)
-
-### make\_section\_text\_after\_column
+### make\_builder\_'  .  $data['section-type']  .  '\_css
 
 ```php
-do_action( 'make_section_text_after_column', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code after an individual text column is displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template-column.php#L95)
-
-### make\_section\_text\_before\_columns\_select
-
-```php
-do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code before the columns select input is displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template.php#L17)
-
-### make\_section\_text\_after\_columns\_select
-
-```php
-do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code after the columns select input is displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template.php#L26)
-
-### make\_section\_text\_after\_title
-
-```php
-do_action( 'make_section_text_after_title', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code after the section title is displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template.php#L35)
-
-### make\_section\_text\_after\_columns
-
-```php
-do_action( 'make_section_text_after_columns', $ttfmake_section_data );
-```
-
-##### Description
-
-Execute code after all columns are displayed.
-
-##### Parameters:
-
-
-* **$ttfmake\_section\_data**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template.php#L46)
-
-### make\_builder\_'.$data['section-type'].'\_css
-
-```php
-do_action( 'make_builder_' . $data['section-type'] . '_css', $data, $id, $style );
+do_action( 'make_builder_'  .  $data['section-type']  .  '_css', $data, $id, $style );
 ```
 
 ##### Description
@@ -391,7 +290,7 @@ Allow section-specific CSS rules to be added to the document head of a Builder p
 
 ##### Source:
 
-* [src/inc/builder/setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L149)
+* [setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L166)
 
 ### make\_choices\_loaded
 
@@ -417,93 +316,7 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/choices/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/choices/manager.php#L74)
-
-### make\_deprecated\_function\_run
-
-```php
-do_action( 'make_deprecated_function_run', $function, $version, $replacement, $message );
-```
-
-##### Description
-
-Fires when a deprecated function is called.
-
-##### Parameters:
-
-
-* **$function**: _(string)_ The function that was called.
-
-* **$version**: _(string)_ The version of Make that deprecated the function.
-
-* **$replacement**: _(string)_ The function that should have been called.
-
-* **$message**: _(string)_ Explanatory text if there is no direct replacement available.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/compatibility/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/methods.php#L284)
-
-### make\_deprecated\_hook\_run
-
-```php
-do_action( 'make_deprecated_hook_run', $hook, $version, $message );
-```
-
-##### Description
-
-Fires when a deprecated hook has an attached functionmethod.
-
-##### Parameters:
-
-
-* **$hook**: _(string)_ The hook that was called.
-
-* **$version**: _(string)_ The version of Make that deprecated the hook.
-
-* **$message**: _(string)_ Optional. A message regarding the change. Default null.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/compatibility/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/methods.php#L337)
-
-### make\_doing\_it\_wrong\_run
-
-```php
-do_action( 'make_doing_it_wrong_run', $function, $message, $version );
-```
-
-##### Description
-
-Fires when the given function is being used incorrectly.
-
-##### Parameters:
-
-
-* **$function**: _(string)_ The function that was called.
-
-* **$message**: _(string)_ A message explaining what has been done incorrectly.
-
-* **$version**: _(string)_ The version of Make where the message was added.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/compatibility/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/methods.php#L380)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/choices/manager.php#L74)
 
 ### make\_font\_loaded
 
@@ -529,7 +342,7 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/font/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L79)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L79)
 
 ### make\_add\_formats
 
@@ -554,7 +367,7 @@ This action gives a developer the opportunity to add or remove formats.
 
 ##### Source:
 
-* [src/inc/formatting/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L218)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L218)
 
 ### make\_view\_loaded
 
@@ -580,7 +393,151 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/layout/view.php](https://github.com/thethemefoundry/make/blob/master/src/inc/layout/view.php#L105)
+* [view.php](https://github.com/thethemefoundry/make/blob/master/src/inc/layout/view.php#L105)
+
+### make\_section\_text\_before\_column
+
+```php
+do_action( 'make_section_text_before_column', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code before an individual text column is displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template-column.php#L69)
+
+### make\_section\_text\_after\_column
+
+```php
+do_action( 'make_section_text_after_column', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code after an individual text column is displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template-column.php#L92)
+
+### make\_section\_text\_before\_columns\_select
+
+```php
+do_action( 'make_section_text_before_columns_select', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code before the columns select input is displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template.php#L17)
+
+### make\_section\_text\_after\_columns\_select
+
+```php
+do_action( 'make_section_text_after_columns_select', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code after the columns select input is displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template.php#L26)
+
+### make\_section\_text\_after\_title
+
+```php
+do_action( 'make_section_text_after_title', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code after the section title is displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template.php#L35)
+
+### make\_section\_text\_after\_columns
+
+```php
+do_action( 'make_section_text_after_columns', $ttfmake_section_data );
+```
+
+##### Description
+
+Execute code after all columns are displayed.
+
+##### Parameters:
+
+
+* **$ttfmake\_section\_data**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [builder-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template.php#L46)
 
 ### make\_settings\_thememod\_loaded
 
@@ -606,12 +563,12 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/settings/thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L120)
+* [thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L120)
 
 ### make\_socialicons\_loaded
 
 ```php
-do_action( "make_socialicons_loaded", $socialicons );
+do_action( 'make_socialicons_loaded', $socialicons );
 ```
 
 ##### Description
@@ -632,7 +589,7 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L130)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L130)
 
 ### make\_style\_before\_load
 
@@ -658,7 +615,7 @@ before the style definitions are loaded.
 
 ##### Source:
 
-* [src/inc/style/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L147)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L147)
 
 ### make\_css
 
@@ -683,7 +640,7 @@ correctly for the CSS generation. Most Customizer options will use this hook to 
 
 ##### Source:
 
-* [src/inc/style/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L188)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L188)
 
 ### make\_style\_loaded
 
@@ -709,7 +666,7 @@ and run additional load routines.
 
 ##### Source:
 
-* [src/inc/style/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L201)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L201)
 
 ### make\_style\_before\_inline
 
@@ -733,7 +690,7 @@ Action: Fires before the inline CSS rules are rendered and output.
 
 ##### Source:
 
-* [src/inc/style/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L234)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L234)
 
 ### make\_style\_before\_file
 
@@ -757,7 +714,7 @@ Action: Fires before the CSS rules are rendered and output as a file.
 
 ##### Source:
 
-* [src/inc/style/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L295)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/manager.php#L295)
 
 
 ## Filters
@@ -786,7 +743,7 @@ Allow for changing the template partial.
 
 ##### Source:
 
-* [src/archive.php](https://github.com/thethemefoundry/make/blob/master/src/archive.php#L31)
+* [archive.php](https://github.com/thethemefoundry/make/blob/master/src/archive.php#L31)
 
 ### make\_add\_section
 
@@ -812,724 +769,12 @@ sections by sanitizing the registered values.
 
 ##### Source:
 
-* [src/inc/builder/core/api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L113)
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L119)
 
-### make\_builder\_js\_dependencies
-
-```php
-apply_filters( 'make_builder_js_dependencies', $dependencies );
-```
-
-##### Description
-
-Filter the dependencies for the Make builder JS.
-
-##### Parameters:
-
-
-* **$dependencies**: _(array)_ The list of dependencies.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L333)
-
-### make\_builder\_is\_default
+### make\_sections\_defaults
 
 ```php
-apply_filters( 'make_builder_is_default', $is_default );
-```
-
-##### Description
-
-Filter: Modify whether new pages default to the Builder template.
-
-##### Parameters:
-
-
-* **$is\_default**: _(bool)_ 
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L400)
-
-### make\_will\_be\_builder\_page
-
-```php
-apply_filters( 'make_will_be_builder_page', $will_be_builder_page, $template, $use_builder );
-```
-
-##### Description
-
-Allow developers to dynamically change the builder page status.
-
-##### Parameters:
-
-
-* **$will\_be\_builder\_page**: _(bool)_ Whether or not this page will be a builder page.
-
-* **$template**: _(string)_ The template name.
-
-* **$use\_builder**: _(int)_ Value of the "use-builder" input. 1 === use builder. 0 === do not use builder.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L766)
-
-### make\_load\_section\_template
-
-```php
-apply_filters( 'make_load_section_template', $templates, $slug, $path );
-```
-
-##### Description
-
-Filter the templates to try and load.
-
-##### Parameters:
-
-
-* **$templates**: _(array)_ The list of template to try and load.
-
-* **$slug**: _(string)_ The template slug.
-
-* **$path**: _(string)_ The path to the template.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L855)
-
-### make\_get\_wp\_editor\_id
-
-```php
-apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
-```
-
-##### Description
-
-Alter the wp_editor ID.
-
-##### Parameters:
-
-
-* **$id**: _(string)_ The ID for the editor.
-
-* **$data**: _(array)_ The section data.
-
-* **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L904)
-
-### make\_get\_section\_name
-
-```php
-apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
-```
-
-##### Description
-
-Alter section name.
-
-##### Parameters:
-
-
-* **$name**: _(string)_ The name of the section.
-
-* **$data**: _(array)_ The section data.
-
-* **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L930)
-
-### make\_get\_image
-
-```php
-apply_filters( 'make_get_image', $return, $image_id, $size );
-```
-
-##### Description
-
-Filter the image HTML.
-
-##### Parameters:
-
-
-* **$return**: _(string)_ The image HTML.
-
-* **$image\_id**: _(int)_ The ID for the image.
-
-* **$size**: _(bool)_ The requested image size.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L969)
-
-### make\_get\_image\_src
-
-```php
-apply_filters( 'make_get_image_src', $src, $image_id, $size );
-```
-
-##### Description
-
-Filter the image source attributes.
-
-##### Parameters:
-
-
-* **$src**: _(string)_ The image source attributes.
-
-* **$image\_id**: _(int)_ The ID for the image.
-
-* **$size**: _(bool)_ The requested image size.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1014)
-
-### make\_get\_placeholder\_image
-
-```php
-apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeholder_images );
-```
-
-##### Description
-
-Filter the image source attributes.
-
-##### Parameters:
-
-
-* **$return**: _(string)_ The image source attributes.
-
-* **$image\_id**: _(int)_ The ID for the image.
-
-* **$ttfmake\_placeholder\_images**: _(bool)_ The list of placeholder images.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1046)
-
-### make\_get\_section\_json
-
-```php
-apply_filters( 'make_get_section_json', $section );
-```
-
-##### Description
-
-Filters the json representation of a single section.
-This filters allows for dynamically altering this section
-json representation.
-
-##### Parameters:
-
-
-* **$section**: _(array)_ The section being jsonified.
-
-##### Changelog:
-
-
-* **Since**: 1.8.0
-
-##### Source:
-
-* [src/inc/builder/core/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L1089)
-
-### make\_configuration\_overlay\_input\_wrap
-
-```php
-apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $section_data );
-```
-
-##### Description
-
-Filter the wrapped used for the inputs.
-
-##### Parameters:
-
-
-* **$wrapper**: _(string)_ The HTML to wrap around the input.
-
-* **$args**: _(string)_ The input data that is wrapped.
-
-* **$section\_data**: _(string)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-##### Source:
-
-* [src/inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L238)
-
-### make\_configuration\_overlay\_input
-
-```php
-apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section_data );
-```
-
-##### Description
-
-Filter the HTML for the input.
-
-##### Parameters:
-
-
-* **$this\_output**: _(string)_ The HTML for the input.
-
-* **$args**: _(string)_ The input data.
-
-* **$section\_data**: _(string)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-##### Source:
-
-* [src/inc/builder/core/configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L249)
-
-### make\_prepare\_data
-
-```php
-apply_filters( 'make_prepare_data', $clean_sections, $sections );
-```
-
-##### Description
-
-Filter the full set of data for a post.
-
-##### Parameters:
-
-
-* **$clean\_sections**: _(array)_ The clean sections.
-
-* **$sections**: _(array)_ The raw sections.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L145)
-
-### make\_insert\_post\_data\_sections
-
-```php
-apply_filters( 'make_insert_post_data_sections', $data );
-```
-
-##### Description
-
-Filter the section data.
-
-##### Parameters:
-
-
-* **$data**: _(array)_ The sanitized data.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L296)
-
-### make\_generate\_post\_content
-
-```php
-apply_filters( 'make_generate_post_content', $post_content, $data );
-```
-
-##### Description
-
-Filter the generated post content.
-This content is the full HTML version of the content that will be saved as "post_content".
-
-##### Parameters:
-
-
-* **$post\_content**: _(string)_ The fully generated post content.
-
-* **$data**: _(array)_ The data used to generate the content.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L375)
-
-### make\_get\_next\_section\_data
-
-```php
-apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sections );
-```
-
-##### Description
-
-Allow developers to alter the "next" section data.
-
-##### Parameters:
-
-
-* **$next\_data**: _(array)_ The data for the next section.
-
-* **$current\_section**: _(array)_ The data for the current section.
-
-* **$sections**: _(array)_ The list of all sections.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L508)
-
-### make\_get\_prev\_section\_data
-
-```php
-apply_filters( 'make_get_prev_section_data', $prev_section, $current_section, $sections );
-```
-
-##### Description
-
-Allow developers to alter the "next" section data.
-
-##### Parameters:
-
-
-* **$prev\_section**: _(array)_ The data for the next section.
-
-* **$current\_section**: _(array)_ The data for the current section.
-
-* **$sections**: _(array)_ The list of all sections.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L540)
-
-### make\_section\_html\_id
-
-```php
-apply_filters( 'make_section_html_id', $section_id, $current_section );
-```
-
-##### Description
-
-Filter the section wrapper's HTML id attribute.
-
-##### Parameters:
-
-
-* **$section\_id**: _(string)_ The string used in the section's HTML id attribute.
-
-* **$current\_section**: _(array)_ The data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.6.0.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L564)
-
-### make\_section\_classes
-
-```php
-apply_filters( 'make_section_classes', $classes, $current_section );
-```
-
-##### Description
-
-Filter the section classes.
-
-##### Parameters:
-
-
-* **$classes**: _(string)_ The sting of classes.
-
-* **$current\_section**: _(array)_ The array of data for the current section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L601)
-
-### ttfmake\_the\_builder\_content
-
-```php
-apply_filters( 'ttfmake_the_builder_content', $content );
-```
-
-##### Description
-
-Filter the content used for "post_content" when the builder is used to generate content.
-
-##### Parameters:
-
-
-* **$content**: _(string)_ The post content.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L621)
-
-### make\_the\_builder\_content
-
-```php
-apply_filters( 'make_the_builder_content', $content );
-```
-
-##### Description
-
-Filter the content used for "post_content" when the builder is used to generate content.
-
-##### Parameters:
-
-
-* **$content**: _(string)_ The post content.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/core/save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L630)
-
-### ttfmake\_builder\_section\_footer\_links
-
-```php
-apply_filters( 'ttfmake_builder_section_footer_links', $links );
-```
-
-##### Description
-
-Deprecated: Filter the definitions for the links that appear in each Builder section's footer.
-This filter is deprecated. Use make_builder_section_links instead.
-
-##### Parameters:
-
-
-* **$links**: _(array)_ The link definition array.
-
-##### Changelog:
-
-
-* **Since**: 1.0.7.
-
-##### Source:
-
-* [src/inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L37)
-
-### make\_builder\_section\_links
-
-```php
-apply_filters( 'make_builder_section_links', $links );
-```
-
-##### Description
-
-Filter the definitions for the buttons that appear in each Builder section's header.
-
-##### Parameters:
-
-
-* **$links**: _(array)_ The button definition array.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-##### Source:
-
-* [src/inc/builder/core/templates/section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L45)
-
-### make\_banner\_slide\_configuration
-
-```php
-apply_filters( 'make_banner_slide_configuration', $inputs );
-```
-
-##### Description
-
-Filter the definitions of the Banner slide configuration inputs.
-
-##### Parameters:
-
-
-* **$inputs**: _(array)_ The input definition array.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-##### Source:
-
-* [src/inc/builder/sections/banner/definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/banner/definition.php#L208)
-
-### make\_column\_buttons
-
-```php
-apply_filters( 'make_column_buttons', $column_buttons, $item_type );
-```
-
-##### Description
-
-Filter the buttons added to a text column.
-
-##### Parameters:
-
-
-* **$column\_buttons**: _(array)_ The current list of buttons.
-
-* **$item\_type**: _(string)_ Item type, in this case 'column'.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-* **Since**: 1.8.8.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template-column.php#L40)
-
-### ttfmake-text-column-classes
-
-```php
-apply_filters( 'ttfmake-text-column-classes', $column_classes, $i, $ttfmake_section_data );
-```
-
-##### Description
-
-Filter the classes applied to each column in a Columns section.
-
-##### Parameters:
-
-
-* **$column\_classes**: _(string)_ The classes for the column.
-
-* **$i**: _(int)_ The column number.
-
-* **$ttfmake\_section\_data**: _(array)_ The array of data for the section.
-
-##### Changelog:
-
-
-* **Since**: 1.2.0.
-
-##### Source:
-
-* [src/inc/builder/sections/columns/builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/columns/builder-template-column.php#L52)
-
-### make\_gallery\_item\_configuration
-
-```php
-apply_filters( 'make_gallery_item_configuration', $inputs );
-```
-
-##### Description
-
-Filter the definitions of the Gallery item configuration inputs.
-
-##### Parameters:
-
-
-* **$inputs**: _(array)_ The input definition array.
-
-##### Changelog:
-
-
-* **Since**: 1.4.0.
-
-##### Source:
-
-* [src/inc/builder/sections/gallery/definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/gallery/definition.php#L164)
-
-### make\_section\_defaults
-
-```php
-apply_filters( 'make_section_defaults', $defaults );
+apply_filters( 'make_sections_defaults', $defaults );
 ```
 
 ##### Description
@@ -1548,7 +793,7 @@ Filter the section defaults.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L120)
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L153)
 
 ### make\_section\_choices
 
@@ -1576,7 +821,165 @@ Filter the section choices.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L144)
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L177)
+
+### make\_section\_settings
+
+```php
+apply_filters( 'make_section_settings', $section_settings, $section_type );
+```
+
+##### Description
+
+Filter the default section data that is received.
+
+##### Parameters:
+
+
+* **$section\_settings**: _(string)_ Array of current section settings.
+
+* **$section\_type**: _(string)_ The type of section the data is for.
+
+##### Changelog:
+
+
+* **Since**: 1.8.10.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L207)
+
+### make\_the\_builder\_content
+
+```php
+apply_filters( 'make_the_builder_content', $content );
+```
+
+##### Description
+
+Filter the content used for "post_content" when the builder is used to generate content.
+
+##### Parameters:
+
+
+* **$content**: _(string)_ The post content.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L330)
+
+### make\_get\_next\_section\_data
+
+```php
+apply_filters( 'make_get_next_section_data', $next_data, $current_section, $sections );
+```
+
+##### Description
+
+Allow developers to alter the "next" section data.
+
+##### Parameters:
+
+
+* **$next\_data**: _(array)_ The data for the next section.
+
+* **$current\_section**: _(array)_ The data for the current section.
+
+* **$sections**: _(array)_ The list of all sections.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L367)
+
+### make\_get\_prev\_section\_data
+
+```php
+apply_filters( 'make_get_prev_section_data', $prev_section, $current_section, $sections );
+```
+
+##### Description
+
+Allow developers to alter the "next" section data.
+
+##### Parameters:
+
+
+* **$prev\_section**: _(array)_ The data for the next section.
+
+* **$current\_section**: _(array)_ The data for the current section.
+
+* **$sections**: _(array)_ The list of all sections.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L397)
+
+### make\_section\_html\_id
+
+```php
+apply_filters( 'make_section_html_id', $section_id, $current_section );
+```
+
+##### Description
+
+Filter the section wrapper's HTML id attribute.
+
+##### Parameters:
+
+
+* **$section\_id**: _(string)_ The string used in the section's HTML id attribute.
+
+* **$current\_section**: _(array)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.6.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L421)
+
+### make\_section\_classes
+
+```php
+apply_filters( 'make_section_classes', $classes, $current_section );
+```
+
+##### Description
+
+Filter the section classes.
+
+##### Parameters:
+
+
+* **$classes**: _(string)_ The sting of classes.
+
+* **$current\_section**: _(array)_ The array of data for the current section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L477)
 
 ### make\_get\_section\_default
 
@@ -1604,7 +1007,7 @@ Filter the default section data that is received.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L176)
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L700)
 
 ### make\_sanitize\_section\_choice
 
@@ -1632,52 +1035,380 @@ Allow developers to alter a section choice during the sanitization process.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-definitions.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-definitions.php#L223)
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L747)
 
-### make\_builder\_is\_section\_type
+### make\_load\_section\_template
 
 ```php
-apply_filters( 'make_builder_is_section_type', $is_section_type, $type, $data );
+apply_filters( 'make_load_section_template', $templates, $slug, $name );
 ```
 
 ##### Description
 
-Allow developers to alter if a set of data is a specified section type.
+Filter the template to try and load.
 
 ##### Parameters:
 
 
-* **$is\_section\_type**: _(bool)_ Whether or not the data represents a specific section.
+* **$templates**: _(array)_ The template file to load.
 
-* **$type**: _(string)_ The section type to check.
+* **$slug**: _(string)_ The template slug.
+
+* **$name**: _(string)_ The optional template name.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L809)
+
+### make\_get\_image
+
+```php
+apply_filters( 'make_get_image', $return, $image_id, $size );
+```
+
+##### Description
+
+Filter the image HTML.
+
+##### Parameters:
+
+
+* **$return**: _(string)_ The image HTML.
+
+* **$image\_id**: _(int)_ The ID for the image.
+
+* **$size**: _(bool)_ The requested image size.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L909)
+
+### make\_get\_placeholder\_image
+
+```php
+apply_filters( 'make_get_placeholder_image', $return, $image_id, $ttfmake_placeholder_images );
+```
+
+##### Description
+
+Filter the image source attributes.
+
+##### Parameters:
+
+
+* **$return**: _(string)_ The image source attributes.
+
+* **$image\_id**: _(int)_ The ID for the image.
+
+* **$ttfmake\_placeholder\_images**: _(bool)_ The list of placeholder images.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L941)
+
+### make\_get\_image\_src
+
+```php
+apply_filters( 'make_get_image_src', $src, $image_id, $size );
+```
+
+##### Description
+
+Filter the image source attributes.
+
+##### Parameters:
+
+
+* **$src**: _(string)_ The image source attributes.
+
+* **$image\_id**: _(int)_ The ID for the image.
+
+* **$size**: _(bool)_ The requested image size.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1002)
+
+### make\_section\_html\_class
+
+```php
+apply_filters( 'make_section_html_class', $classes, $ttfmake_section_data, $ttfmake_sections );
+```
+
+##### Description
+
+Filters the rendered HTML class of the section.
+
+##### Parameters:
+
+
+* **$classes**: _(string)_ The current HTML class.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+* **$ttfmake\_sections**: _(array)_ A list of sections in the current layout.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1044)
+
+### make\_section\_html\_style
+
+```php
+apply_filters( 'make_section_html_style', $style, $ttfmake_section_data, $ttfmake_sections );
+```
+
+##### Description
+
+Filters the rendered HTML style of the section.
+
+##### Parameters:
+
+
+* **$style**: _(string)_ The current HTML style.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+* **$ttfmake\_sections**: _(array)_ A list of sections in the current layout.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1071)
+
+### make\_section\_item\_html\_class
+
+```php
+apply_filters( 'make_section_item_html_class', $classes, $item_data, $ttfmake_section_data );
+```
+
+##### Description
+
+Filters the rendered HTML class of the section item.
+
+##### Parameters:
+
+
+* **$classes**: _(string)_ The current HTML class.
+
+* **$item\_data**: _(array)_ The data of the current section item.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1100)
+
+### make\_section\_item\_html\_style
+
+```php
+apply_filters( 'make_section_item_html_style', $style, $item_data, $ttfmake_section_data );
+```
+
+##### Description
+
+Filters the rendered HTML style of the section item.
+
+##### Parameters:
+
+
+* **$style**: _(string)_ The current HTML style.
+
+* **$item\_data**: _(array)_ The data of the current section item.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1129)
+
+### make\_section\_item\_html\_attrs
+
+```php
+apply_filters( 'make_section_item_html_attrs', $attrs, $item_data, $ttfmake_section_data );
+```
+
+##### Description
+
+Filters the rendered HTML attributes of the section item.
+
+##### Parameters:
+
+
+* **$attrs**: _(string)_ The current HTML attrs.
+
+* **$item\_data**: _(array)_ The data of the current section item.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1158)
+
+### make\_section\_html\_attrs
+
+```php
+apply_filters( 'make_section_html_attrs', $attrs, $ttfmake_section_data );
+```
+
+##### Description
+
+Filters the rendered HTML attributes of the section.
+
+##### Parameters:
+
+
+* **$attrs**: _(string)_ The current HTML attributes.
+
+* **$ttfmake\_section\_data**: _(array)_ The data of the current section.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [api.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/api.php#L1209)
+
+### make\_builder\_js\_dependencies
+
+```php
+apply_filters( 'make_builder_js_dependencies', $dependencies );
+```
+
+##### Description
+
+Filter the dependencies for the Make builder JS.
+
+##### Parameters:
+
+
+* **$dependencies**: _(array)_ The list of dependencies.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L259)
+
+### make\_builder\_is\_default
+
+```php
+apply_filters( 'make_builder_is_default', $is_default );
+```
+
+##### Description
+
+Filter: Modify whether new pages default to the Builder template.
+
+##### Parameters:
+
+
+* **$is\_default**: _(bool)_ 
+
+##### Changelog:
+
+
+* **Since**: 1.7.0.
+
+##### Source:
+
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L336)
+
+### 
+
+```php
+apply_filters( '', $will_be_builder_page, $template, $use_builder );
+```
+
+##### Description
+
+Allow developers to dynamically change the builder page status.
+
+##### Parameters:
+
+
+* **$will\_be\_builder\_page**: _(bool)_ Whether or not this page will be a builder page.
+
+* **$template**: _(string)_ The template name.
+
+* **$use\_builder**: _(int)_ Value of the "use-builder" input. 1 === use builder. 0 === do not use builder.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L664)
+
+### make\_get\_wp\_editor\_id
+
+```php
+apply_filters( 'make_get_wp_editor_id', $id, $data, $is_js_template );
+```
+
+##### Description
+
+Alter the wp_editor ID.
+
+##### Parameters:
+
+
+* **$id**: _(string)_ The ID for the editor.
 
 * **$data**: _(array)_ The section data.
 
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L27)
-
-### make\_builder\_get\_gallery\_array
-
-```php
-apply_filters( 'make_builder_get_gallery_array', $gallery_array, $ttfmake_section_data );
-```
-
-##### Description
-
-Filter the gallery item data.
-
-##### Parameters:
-
-
-* **$gallery\_array**: _(array)_ The array of gallery item data.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
+* **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
 
 ##### Changelog:
 
@@ -1686,26 +1417,26 @@ Filter the gallery item data.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L68)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L754)
 
-### make\_gallery\_class
+### make\_get\_section\_name
 
 ```php
-apply_filters( 'make_gallery_class', $gallery_class, $ttfmake_section_data, $sections );
+apply_filters( 'make_get_section_name', $name, $data, $is_js_template );
 ```
 
 ##### Description
 
-Filter the class applied to a gallery.
+Alter section name.
 
 ##### Parameters:
 
 
-* **$gallery\_class**: _(string)_ The class applied to the gallery.
+* **$name**: _(string)_ The name of the section.
 
-* **$ttfmake\_section\_data**: _(array)_ The section data.
+* **$data**: _(array)_ The section data.
 
-* **$sections**: _(array)_ The list of sections.
+* **$is\_js\_template**: _(bool)_ Whether or not this is in the context of a JS template.
 
 ##### Changelog:
 
@@ -1714,24 +1445,106 @@ Filter the class applied to a gallery.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L132)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L780)
 
-### make\_builder\_get\_gallery\_style
+### make\_get\_section\_json
 
 ```php
-apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_section_data );
+apply_filters( 'make_get_section_json', $section );
 ```
 
 ##### Description
 
-Filter the style added to a gallery section.
+Filters the json representation of a single section.
+This filters allows for dynamically altering this section
+json representation.
 
 ##### Parameters:
 
 
-* **$gallery\_style**: _(string)_ The style applied to the gallery.
+* **$section**: _(array)_ The section being jsonified.
 
-* **$ttfmake\_section\_data**: _(array)_ The section data.
+##### Changelog:
+
+
+* **Since**: 1.8.0
+
+##### Source:
+
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/base.php#L807)
+
+### make\_configuration\_overlay\_input\_wrap
+
+```php
+apply_filters( 'make_configuration_overlay_input_wrap', $wrapper, $args, $section_data );
+```
+
+##### Description
+
+Filter the wrapped used for the inputs.
+
+##### Parameters:
+
+
+* **$wrapper**: _(string)_ The HTML to wrap around the input.
+
+* **$args**: _(string)_ The input data that is wrapped.
+
+* **$section\_data**: _(string)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.4.0.
+
+##### Source:
+
+* [configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L238)
+
+### make\_configuration\_overlay\_input
+
+```php
+apply_filters( 'make_configuration_overlay_input', $this_output, $args, $section_data );
+```
+
+##### Description
+
+Filter the HTML for the input.
+
+##### Parameters:
+
+
+* **$this\_output**: _(string)_ The HTML for the input.
+
+* **$args**: _(string)_ The input data.
+
+* **$section\_data**: _(string)_ The data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.4.0.
+
+##### Source:
+
+* [configuration-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/configuration-helpers.php#L249)
+
+### make\_prepare\_data
+
+```php
+apply_filters( 'make_prepare_data', $clean_sections, $sections );
+```
+
+##### Description
+
+Filter the full set of data for a post.
+
+##### Parameters:
+
+
+* **$clean\_sections**: _(array)_ The clean sections.
+
+* **$sections**: _(array)_ The raw sections.
 
 ##### Changelog:
 
@@ -1740,28 +1553,22 @@ Filter the style added to a gallery section.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L184)
+* [save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L148)
 
-### make\_builder\_get\_gallery\_item\_class
+### make\_insert\_post\_data\_sections
 
 ```php
-apply_filters( 'make_builder_get_gallery_item_class', $gallery_class, $item, $ttfmake_section_data, $i );
+apply_filters( 'make_insert_post_data_sections', $data );
 ```
 
 ##### Description
 
-Filter the class used for a gallery item.
+Filter the section data.
 
 ##### Parameters:
 
 
-* **$gallery\_class**: _(string)_ The computed gallery class.
-
-* **$item**: _(array)_ The item's data.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-* **$i**: _(int)_ The current gallery item number.
+* **$data**: _(array)_ The sanitized data.
 
 ##### Changelog:
 
@@ -1770,56 +1577,25 @@ Filter the class used for a gallery item.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L230)
+* [save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L340)
 
-### make\_builder\_get\_gallery\_item\_onclick
+### make\_generate\_post\_content
 
 ```php
-apply_filters( 'make_builder_get_gallery_item_onclick', $onclick, $link, $ttfmake_section_data, $i );
+apply_filters( 'make_generate_post_content', $post_content, $data );
 ```
 
 ##### Description
 
-Filter the class used for a gallery item.
+Filter the generated post content.
+This content is the full HTML version of the content that will be saved as "post_content".
 
 ##### Parameters:
 
 
-* **$onclick**: _(string)_ The computed gallery onclick attribute.
+* **$post\_content**: _(string)_ The fully generated post content.
 
-* **$link**: _(string)_ The item's link.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-* **$i**: _(int)_ The current gallery item number.
-
-##### Changelog:
-
-
-* **Since**: 1.7.6.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L269)
-
-### make\_builder\_get\_gallery\_item\_image
-
-```php
-apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
-```
-
-##### Description
-
-Alter the generated gallery image.
-
-##### Parameters:
-
-
-* **$image**: _(string)_ The image HTML.
-
-* **$item**: _(array)_ The item's data.
-
-* **$aspect**: _(string)_ The aspect ratio for the section.
+* **$data**: _(array)_ The data used to generate the content.
 
 ##### Changelog:
 
@@ -1828,211 +1604,80 @@ Alter the generated gallery image.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L312)
+* [save.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/save.php#L423)
 
-### make\_builder\_get\_text\_array
+### ttfmake\_builder\_section\_footer\_links
 
 ```php
-apply_filters( 'make_builder_get_text_array', $columns_array, $ttfmake_section_data );
+apply_filters( 'ttfmake_builder_section_footer_links', $links );
 ```
 
 ##### Description
 
-Filter the array of builder data for the text section.
+Deprecated: Filter the definitions for the links that appear in each Builder section's footer.
+This filter is deprecated. Use make_builder_section_links instead.
 
 ##### Parameters:
 
 
-* **$columns\_array**: _(array)_ The ordered data for the text section.
-
-* **$ttfmake\_section\_data**: _(array)_ The raw section data.
+* **$links**: _(array)_ The link definition array.
 
 ##### Changelog:
 
 
-* **Since**: 1.2.3.
+* **Since**: 1.0.7.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L365)
+* [section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L39)
 
-### make\_builder\_get\_text\_class
+### make\_builder\_section\_links
 
 ```php
-apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data, $sections );
+apply_filters( 'make_builder_section_links', $links );
 ```
 
 ##### Description
 
-Filter the text section class.
+Filter the definitions for the buttons that appear in each Builder section's header.
 
 ##### Parameters:
 
 
-* **$text\_class**: _(string)_ The computed class string.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-* **$sections**: _(array)_ The list of sections.
+* **$links**: _(array)_ The button definition array.
 
 ##### Changelog:
 
 
-* **Since**: 1.2.3.
+* **Since**: 1.4.0.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L414)
+* [section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L48)
 
-### make\_builder\_get\_banner\_array
+### make\_builder\_section\_class
 
 ```php
-apply_filters( 'make_builder_get_banner_array', $banner_array, $ttfmake_section_data );
+apply_filters( 'make_builder_section_class', $class );
 ```
 
 ##### Description
 
-Filter the data array for a banner section.
+Filters the rendered HTML class of the section in the Builder.
 
 ##### Parameters:
 
 
-* **$banner\_array**: _(array)_ The ordered banner data.
-
-* **$ttfmake\_section\_data**: _(array)_ All of the data for the section.
+* **$class**: _(string)_ The current HTML class.
 
 ##### Changelog:
 
 
-* **Since**: 1.2.3.
+* **Since**: 1.9.0.
 
 ##### Source:
 
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L498)
-
-### make\_builder\_banner\_class
-
-```php
-apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data );
-```
-
-##### Description
-
-Filter the class for the banner section.
-
-##### Parameters:
-
-
-* **$banner\_class**: _(string)_ The banner class.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L532)
-
-### make\_builder\_get\_banner\_slider\_atts
-
-```php
-apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake_section_data );
-```
-
-##### Description
-
-Allow for altering the banner slider attributes.
-
-##### Parameters:
-
-
-* **$data\_attributes**: _(string)_ The data attributes in string form.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L637)
-
-### make\_builder\_banner\_slide\_class
-
-```php
-apply_filters( 'make_builder_banner_slide_class', $slide_class );
-```
-
-##### Description
-
-Allow developers to alter the class for the banner slide.
-
-##### Parameters:
-
-
-* **$slide\_class**: _(string)_ The banner classes.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L663)
-
-### make\_builder\_banner\_slide\_style
-
-```php
-apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake_section_data );
-```
-
-##### Description
-
-Allow developers to change the CSS for a Banner section.
-
-##### Parameters:
-
-
-* **$slide\_style**: _(string)_ The CSS for the banner.
-
-* **$slide**: _(array)_ The slide data.
-
-* **$ttfmake\_section\_data**: _(array)_ The section data.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/builder/sections/section-front-end-helpers.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/sections/section-front-end-helpers.php#L700)
-
-### make\_section\_html\_id
-
-```php
-apply_filters( 'make_section_html_id' );
-```
-
-##### Description
-
-This filter is documented in incbuildercoresave.php
-
-##### Parameters:
-
-
-##### Changelog:
-
-
-##### Source:
-
-* [src/inc/builder/setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L175)
+* [section-header.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/core/templates/section-header.php#L60)
 
 ### make\_get\_section\_data
 
@@ -2058,7 +1703,7 @@ Filter the section data for a post.
 
 ##### Source:
 
-* [src/inc/builder/setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L262)
+* [setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L230)
 
 ### make\_is\_builder\_page
 
@@ -2084,7 +1729,7 @@ Allow a developer to dynamically change whether the post uses the builder or not
 
 ##### Source:
 
-* [src/inc/builder/setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L352)
+* [setup.php](https://github.com/thethemefoundry/make/blob/master/src/inc/builder/setup.php#L335)
 
 ### make\_customizer\_key\_conversions
 
@@ -2110,7 +1755,7 @@ defines each change as $new_key => $old key.
 
 ##### Source:
 
-* [src/inc/compatibility/keyconverter.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/keyconverter.php#L104)
+* [keyconverter.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/keyconverter.php#L104)
 
 ### make\_compatibility\_mode
 
@@ -2141,75 +1786,7 @@ and 1.6.
 
 ##### Source:
 
-* [src/inc/compatibility/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/methods.php#L168)
-
-### make\_customizer\_panels
-
-```php
-apply_filters( 'make_customizer_panels', $panels );
-```
-
-##### Description
-
-Filter: Modify the array of panel definitions for the Customizer.
-
-##### Parameters:
-
-
-* **$panels**: _(array)_ The array of panel definitions.
-
-##### Changelog:
-
-
-* **Since**: 1.3.0.
-
-##### Source:
-
-* [src/inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L281)
-
-### make\_customizer\_sections
-
-```php
-apply_filters( 'make_customizer_sections', $sections );
-```
-
-##### Description
-
-Filter: Modify the array of sectioncontrol definitions for the Customizer.
-
-##### Parameters:
-
-
-* **$sections**: _(array)_ The array of section definitions.
-
-##### Changelog:
-
-
-* **Since**: 1.3.0.
-
-##### Source:
-
-* [src/inc/customizer/controls.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/controls.php#L356)
-
-### make\_read\_more\_text
-
-```php
-apply_filters( 'make_read_more_text' );
-```
-
-##### Description
-
-This filter is documented in inctemplate-tags.php
-
-##### Parameters:
-
-
-##### Changelog:
-
-
-##### Source:
-
-* [src/inc/customizer/definitions/general.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/definitions/general.php#L53)
+* [methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/compatibility/methods.php#L168)
 
 ### make\_breadcrumb\_override
 
@@ -2233,7 +1810,7 @@ Filter: Allow override of breadcrumb settings, controls and output
 
 ##### Source:
 
-* [src/inc/customizer/definitions/layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/definitions/layout.php#L477)
+* [layout.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/definitions/layout.php#L477)
 
 ### make\_preview\_font\_data
 
@@ -2259,36 +1836,12 @@ Filter: Modify the preview font data array before it is converted to JSON and se
 
 ##### Source:
 
-* [src/inc/customizer/preview.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/preview.php#L217)
+* [preview.php](https://github.com/thethemefoundry/make/blob/master/src/inc/customizer/preview.php#L217)
 
-### make\_show\_errors
-
-```php
-apply_filters( 'make_show_errors', $show_errors );
-```
-
-##### Description
-
-Filter: Toggle for showing Make errors.
-
-##### Parameters:
-
-
-* **$show\_errors**: _(bool)_ True to show errors.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/error/collector.php](https://github.com/thethemefoundry/make/blob/master/src/inc/error/collector.php#L51)
-
-### lters('make\_error\_backtrace\_limit
+### pply\_filter
 
 ```php
-absint( apply_filters( 'make_error_backtrace_limit', $limit );
+apply_filters( 'pply_filter', $limit );
 ```
 
 ##### Description
@@ -2307,12 +1860,12 @@ Filter: Change the number of steps shown in a Make Error backtrace.
 
 ##### Source:
 
-* [src/inc/error/collector.php](https://github.com/thethemefoundry/make/blob/master/src/inc/error/collector.php#L159)
+* [collector.php](https://github.com/thethemefoundry/make/blob/master/src/inc/error/collector.php#L159)
 
-### make\_add\_font\_source\_'.$source\_i
+### make\_add\_font\_source\_'  .  $source\_i
 
 ```php
-apply_filters( 'make_add_font_source_' . $source_id, $add_source );
+apply_filters( 'make_add_font_source_'  .  $source_i', $add_source );
 ```
 
 ##### Description
@@ -2331,7 +1884,7 @@ Filter: Prevent a font source from being added.
 
 ##### Source:
 
-* [src/inc/font/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L116)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L116)
 
 ### make\_font\_stack
 
@@ -2357,7 +1910,7 @@ Allow developers to filter the full font stack.
 
 ##### Source:
 
-* [src/inc/font/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L295)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L295)
 
 ### make\_all\_font\_choices
 
@@ -2381,12 +1934,12 @@ Filter the list of font choices.
 
 ##### Source:
 
-* [src/inc/font/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L362)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/manager.php#L362)
 
 ### make\_font\_data\_{$this->id}
 
 ```php
-apply_filters( "make_font_data_{$this->id}", $font_data );
+apply_filters( 'make_font_data_{$this->id}', $font_data );
 ```
 
 ##### Description
@@ -2405,7 +1958,7 @@ Filter: Modify the font data from a particular source.
 
 ##### Source:
 
-* [src/inc/font/source/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/base.php#L149)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/base.php#L149)
 
 ### make\_get\_standard\_fonts
 
@@ -2429,7 +1982,7 @@ Allow for developers to modify the standard fonts.
 
 ##### Source:
 
-* [src/inc/font/source/generic.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/generic.php#L93)
+* [generic.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/generic.php#L93)
 
 ### make\_all\_fonts
 
@@ -2453,7 +2006,7 @@ Allow for developers to modify the full list of fonts.
 
 ##### Source:
 
-* [src/inc/font/source/generic.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/generic.php#L119)
+* [generic.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/generic.php#L119)
 
 ### make\_get\_google\_fonts
 
@@ -2477,7 +2030,7 @@ Allow for developers to modify the standard fonts.
 
 ##### Source:
 
-* [src/inc/font/source/google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L161)
+* [google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L161)
 
 ### make\_font\_google\_stack
 
@@ -2503,7 +2056,7 @@ Filter: Modify the CSS font stack for a particular category of Google font.
 
 ##### Source:
 
-* [src/inc/font/source/google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L217)
+* [google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L217)
 
 ### make\_get\_google\_font\_uri
 
@@ -2527,7 +2080,7 @@ Filter the Google Fonts URL.
 
 ##### Source:
 
-* [src/inc/font/source/google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L267)
+* [google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L267)
 
 ### make\_font\_variants
 
@@ -2555,7 +2108,7 @@ Allow developers to alter the font variant choice.
 
 ##### Source:
 
-* [src/inc/font/source/google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L359)
+* [google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L359)
 
 ### make\_font\_google\_variants
 
@@ -2583,7 +2136,7 @@ Allow developers to alter the Google font variant choice.
 
 ##### Source:
 
-* [src/inc/font/source/google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L371)
+* [google.php](https://github.com/thethemefoundry/make/blob/master/src/inc/font/source/google.php#L371)
 
 ### make\_format\_builder\_format\_models
 
@@ -2608,7 +2161,7 @@ model => URI of the model's script file
 
 ##### Source:
 
-* [src/inc/formatting/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L206)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L206)
 
 ### make\_style\_formats
 
@@ -2632,79 +2185,7 @@ Filter the styles that are added to the TinyMCE Formats dropdown.
 
 ##### Source:
 
-* [src/inc/formatting/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L443)
-
-### make\_jetpack\_infinite\_scroll\_footer\_callback
-
-```php
-apply_filters( 'make_jetpack_infinite_scroll_footer_callback', $callback );
-```
-
-##### Description
-
-Filter: Change the callback used to render the Infinite Scroll footer.
-
-##### Parameters:
-
-
-* **$callback**: _(array|string)_ 
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/integration/jetpack.php](https://github.com/thethemefoundry/make/blob/master/src/inc/integration/jetpack.php#L112)
-
-### make\_jetpack\_infinite\_scroll\_render\_callback
-
-```php
-apply_filters( 'make_jetpack_infinite_scroll_render_callback', $callback );
-```
-
-##### Description
-
-Filter: Change the callback used to render posts retrieved by Infinite Scroll.
-
-##### Parameters:
-
-
-* **$callback**: _(array|string)_ 
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/integration/jetpack.php](https://github.com/thethemefoundry/make/blob/master/src/inc/integration/jetpack.php#L130)
-
-### make\_add\_integration\_'.$integration\_nam
-
-```php
-apply_filters( 'make_add_integration_' . $integration_name, $add_integration );
-```
-
-##### Description
-
-Filter: Prevent an integration from being added.
-
-##### Parameters:
-
-
-* **$add\_integration**: _(bool)_ True to allow the integration to be added.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/integration/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/integration/manager.php#L64)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/formatting/manager.php#L443)
 
 ### make\_get\_view
 
@@ -2730,7 +2211,7 @@ Allow developers to dynamically change the view.
 
 ##### Source:
 
-* [src/inc/layout/view.php](https://github.com/thethemefoundry/make/blob/master/src/inc/layout/view.php#L414)
+* [view.php](https://github.com/thethemefoundry/make/blob/master/src/inc/layout/view.php#L414)
 
 ### ttfmake\_custom\_logo\_information
 
@@ -2758,7 +2239,7 @@ reflected.
 
 ##### Source:
 
-* [src/inc/logo/legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L369)
+* [legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L369)
 
 ### make\_logo\_information
 
@@ -2786,47 +2267,7 @@ reflected.
 
 ##### Source:
 
-* [src/inc/logo/legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L384)
-
-### ttfmake\_custom\_logo\_max\_width
-
-```php
-apply_filters( 'ttfmake_custom_logo_max_width' );
-```
-
-##### Description
-
-This filter is documented in inclogomethods.php
-
-##### Parameters:
-
-
-##### Changelog:
-
-
-##### Source:
-
-* [src/inc/logo/legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L422)
-
-### make\_logo\_max\_width
-
-```php
-apply_filters( 'make_logo_max_width' );
-```
-
-##### Description
-
-This filter is documented in inclogomethods.php
-
-##### Parameters:
-
-
-##### Changelog:
-
-
-##### Source:
-
-* [src/inc/logo/legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L426)
+* [legacy.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/legacy.php#L384)
 
 ### make\_logo\_load\_legacy
 
@@ -2850,7 +2291,7 @@ Filter: Switch to prevent legacy logo functionality from loading.
 
 ##### Source:
 
-* [src/inc/logo/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L67)
+* [methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L67)
 
 ### ttfmake\_custom\_logo\_max\_width
 
@@ -2874,7 +2315,7 @@ Filter the maximum allowable width for a custom logo.
 
 ##### Source:
 
-* [src/inc/logo/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L189)
+* [methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L189)
 
 ### make\_logo\_max\_width
 
@@ -2898,7 +2339,7 @@ Filter the maximum allowable width for a custom logo.
 
 ##### Source:
 
-* [src/inc/logo/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L199)
+* [methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/logo/methods.php#L199)
 
 ### make\_is\_plus
 
@@ -2922,12 +2363,504 @@ Filter: Modify the status of Make Plus.
 
 ##### Source:
 
-* [src/inc/plus/methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/plus/methods.php#L127)
+* [methods.php](https://github.com/thethemefoundry/make/blob/master/src/inc/plus/methods.php#L127)
+
+### make\_banner\_slide\_configuration
+
+```php
+apply_filters( 'make_banner_slide_configuration', $inputs );
+```
+
+##### Description
+
+Filter the definitions of the Banner slide configuration inputs.
+
+##### Parameters:
+
+
+* **$inputs**: _(array)_ The input definition array.
+
+##### Changelog:
+
+
+* **Since**: 1.4.0.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L216)
+
+### make\_builder\_js\_extensions
+
+```php
+apply_filters( 'make_builder_js_extensions', $dependencies );
+```
+
+##### Description
+
+Filter any available extensions for the Make builder JS.
+
+##### Parameters:
+
+
+* **$dependencies**: _(array)_ The list of dependencies.
+
+##### Changelog:
+
+
+* **Since**: 1.8.11.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L585)
+
+### make\_builder\_banner\_class
+
+```php
+apply_filters( 'make_builder_banner_class', $banner_class, $ttfmake_section_data );
+```
+
+##### Description
+
+Filter the class for the banner section.
+
+##### Parameters:
+
+
+* **$banner\_class**: _(string)_ The banner class.
+
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L629)
+
+### make\_builder\_get\_banner\_slider\_atts
+
+```php
+apply_filters( 'make_builder_get_banner_slider_atts', $data_attributes, $ttfmake_section_data );
+```
+
+##### Description
+
+Allow for altering the banner slider attributes.
+
+##### Parameters:
+
+
+* **$data\_attributes**: _(string)_ The data attributes in string form.
+
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L685)
+
+### make\_builder\_banner\_slide\_class
+
+```php
+apply_filters( 'make_builder_banner_slide_class', $slide_class );
+```
+
+##### Description
+
+Allow developers to alter the class for the banner slide.
+
+##### Parameters:
+
+
+* **$slide\_class**: _(string)_ The banner classes.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L704)
+
+### make\_builder\_banner\_slide\_style
+
+```php
+apply_filters( 'make_builder_banner_slide_style', $slide_style, $slide, $ttfmake_section_data );
+```
+
+##### Description
+
+Allow developers to change the CSS for a Banner section.
+
+##### Parameters:
+
+
+* **$slide\_style**: _(string)_ The CSS for the banner.
+
+* **$slide**: _(array)_ The slide data.
+
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L732)
+
+### make\_section\_html\_id
+
+```php
+apply_filters( 'make_section_html_id' );
+```
+
+##### Description
+
+This filter is documented in inc/builder/core/save.php
+
+##### Parameters:
+
+
+##### Changelog:
+
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/banner/definition.php#L758)
+
+### make\_column\_buttons
+
+```php
+apply_filters( 'make_column_buttons', $column_buttons, $item_type );
+```
+
+##### Description
+
+Filter the buttons added to a text column.
+
+##### Parameters:
+
+
+* **$column\_buttons**: _(array)_ The current list of buttons.
+
+* **$item\_type**: _(string)_ Item type, in this case 'column'.
+
+##### Changelog:
+
+
+* **Since**: 1.4.0.
+
+* **Since**: 1.8.8.
+
+##### Source:
+
+* [builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template-column.php#L37)
+
+### ttfmake-text-column-classes
+
+```php
+apply_filters( 'ttfmake-text-column-classes', $column_classes, $i, $ttfmake_section_data );
+```
+
+##### Description
+
+Filter the classes applied to each column in a Columns section.
+
+##### Parameters:
+
+
+* **$column\_classes**: _(string)_ The classes for the column.
+
+* **$i**: _(int)_ The column number.
+
+* **$ttfmake\_section\_data**: _(array)_ The array of data for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.0.
+
+##### Source:
+
+* [builder-template-column.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/builder-template-column.php#L49)
+
+### make\_builder\_js\_extensions
+
+```php
+apply_filters( 'make_builder_js_extensions', $dependencies );
+```
+
+##### Description
+
+Filter any available extensions for the Make builder JS.
+
+##### Parameters:
+
+
+* **$dependencies**: _(array)_ The list of dependencies.
+
+##### Changelog:
+
+
+* **Since**: 1.8.11.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/definition.php#L537)
+
+### make\_builder\_get\_text\_class
+
+```php
+apply_filters( 'make_builder_get_text_class', $text_class, $ttfmake_section_data, $sections );
+```
+
+##### Description
+
+Filter the text section class.
+
+##### Parameters:
+
+
+* **$text\_class**: _(string)_ The computed class string.
+
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+
+* **$sections**: _(array)_ The list of sections.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/definition.php#L586)
+
+### make\_filter\_column\_content
+
+```php
+apply_filters( 'make_filter_column_content', $content, $column );
+```
+
+##### Description
+
+Filters the output of the column content.
+
+##### Parameters:
+
+
+* **$content**: _(string)_ The column content.
+
+* **$column**: _(array)_ The column item data.
+
+##### Changelog:
+
+
+* **Since**: 1.9.0.
+
+##### Source:
+
+* [frontend-template.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/columns/frontend-template.php#L40)
+
+### make\_gallery\_item\_configuration
+
+```php
+apply_filters( 'make_gallery_item_configuration', $inputs );
+```
+
+##### Description
+
+Filter the definitions of the Gallery item configuration inputs.
+
+##### Parameters:
+
+
+* **$inputs**: _(array)_ The input definition array.
+
+##### Changelog:
+
+
+* **Since**: 1.4.0.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L161)
+
+### make\_builder\_js\_extensions
+
+```php
+apply_filters( 'make_builder_js_extensions', $dependencies );
+```
+
+##### Description
+
+Filter any available extensions for the Make builder JS.
+
+##### Parameters:
+
+
+* **$dependencies**: _(array)_ The list of dependencies.
+
+##### Changelog:
+
+
+* **Since**: 1.8.11.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L542)
+
+### make\_gallery\_class
+
+```php
+apply_filters( 'make_gallery_class', $gallery_class, $section_data, $sections );
+```
+
+##### Description
+
+Filter the class applied to a gallery.
+
+##### Parameters:
+
+
+* **$gallery\_class**: _(string)_ The class applied to the gallery.
+
+* **$section\_data**: _(array)_ The section data.
+
+* **$sections**: _(array)_ The list of sections.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L606)
+
+### make\_builder\_get\_gallery\_style
+
+```php
+apply_filters( 'make_builder_get_gallery_style', $gallery_style, $ttfmake_section_data );
+```
+
+##### Description
+
+Filter the style added to a gallery section.
+
+##### Parameters:
+
+
+* **$gallery\_style**: _(string)_ The style applied to the gallery.
+
+* **$ttfmake\_section\_data**: _(array)_ The section data.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L622)
+
+### make\_builder\_get\_gallery\_item\_class
+
+```php
+apply_filters( 'make_builder_get_gallery_item_class', $classes, $item, $section_data, $i );
+```
+
+##### Description
+
+Filter the class used for a gallery item.
+
+##### Parameters:
+
+
+* **$classes**: _(string)_ The computed gallery class.
+
+* **$item**: _(array)_ The item's data.
+
+* **$section\_data**: _(array)_ The section data.
+
+* **$i**: _(int)_ The current gallery item number.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L661)
+
+### make\_builder\_get\_gallery\_item\_onclick
+
+```php
+apply_filters( 'make_builder_get_gallery_item_onclick', $onclick, $link );
+```
+
+##### Description
+
+Filter the class used for a gallery item.
+
+##### Parameters:
+
+
+* **$onclick**: _(string)_ The computed gallery onclick attribute.
+
+* **$link**: _(string)_ The item.
+
+##### Changelog:
+
+
+* **Since**: 1.7.6.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L692)
+
+### make\_builder\_get\_gallery\_item\_image
+
+```php
+apply_filters( 'make_builder_get_gallery_item_image', $image, $item, $aspect );
+```
+
+##### Description
+
+Alter the generated gallery image.
+
+##### Parameters:
+
+
+* **$image**: _(string)_ The image HTML.
+
+* **$item**: _(array)_ The item's data.
+
+* **$aspect**: _(string)_ The aspect ratio for the section.
+
+##### Changelog:
+
+
+* **Since**: 1.2.3.
+
+##### Source:
+
+* [definition.php](https://github.com/thethemefoundry/make/blob/master/src/inc/sections/gallery/definition.php#L734)
 
 ### make\_settings\_{$this->type}\_current\_value
 
 ```php
-apply_filters( "make_settings_{$this->type}_current_value", $value, $setting_id, $context );
+apply_filters( 'make_settings_{$this->type}_current_value', $value, $setting_id, $context );
 ```
 
 ##### Description
@@ -2950,12 +2883,12 @@ Filter: Modify the current value for a particular setting.
 
 ##### Source:
 
-* [src/inc/settings/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L341)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L341)
 
 ### make\_settings\_{$this->type}\_default\_value
 
 ```php
-apply_filters( "make_settings_{$this->type}_default_value", $default_value, $setting_id );
+apply_filters( 'make_settings_{$this->type}_default_value', $default_value, $setting_id );
 ```
 
 ##### Description
@@ -2976,12 +2909,12 @@ Filter: Modify the default value for a particular setting.
 
 ##### Source:
 
-* [src/inc/settings/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L369)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L369)
 
 ### make\_settings\_{$this->type}\_sanitize\_callback
 
 ```php
-apply_filters( "make_settings_{$this->type}_sanitize_callback", $callback, $setting_id, $context );
+apply_filters( 'make_settings_{$this->type}_sanitize_callback', $callback, $setting_id, $context );
 ```
 
 ##### Description
@@ -3004,12 +2937,12 @@ Filter: Modify the name of the sanitize callback function for a particular setti
 
 ##### Source:
 
-* [src/inc/settings/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L425)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L425)
 
 ### make\_settings\_{$this->type}\_sanitize\_callback\_parameters
 
 ```php
-apply_filters( "make_settings_{$this->type}_sanitize_callback_parameters", $value, $setting_id, $callback );
+apply_filters( 'make_settings_{$this->type}_sanitize_callback_parameters', $value, $setting_id, $callback );
 ```
 
 ##### Description
@@ -3034,7 +2967,7 @@ to add additional items to the array that will become the callback's parameters.
 
 ##### Source:
 
-* [src/inc/settings/base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L482)
+* [base.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/base.php#L482)
 
 ### make\_sanitize\_text\_allowed\_tags
 
@@ -3060,7 +2993,7 @@ Customize the tags and attributes that are allowed during text sanitization.
 
 ##### Source:
 
-* [src/inc/settings/sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L120)
+* [sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L120)
 
 ### make\_sanitize\_choice
 
@@ -3086,7 +3019,7 @@ Deprecated: Filter the sanitized value.
 
 ##### Source:
 
-* [src/inc/settings/sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L159)
+* [sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L159)
 
 ### make\_sanitize\_font\_choice
 
@@ -3110,7 +3043,7 @@ Deprecated: Filter the sanitized font choice.
 
 ##### Source:
 
-* [src/inc/settings/sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L198)
+* [sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L198)
 
 ### make\_sanitize\_font\_subset
 
@@ -3134,7 +3067,7 @@ Filter the sanitized subset choice.
 
 ##### Source:
 
-* [src/inc/settings/sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L253)
+* [sanitize.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/sanitize.php#L253)
 
 ### make\_setting\_defaults
 
@@ -3158,7 +3091,7 @@ Deprecated: Filter the default values for the settings.
 
 ##### Source:
 
-* [src/inc/settings/thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L173)
+* [thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L173)
 
 ### make\_get\_default
 
@@ -3184,7 +3117,7 @@ Deprecated: Filter the retrieved default value.
 
 ##### Source:
 
-* [src/inc/settings/thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L278)
+* [thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L278)
 
 ### make\_setting\_choices
 
@@ -3210,7 +3143,7 @@ Filter the setting choices.
 
 ##### Source:
 
-* [src/inc/settings/thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L354)
+* [thememod.php](https://github.com/thethemefoundry/make/blob/master/src/inc/settings/thememod.php#L354)
 
 ### make\_content\_width
 
@@ -3238,7 +3171,7 @@ Filter to modify the $content_width variable.
 
 ##### Source:
 
-* [src/inc/setup/misc.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/misc.php#L195)
+* [misc.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/misc.php#L195)
 
 ### make\_enqueue\_parent\_stylesheet
 
@@ -3262,7 +3195,7 @@ Filter: Toggle whether the parent stylesheet loads along with the child one.
 
 ##### Source:
 
-* [src/inc/setup/scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L283)
+* [scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L283)
 
 ### make\_located\_file\_url
 
@@ -3290,31 +3223,7 @@ determining the correct URL.
 
 ##### Source:
 
-* [src/inc/setup/scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L437)
-
-### make\_fitvids\_custom\_selectors
-
-```php
-apply_filters( 'make_fitvids_custom_selectors', $selector_array );
-```
-
-##### Description
-
-Filter: Allow customization of the selectors that are used to apply FitVids.
-
-##### Parameters:
-
-
-* **$selector\_array**: _(array)_ The selectors used by FitVids.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/inc/setup/scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L647)
+* [scripts.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/scripts.php#L437)
 
 ### make\_widget\_display\_args
 
@@ -3340,7 +3249,7 @@ Filter: Modify the wrapper markup parameters for the widgets in a particular sid
 
 ##### Source:
 
-* [src/inc/setup/widgets.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/widgets.php#L95)
+* [widgets.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/widgets.php#L95)
 
 ### make\_has\_sidebar
 
@@ -3368,7 +3277,7 @@ Filter: Dynamically change the result of the "has sidebar" check.
 
 ##### Source:
 
-* [src/inc/setup/widgets.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/widgets.php#L236)
+* [widgets.php](https://github.com/thethemefoundry/make/blob/master/src/inc/setup/widgets.php#L236)
 
 ### make\_supported\_social\_icons
 
@@ -3394,79 +3303,7 @@ The URL pattern is used to match the URL used by a menu item.
 
 ##### Source:
 
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L284)
-
-### make\_socialicons\_email
-
-```php
-apply_filters( 'make_socialicons_email', $icon );
-```
-
-##### Description
-
-Filter: Modify the icon definition for an email address.
-
-##### Parameters:
-
-
-* **$icon**: _(array)_ The icon definition.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L315)
-
-### make\_socialicons\_rss
-
-```php
-apply_filters( 'make_socialicons_rss', $icon );
-```
-
-##### Description
-
-Filter: Modify the icon definition for an RSS feed.
-
-##### Parameters:
-
-
-* **$icon**: _(array)_ The icon definition.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L336)
-
-### make\_socialicons\_default
-
-```php
-apply_filters( 'make_socialicons_default', $icon );
-```
-
-##### Description
-
-Filter: Modify the icon definition for a URL that doesn't match any icon URL pattern.
-
-##### Parameters:
-
-
-* **$icon**: _(array)_ The icon definition.
-
-##### Changelog:
-
-
-* **Since**: 1.7.0.
-
-##### Source:
-
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L357)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L284)
 
 ### make\_socialicons\_render\_override
 
@@ -3492,7 +3329,7 @@ Filter: Override the default social icons rendered output.
 
 ##### Source:
 
-* [src/inc/socialicons/manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L647)
+* [manager.php](https://github.com/thethemefoundry/make/blob/master/src/inc/socialicons/manager.php#L647)
 
 ### make\_css\_add
 
@@ -3516,7 +3353,7 @@ Filter: Modify CSS rules as they are registered.
 
 ##### Source:
 
-* [src/inc/style/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L104)
+* [css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L104)
 
 ### make\_parse\_declaration
 
@@ -3548,7 +3385,7 @@ Filter: Modify the final CSS declaration after being parsed.
 
 ##### Source:
 
-* [src/inc/style/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L271)
+* [css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L271)
 
 ### make\_css\_parse\_declarations
 
@@ -3576,33 +3413,7 @@ Filter: Modify the full list of parsed declarations.
 
 ##### Source:
 
-* [src/inc/style/css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L283)
-
-### make\_font\_relative\_size
-
-```php
-apply_filters( 'make_font_relative_size', $sizes );
-```
-
-##### Description
-
-Filter the array of relative font sizes.
-Each array item defines a percentage by which to scale a font size compared
-to some other font size. Most of these were deprecated in version 1.3.0.
-
-##### Parameters:
-
-
-* **$sizes**: _(array)_ The array of relative sizes.
-
-##### Changelog:
-
-
-* **Since**: 1.0.0.
-
-##### Source:
-
-* [src/inc/style/datahelper.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/datahelper.php#L212)
+* [css.php](https://github.com/thethemefoundry/make/blob/master/src/inc/style/css.php#L283)
 
 ### make\_read\_more\_text
 
@@ -3628,7 +3439,7 @@ will only be available if no filters have been added to the hook.
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L171)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L171)
 
 ### make\_site\_header\_class
 
@@ -3652,7 +3463,7 @@ Filter: Modify the classes applied to the site header element.
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L249)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L249)
 
 ### make\_exif\_shutter\_speed
 
@@ -3682,7 +3493,7 @@ Filter the shutter speed value.
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L346)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L346)
 
 ### make\_exif\_aperture
 
@@ -3712,7 +3523,7 @@ Filter the aperture value.
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L367)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L367)
 
 ### make\_get\_exif\_data
 
@@ -3738,7 +3549,7 @@ Alter the exif data output.
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L439)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L439)
 
 ### make\_breadcrumb\_output
 
@@ -3766,7 +3577,7 @@ Filter: Modify the output of breadcrumb
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L588)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L588)
 
 ### make\_entry\_thumbnail\_size
 
@@ -3792,7 +3603,7 @@ Filter: Modify the image size used to display a post's featured image (post thum
 
 ##### Source:
 
-* [src/inc/template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L626)
+* [template-tags.php](https://github.com/thethemefoundry/make/blob/master/src/inc/template-tags.php#L626)
 
 ### make\_template\_content\_archive
 
@@ -3818,7 +3629,7 @@ Allow for changing the template partial.
 
 ##### Source:
 
-* [src/index.php](https://github.com/thethemefoundry/make/blob/master/src/index.php#L37)
+* [index.php](https://github.com/thethemefoundry/make/blob/master/src/index.php#L37)
 
 ### make\_template\_content\_page
 
@@ -3844,31 +3655,7 @@ Allow for changing the template partial.
 
 ##### Source:
 
-* [src/page.php](https://github.com/thethemefoundry/make/blob/master/src/page.php#L25)
-
-### make\_show\_footer\_credit
-
-```php
-apply_filters( 'make_show_footer_credit', $show );
-```
-
-##### Description
-
-Allow toggling of the footer credit.
-
-##### Parameters:
-
-
-* **$show**: _(bool)_ Whether or not to show the footer credit.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/partials/footer-credit.php](https://github.com/thethemefoundry/make/blob/master/src/partials/footer-credit.php#L13)
+* [page.php](https://github.com/thethemefoundry/make/blob/master/src/page.php#L25)
 
 ### make\_template\_content\_search
 
@@ -3894,151 +3681,7 @@ Allow for changing the template partial.
 
 ##### Source:
 
-* [src/search.php](https://github.com/thethemefoundry/make/blob/master/src/search.php#L30)
-
-### make\_footer\_1
-
-```php
-apply_filters( 'make_footer_1', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-footer-1.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-1.php#L13)
-
-### make\_footer\_2
-
-```php
-apply_filters( 'make_footer_2', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-footer-2.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-2.php#L13)
-
-### make\_footer\_3
-
-```php
-apply_filters( 'make_footer_3', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-footer-3.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-3.php#L13)
-
-### make\_footer\_4
-
-```php
-apply_filters( 'make_footer_4', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-footer-4.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-footer-4.php#L13)
-
-### make\_sidebar\_left
-
-```php
-apply_filters( 'make_sidebar_left', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-left.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-left.php#L13)
-
-### make\_sidebar\_right
-
-```php
-apply_filters( 'make_sidebar_right', $footer_id );
-```
-
-##### Description
-
-Filter the sidebar ID to allow developers to programmatically change the sidebar displayed.
-
-##### Parameters:
-
-
-* **$footer\_id**: _(string)_ The ID of the current footer being generated.
-
-##### Changelog:
-
-
-* **Since**: 1.2.3.
-
-##### Source:
-
-* [src/sidebar-right.php](https://github.com/thethemefoundry/make/blob/master/src/sidebar-right.php#L13)
+* [search.php](https://github.com/thethemefoundry/make/blob/master/src/search.php#L30)
 
 ### make\_template\_content\_single
 
@@ -4064,4 +3707,4 @@ Allow for changing the template partial.
 
 ##### Source:
 
-* [src/single.php](https://github.com/thethemefoundry/make/blob/master/src/single.php#L25)
+* [single.php](https://github.com/thethemefoundry/make/blob/master/src/single.php#L25)
